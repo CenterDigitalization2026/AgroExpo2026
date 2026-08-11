@@ -11,7 +11,7 @@ export const translations = {
       title: "Digital AgroExpo Tajikistan-2026",
       subtitle:
         "Конференция и выставка проводятся с целью обмена опытом, создания единой цифровой экосистемы и объединения партнеров для устойчивой трансформации агропродовольственных систем и привлечения инвестиций.",
-      location: "📍 г. Душанбе",
+      location: "📍 г. Душанбе, отель Hyatt Regency",
       date: "📅 Ноябрь – Декабрь 2026",
       format: "🤝 B2B & Форум",
       cta: "Принять участие в AgroExpo",
@@ -137,7 +137,7 @@ export const translations = {
     },
     footer: {
       text: "Digital AgroExpo Tajikistan-2026 — Трансформация сельского хозяйства через технологии.",
-      location: "г. Душанбе, Республика Таджикистан",
+      location: "г. Душанбе, отель Hyatt Regency, Республика Таджикистан",
       copyright: "© 2026 Digital AgroExpo Tajikistan. Все права защищены.",
     },
   },
@@ -153,7 +153,7 @@ export const translations = {
       title: "Digital AgroExpo Tajikistan-2026",
       subtitle:
         "Конфронс ва намоишгоҳ бо мақсади мубодилаи таҷриба, таъсиси экосистемаи ягонаи рақамӣ ва муттаҳидсозии шарикон барои табдилдиҳии устувори системаҳои агроозуқаворӣ ва ҷалби сармоя баргузор мегардад.",
-      location: "📍 ш. Душанбе",
+      location: "📍 ш. Душанбе, бинои Hyatt Regency",
       date: "📅 Декабр 2026",
       format: "🤝 B2B ва Форум",
       cta: "Иштирок дар AgroExpo",
@@ -276,7 +276,7 @@ export const translations = {
     },
     footer: {
       text: "Digital AgroExpo Tajikistan-2026 — Гузариш ба кишоварзии рақамӣ тавассути технологияҳо.",
-      location: "ш. Душанбе, Ҷумҳурии Тоҷикистон",
+      location: "ш. Душанбе, бинои Hyatt Regency, Ҷумҳурии Тоҷикистон",
       copyright:
         "© 2026 Digital AgroExpo Tajikistan. Ҳамаи ҳуқуқҳо ҳифз шудаанд.",
     },
@@ -293,7 +293,7 @@ export const translations = {
       title: "Digital AgroExpo Tajikistan-2026",
       subtitle:
         "The conference and exhibition are held to exchange experience, create a unified digital ecosystem, and unite partners for the sustainable transformation of agrifood systems and investment attraction.",
-      location: "📍 Dushanbe",
+      location: "📍 Dushanbe, Hyatt Regency",
       date: "📅 November – December 2026",
       format: "🤝 B2B & Forum",
       cta: "Join AgroExpo",
@@ -418,7 +418,7 @@ export const translations = {
     },
     footer: {
       text: "Digital AgroExpo Tajikistan-2026 — Agriculture transformation through technology.",
-      location: "Dushanbe, Republic of Tajikistan",
+      location: "Dushanbe, Hyatt Regency Hotel, Republic of Tajikistan",
       copyright: "© 2026 Digital AgroExpo Tajikistan. All rights reserved.",
     },
   },
