@@ -91,7 +91,9 @@ body {
   width: 0;
   height: 2px;
   background: var(--accent-green);
-  transition: width 0.3s ease, left 0.3s ease;
+  transition:
+    width 0.3s ease,
+    left 0.3s ease;
   border-radius: 2px;
 }
 
@@ -196,7 +198,8 @@ body {
 }
 
 @keyframes heroFloat {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0) rotate(0deg);
   }
   50% {
@@ -223,11 +226,15 @@ body {
 
 @keyframes pulseGlow {
   0% {
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1), 0 0 0 0 rgba(116, 198, 157, 0.2);
+    box-shadow:
+      0 4px 15px rgba(0, 0, 0, 0.1),
+      0 0 0 0 rgba(116, 198, 157, 0.2);
     border-color: rgba(255, 255, 255, 0.25);
   }
   100% {
-    box-shadow: 0 6px 25px rgba(82, 183, 136, 0.4), 0 0 20px 4px rgba(116, 198, 157, 0.3);
+    box-shadow:
+      0 6px 25px rgba(82, 183, 136, 0.4),
+      0 0 20px 4px rgba(116, 198, 157, 0.3);
     border-color: rgba(116, 198, 157, 0.6);
   }
 }
@@ -239,11 +246,19 @@ body {
   letter-spacing: -0.8px;
   line-height: 1.15;
   text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  background: linear-gradient(120deg, #ffffff 0%, #d8f3dc 40%, #74c69d 70%, #ffffff 100%);
+  background: linear-gradient(
+    120deg,
+    #ffffff 0%,
+    #d8f3dc 40%,
+    #74c69d 70%,
+    #ffffff 100%
+  );
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: gradientShift 6s ease infinite, fadeInUp 0.8s ease-out;
+  animation:
+    gradientShift 6s ease infinite,
+    fadeInUp 0.8s ease-out;
 }
 
 @keyframes gradientShift {
@@ -348,7 +363,8 @@ body {
   0% {
     left: -100%;
   }
-  25%, 100% {
+  25%,
+  100% {
     left: 200%;
   }
 }
@@ -410,7 +426,9 @@ body {
   border-radius: 20px;
   padding: 16px;
   border: 1px solid rgba(27, 67, 50, 0.1);
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.07), 0 4px 10px rgba(0, 0, 0, 0.03);
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.07),
+    0 4px 10px rgba(0, 0, 0, 0.03);
   transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   cursor: pointer;
   position: relative;
@@ -421,7 +439,9 @@ body {
 
 .direction-card:hover {
   transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 24px 50px rgba(27, 67, 50, 0.16), 0 8px 18px rgba(0, 0, 0, 0.06);
+  box-shadow:
+    0 24px 50px rgba(27, 67, 50, 0.16),
+    0 8px 18px rgba(0, 0, 0, 0.06);
   border-color: rgba(45, 106, 79, 0.4);
 }
 
@@ -575,12 +595,20 @@ body {
 
 .partners-carousel-wrapper::before {
   left: 44px;
-  background: linear-gradient(to right, var(--bg-light) 0%, rgba(248, 249, 250, 0) 100%);
+  background: linear-gradient(
+    to right,
+    var(--bg-light) 0%,
+    rgba(248, 249, 250, 0) 100%
+  );
 }
 
 .partners-carousel-wrapper::after {
   right: 44px;
-  background: linear-gradient(to left, var(--bg-light) 0%, rgba(248, 249, 250, 0) 100%);
+  background: linear-gradient(
+    to left,
+    var(--bg-light) 0%,
+    rgba(248, 249, 250, 0) 100%
+  );
 }
 
 .partners-carousel-track {
@@ -610,7 +638,9 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 105px;
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06), 0 2px 6px rgba(0, 0, 0, 0.02);
+  box-shadow:
+    0 8px 22px rgba(0, 0, 0, 0.06),
+    0 2px 6px rgba(0, 0, 0, 0.02);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   position: relative;
   overflow: hidden;
@@ -619,7 +649,9 @@ body {
 
 .partner-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 18px 38px rgba(45, 106, 79, 0.18), 0 4px 12px rgba(0, 0, 0, 0.04);
+  box-shadow:
+    0 18px 38px rgba(45, 106, 79, 0.18),
+    0 4px 12px rgba(0, 0, 0, 0.04);
   border-color: rgba(45, 106, 79, 0.4);
 }
 
@@ -628,7 +660,9 @@ body {
   max-height: 60px;
   object-fit: contain;
   filter: grayscale(15%);
-  transition: filter 0.3s ease, transform 0.3s ease;
+  transition:
+    filter 0.3s ease,
+    transform 0.3s ease;
 }
 
 .partner-card:hover .partner-logo-img {
@@ -701,8 +735,6 @@ body {
     max-height: 50px;
   }
 }
-
-
 
 /* Footer */
 .footer {
@@ -871,7 +903,9 @@ body {
   color: var(--primary-green);
   text-decoration: none;
   border-radius: 12px;
-  transition: background 0.2s ease, transform 0.2s ease;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
 }
 
 .mobile-drawer-links a:hover {
@@ -1071,7 +1105,6 @@ body {
     font-size: 10px;
   }
 }
-
 
 /* Custom Language Select Dropdown */
 .nav-actions {

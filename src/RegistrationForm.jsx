@@ -2,6 +2,7 @@ import React, { useState, useMemo } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useLanguage } from "./i18n/LanguageContext";
+import emailjs from "@emailjs/browser";
 import "./RegistrationForm.css";
 
 const GOOGLE_FORM_ACTION_URL =
@@ -26,29 +27,24 @@ const sendEmailNotification = async (sanitized) => {
   }
 
   try {
-    await fetch("https://api.emailjs.com/api/v1.0/email/send", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
+    const response = await emailjs.send(
+      EMAILJS_SERVICE_ID,
+      EMAILJS_TEMPLATE_ID,
+      {
+        to_name: sanitized.fullName,
+        to_email: sanitized.email,
+        phone: sanitized.phone,
+        organization: sanitized.organization,
+        position: sanitized.position,
+        region: sanitized.region,
+        category: sanitized.category,
+        format: sanitized.format,
       },
-      body: JSON.stringify({
-        service_id: EMAILJS_SERVICE_ID,
-        template_id: EMAILJS_TEMPLATE_ID,
-        user_id: EMAILJS_PUBLIC_KEY,
-        template_params: {
-          to_name: sanitized.fullName,
-          to_email: sanitized.email,
-          phone: sanitized.phone,
-          organization: sanitized.organization,
-          position: sanitized.position,
-          region: sanitized.region,
-          category: sanitized.category,
-          format: sanitized.format,
-        },
-      }),
-    });
+      EMAILJS_PUBLIC_KEY
+    );
+    console.log("EmailJS SUCCESS!", response.status, response.text);
   } catch (err) {
-    console.warn("Ошибка отправки письма через EmailJS:", err);
+    console.error("Ошибка отправки письма через EmailJS:", err);
   }
 };
 
