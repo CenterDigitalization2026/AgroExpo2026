@@ -29,11 +29,10 @@ const PARTNER_LOGOS = [
 ];
 
 const DIRECTION_ITEMS = [
-  { key: "marketplace", icon: "📊", img: fintechImg },
-  { key: "fintech", icon: "📱", img: fintechImg },
   { key: "smartIrrigation", icon: "💧", img: irrigationImg },
   { key: "agrometeo", icon: "🌤️", img: agrometeoImg },
   { key: "drones", icon: "🛸", img: dronesImg },
+  { key: "fintech", icon: "📱", img: fintechImg },
 ];
 
 const LandingPage = () => {
@@ -71,7 +70,10 @@ const LandingPage = () => {
   const scrollDirections = (direction) => {
     if (dirCarouselRef.current) {
       const scrollAmount = direction === "left" ? -330 : 330;
-      dirCarouselRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
+      dirCarouselRef.current.scrollBy({
+        left: scrollAmount,
+        behavior: "smooth",
+      });
     }
   };
 
@@ -79,10 +81,11 @@ const LandingPage = () => {
     if (dirCarouselRef.current) {
       const { scrollLeft } = dirCarouselRef.current;
       const index = Math.round(scrollLeft / 330);
-      setActiveDirIndex(Math.min(Math.max(index, 0), DIRECTION_ITEMS.length - 1));
+      setActiveDirIndex(
+        Math.min(Math.max(index, 0), DIRECTION_ITEMS.length - 1),
+      );
     }
   };
-
 
   const scrollToRegistration = () => {
     const regSection = document.getElementById("registration");
