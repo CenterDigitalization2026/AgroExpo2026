@@ -130,15 +130,72 @@ export const RegistrationForm = () => {
         Object.keys(ENTRY_MAP).forEach((key) => {
           formBody.append(ENTRY_MAP[key], sanitized[key] || "");
         });
+        const bodyString = formBody.toString();
 
-        await fetch(GOOGLE_FORM_ACTION_URL, {
-          method: "POST",
-          mode: "no-cors",
-          headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
-          },
-          body: formBody.toString(),
-        });
+        // 1. Метод sendBeacon (Самый надежный способ для HTTPS сайтов на продакшене)
+        if (navigator.sendBeacon) {
+          try {
+            const blob = new Blob([bodyString], {
+              type: "application/x-www-form-urlencoded",
+            });
+            navigator.sendBeacon(GOOGLE_FORM_ACTION_URL, blob);
+          } catch (beaconErr) {
+            console.warn("sendBeacon warning:", beaconErr);
+          }
+        }
+
+        // 2. Метод fetch с keepalive: true (работает асинхронно даже при сбросе формы)
+        try {
+          await fetch(GOOGLE_FORM_ACTION_URL, {
+            method: "POST",
+            mode: "no-cors",
+            keepalive: true,
+            headers: {
+              "Content-Type": "application/x-www-form-urlencoded",
+            },
+            body: bodyString,
+          });
+        } catch (fetchErr) {
+          console.warn("Fetch warning:", fetchErr);
+        }
+
+        // 3. Традиционная резервная отправка через скрытый iframe
+        try {
+          const iframeName = "hidden_gform_iframe";
+          let iframe = document.getElementById(iframeName);
+          if (!iframe) {
+            iframe = document.createElement("iframe");
+            iframe.id = iframeName;
+            iframe.name = iframeName;
+            iframe.style.display = "none";
+            document.body.appendChild(iframe);
+          }
+
+          const hiddenForm = document.createElement("form");
+          hiddenForm.action = GOOGLE_FORM_ACTION_URL;
+          hiddenForm.method = "POST";
+          hiddenForm.target = iframeName;
+          hiddenForm.style.display = "none";
+
+          Object.keys(ENTRY_MAP).forEach((key) => {
+            const input = document.createElement("input");
+            input.type = "hidden";
+            input.name = ENTRY_MAP[key];
+            input.value = sanitized[key] || "";
+            hiddenForm.appendChild(input);
+          });
+
+          document.body.appendChild(hiddenForm);
+          hiddenForm.submit();
+
+          setTimeout(() => {
+            if (hiddenForm.parentNode) {
+              hiddenForm.parentNode.removeChild(hiddenForm);
+            }
+          }, 1500);
+        } catch (iframeErr) {
+          console.warn("Iframe submit warning:", iframeErr);
+        }
 
         setIsSubmitted(true);
         resetForm();
