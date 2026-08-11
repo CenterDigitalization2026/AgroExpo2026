@@ -126,58 +126,19 @@ export const RegistrationForm = () => {
       const sanitized = sanitizeValues(rawValues);
 
       try {
-        // 1. Прямая отправка через fetch (no-cors) для работы на всех устройствах и браузерах
         const formBody = new URLSearchParams();
         Object.keys(ENTRY_MAP).forEach((key) => {
           formBody.append(ENTRY_MAP[key], sanitized[key] || "");
         });
 
-        try {
-          await fetch(GOOGLE_FORM_ACTION_URL, {
-            method: "POST",
-            mode: "no-cors",
-            headers: {
-              "Content-Type": "application/x-www-form-urlencoded",
-            },
-            body: formBody.toString(),
-          });
-        } catch (fetchErr) {
-          console.warn("Fetch submission warning, fallback to iframe:", fetchErr);
-        }
-
-        // 2. Резервная отправка через скрытый iframe
-        const iframeName = "hidden_google_form_iframe";
-        let iframe = document.getElementById(iframeName);
-        if (!iframe) {
-          iframe = document.createElement("iframe");
-          iframe.id = iframeName;
-          iframe.name = iframeName;
-          iframe.style.display = "none";
-          document.body.appendChild(iframe);
-        }
-
-        const hiddenForm = document.createElement("form");
-        hiddenForm.action = GOOGLE_FORM_ACTION_URL;
-        hiddenForm.method = "POST";
-        hiddenForm.target = iframeName;
-        hiddenForm.style.display = "none";
-
-        Object.keys(ENTRY_MAP).forEach((key) => {
-          const input = document.createElement("input");
-          input.type = "hidden";
-          input.name = ENTRY_MAP[key];
-          input.value = sanitized[key] || "";
-          hiddenForm.appendChild(input);
+        await fetch(GOOGLE_FORM_ACTION_URL, {
+          method: "POST",
+          mode: "no-cors",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+          body: formBody.toString(),
         });
-
-        document.body.appendChild(hiddenForm);
-        hiddenForm.submit();
-
-        setTimeout(() => {
-          if (hiddenForm.parentNode) {
-            hiddenForm.parentNode.removeChild(hiddenForm);
-          }
-        }, 1000);
 
         setIsSubmitted(true);
         resetForm();
@@ -383,7 +344,7 @@ export const RegistrationForm = () => {
               >
                 <option value=""></option>
                 {regRegions.map((option, idx) => (
-                  <option key={idx} value={option}>
+                  <option key={idx} value={REGION_OPTIONS[idx] || option}>
                     {option}
                   </option>
                 ))}
@@ -414,7 +375,7 @@ export const RegistrationForm = () => {
               >
                 <option value=""></option>
                 {regCategories.map((option, idx) => (
-                  <option key={idx} value={option}>
+                  <option key={idx} value={CATEGORY_OPTIONS[idx] || option}>
                     {option}
                   </option>
                 ))}
@@ -438,7 +399,7 @@ export const RegistrationForm = () => {
               >
                 <option value=""></option>
                 {regFormats.map((option, idx) => (
-                  <option key={idx} value={option}>
+                  <option key={idx} value={FORMAT_OPTIONS[idx] || option}>
                     {option}
                   </option>
                 ))}
