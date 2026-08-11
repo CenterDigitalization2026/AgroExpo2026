@@ -8,9 +8,9 @@ const GOOGLE_FORM_ACTION_URL =
   "https://docs.google.com/forms/d/e/1FAIpQLSfuM_HCt97JAN1tg-JuvSoGN4w9DtlXydSKFcJ1Qx7_Hm-T1g/formResponse";
 
 // Конфигурация EmailJS для авто-отправки подтверждающего письма на email
-const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID";
-const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
-const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY";
+const EMAILJS_SERVICE_ID = "service_1ctngd8";
+const EMAILJS_TEMPLATE_ID = "template_67a2psq";
+const EMAILJS_PUBLIC_KEY = "O5XmaJPSPgFBquV79pW5r";
 
 const sendEmailNotification = async (sanitized) => {
   if (
@@ -20,7 +20,7 @@ const sendEmailNotification = async (sanitized) => {
     EMAILJS_PUBLIC_KEY === "YOUR_PUBLIC_KEY"
   ) {
     console.info(
-      "EmailJS не настроен (укажите SERVICE_ID, TEMPLATE_ID и PUBLIC_KEY в RegistrationForm.jsx)"
+      "EmailJS не настроен (укажите SERVICE_ID, TEMPLATE_ID и PUBLIC_KEY в RegistrationForm.jsx)",
     );
     return;
   }
@@ -300,7 +300,7 @@ export const RegistrationForm = () => {
                     if (formik.values.email) {
                       formik.setFieldValue(
                         "email",
-                        formik.values.email.trim().toLowerCase()
+                        formik.values.email.trim().toLowerCase(),
                       );
                     }
                   }}
@@ -353,7 +353,8 @@ export const RegistrationForm = () => {
                   onBlur={formik.handleBlur}
                 />
                 <label htmlFor="organization" className="floating-label">
-                  {regLabels.organization} <span className="required-star">*</span>
+                  {regLabels.organization}{" "}
+                  <span className="required-star">*</span>
                 </label>
                 {formik.touched.organization && formik.errors.organization && (
                   <div className="error-message">
@@ -410,7 +411,8 @@ export const RegistrationForm = () => {
           {/* СЕКЦИЯ 3 */}
           <div className="form-section">
             <h3 className="section-title">
-              <span className="section-number">3</span> {regLabels.category} & {regLabels.format}
+              <span className="section-number">3</span> {regLabels.category} &{" "}
+              {regLabels.format}
             </h3>
 
             <div className="form-group floating-group">
@@ -475,11 +477,11 @@ export const RegistrationForm = () => {
                   onBlur={formik.handleBlur}
                 />
                 <span>
-                  {t.language === 'tj'
-                    ? 'Ман ба коркарди маълумоти шахсӣ розигӣ медиҳам'
-                    : t.language === 'en'
-                    ? 'I consent to the processing of personal data'
-                    : 'Я согласен на обработку персональных данных'}{' '}
+                  {t.language === "tj"
+                    ? "Ман ба коркарди маълумоти шахсӣ розигӣ медиҳам"
+                    : t.language === "en"
+                      ? "I consent to the processing of personal data"
+                      : "Я согласен на обработку персональных данных"}{" "}
                   <span className="required-star">*</span>
                 </span>
               </label>
