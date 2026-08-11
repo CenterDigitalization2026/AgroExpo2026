@@ -36,6 +36,10 @@ export const translations = {
         title: "Агроконсалтинг и Финтех",
         desc: "Мобильные приложения для фермеров, электронные маркетплейсы, зеленые кредиты и цифровой агролизинг.",
       },
+      marketplace: {
+        title: "Маркетплейс платформа",
+        desc: "Электронные торговые площадки, агро-каталоги и цифровые экосистемы купли-продажи сельхозпродукции.",
+      },
     },
     registration: {
       title: "Онлайн-регистрация участников",
@@ -178,6 +182,10 @@ export const translations = {
         title: "Агроконсалтинг ва Финтех",
         desc: "Барномаҳои мобилӣ барои деҳқонон, маркетплейсҳои рақамӣ, кредитҳои сабз ва агролизинги рақамӣ.",
       },
+      marketplace: {
+        title: "Маркетплейс платформа",
+        desc: "Маркетплейсҳои рақамӣ, каталогҳои кишоварзӣ ва платформаҳои хизматрасонии тиҷоратии деҳқонон.",
+      },
     },
     registration: {
       title: "Бақайдгирии онлайни иштирокчиён",
@@ -317,6 +325,10 @@ export const translations = {
       fintech: {
         title: "Agro-consulting & Fintech",
         desc: "Mobile apps for farmers, digital marketplaces, green credits, and digital agricultural leasing.",
+      },
+      marketplace: {
+        title: "Marketplace Platform",
+        desc: "Digital trading marketplaces, ag-directories, and e-commerce solutions for agricultural trade.",
       },
     },
     registration: {

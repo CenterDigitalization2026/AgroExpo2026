@@ -380,49 +380,153 @@ body {
   font-size: 16px;
 }
 
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-}
-
-.feature-card {
-  background: var(--white);
-  padding: 32px 28px;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
-  border: 1px solid rgba(27, 67, 50, 0.09);
-  transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+/* Directions 3D Carousel Section */
+.directions-carousel-wrapper {
   position: relative;
-  overflow: hidden;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 10px 44px 35px;
 }
 
-.feature-card:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 22px 48px rgba(27, 67, 50, 0.18), 0 6px 16px rgba(0, 0, 0, 0.06);
+.directions-carousel-track {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 25px 15px 35px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  align-items: stretch;
+}
+
+.directions-carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.direction-card {
+  flex: 0 0 310px;
+  background: var(--white);
+  border-radius: 20px;
+  padding: 16px;
+  border: 1px solid rgba(27, 67, 50, 0.1);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.07), 0 4px 10px rgba(0, 0, 0, 0.03);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.direction-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 24px 50px rgba(27, 67, 50, 0.16), 0 8px 18px rgba(0, 0, 0, 0.06);
   border-color: rgba(45, 106, 79, 0.4);
 }
 
-.feature-icon {
-  font-size: 42px;
-  margin-bottom: 18px;
-  display: inline-block;
-  transition: transform 0.35s ease;
+.direction-card.active {
+  transform: scale(1.03) translateY(-4px);
+  box-shadow: 0 20px 45px rgba(27, 67, 50, 0.18);
+  border-color: rgba(45, 106, 79, 0.5);
 }
 
-.feature-card:hover .feature-icon {
-  transform: scale(1.25) rotate(6deg);
+.direction-card-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 185px;
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 14px;
+  background: #f1f5f9;
 }
 
-.feature-card h3 {
+.direction-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.direction-card:hover .direction-card-img {
+  transform: scale(1.07);
+}
+
+.direction-icon-badge {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  width: 42px;
+  height: 42px;
+  background: #ffffff;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  transition: transform 0.3s ease;
+  z-index: 2;
+}
+
+.direction-card:hover .direction-icon-badge {
+  transform: scale(1.15) rotate(6deg);
+}
+
+.direction-card-body {
+  padding: 4px 6px 8px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.direction-card-body h3 {
   color: var(--primary-green);
-  font-size: 20px;
-  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  line-height: 1.3;
 }
 
-.feature-card p {
-  color: var(--text-muted);
-  font-size: 14px;
+.direction-card-body p {
+  color: #4b5563;
+  font-size: 13px;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Pagination Dots */
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.carousel-dots .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #cbd5e1;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.carousel-dots .dot:hover {
+  background: #94a3b8;
+}
+
+.carousel-dots .dot.active {
+  background: var(--primary-green);
+  width: 12px;
+  height: 12px;
+  box-shadow: 0 0 8px rgba(27, 67, 50, 0.4);
 }
 
 @keyframes fadeInUp {

@@ -11,6 +11,11 @@ import koicaLogo from "./assets/partners/KOICA.png";
 import EmblemOfTJK from "./assets/partners/EmblemTJK.png";
 import CenterForDigital from "./assets/partners/CenterForDigital.png";
 
+import irrigationImg from "./assets/directions/irrigation.png";
+import agrometeoImg from "./assets/directions/agrometeo.png";
+import dronesImg from "./assets/directions/drones.png";
+import fintechImg from "./assets/directions/fintech.png";
+
 import "./LandingPage.css";
 
 const PARTNER_LOGOS = [
@@ -21,6 +26,14 @@ const PARTNER_LOGOS = [
   wfpLogo,
   faoLogo,
   worldBankLogo,
+];
+
+const DIRECTION_ITEMS = [
+  { key: "marketplace", icon: "📊", img: fintechImg },
+  { key: "fintech", icon: "📱", img: fintechImg },
+  { key: "smartIrrigation", icon: "💧", img: irrigationImg },
+  { key: "agrometeo", icon: "🌤️", img: agrometeoImg },
+  { key: "drones", icon: "🛸", img: dronesImg },
 ];
 
 const LandingPage = () => {
@@ -45,12 +58,31 @@ const LandingPage = () => {
     return () => clearInterval(interval);
   }, [isHovered]);
 
+  const dirCarouselRef = React.useRef(null);
+  const [activeDirIndex, setActiveDirIndex] = React.useState(2);
+
   const scrollCarousel = (direction) => {
     if (carouselRef.current) {
       const scrollAmount = direction === "left" ? -280 : 280;
       carouselRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
     }
   };
+
+  const scrollDirections = (direction) => {
+    if (dirCarouselRef.current) {
+      const scrollAmount = direction === "left" ? -330 : 330;
+      dirCarouselRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    }
+  };
+
+  const handleDirScroll = () => {
+    if (dirCarouselRef.current) {
+      const { scrollLeft } = dirCarouselRef.current;
+      const index = Math.round(scrollLeft / 330);
+      setActiveDirIndex(Math.min(Math.max(index, 0), DIRECTION_ITEMS.length - 1));
+    }
+  };
+
 
   const scrollToRegistration = () => {
     const regSection = document.getElementById("registration");
@@ -126,29 +158,80 @@ const LandingPage = () => {
           <p>{t.directions.subtitle}</p>
         </div>
 
-        <div className="features-grid">
-          <div className="feature-card">
-            <div className="feature-icon">💧</div>
-            <h3>{t.directions.smartIrrigation.title}</h3>
-            <p>{t.directions.smartIrrigation.desc}</p>
+        <div className="directions-carousel-wrapper">
+          <button
+            type="button"
+            className="carousel-arrow arrow-left"
+            onClick={() => scrollDirections("left")}
+            aria-label="Previous direction"
+          >
+            ‹
+          </button>
+
+          <div
+            className="directions-carousel-track"
+            ref={dirCarouselRef}
+            onScroll={handleDirScroll}
+          >
+            {DIRECTION_ITEMS.map((item, idx) => {
+              const dirData = t.directions[item.key] || {};
+              const isCenter = idx === activeDirIndex;
+
+              return (
+                <div
+                  key={item.key}
+                  className={`direction-card ${isCenter ? "active" : ""}`}
+                  onClick={() => {
+                    if (dirCarouselRef.current) {
+                      dirCarouselRef.current.scrollTo({
+                        left: idx * 320,
+                        behavior: "smooth",
+                      });
+                    }
+                  }}
+                >
+                  <div className="direction-card-img-wrap">
+                    <img
+                      src={item.img}
+                      alt={dirData.title}
+                      className="direction-card-img"
+                    />
+                    <div className="direction-icon-badge">{item.icon}</div>
+                  </div>
+                  <div className="direction-card-body">
+                    <h3>{dirData.title}</h3>
+                    <p>{dirData.desc}</p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
 
-          <div className="feature-card">
-            <div className="feature-icon">🌤️</div>
-            <h3>{t.directions.agrometeo.title}</h3>
-            <p>{t.directions.agrometeo.desc}</p>
-          </div>
+          <button
+            type="button"
+            className="carousel-arrow arrow-right"
+            onClick={() => scrollDirections("right")}
+            aria-label="Next direction"
+          >
+            ›
+          </button>
 
-          <div className="feature-card">
-            <div className="feature-icon">🛸</div>
-            <h3>{t.directions.drones.title}</h3>
-            <p>{t.directions.drones.desc}</p>
-          </div>
-
-          <div className="feature-card">
-            <div className="feature-icon">📱</div>
-            <h3>{t.directions.fintech.title}</h3>
-            <p>{t.directions.fintech.desc}</p>
+          {/* Pagination Dots */}
+          <div className="carousel-dots">
+            {DIRECTION_ITEMS.map((_, idx) => (
+              <span
+                key={idx}
+                className={`dot ${idx === activeDirIndex ? "active" : ""}`}
+                onClick={() => {
+                  if (dirCarouselRef.current) {
+                    dirCarouselRef.current.scrollTo({
+                      left: idx * 320,
+                      behavior: "smooth",
+                    });
+                  }
+                }}
+              />
+            ))}
           </div>
         </div>
       </section>
