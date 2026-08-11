@@ -39,6 +39,9 @@ const LandingPage = () => {
   const { t } = useLanguage();
   const carouselRef = React.useRef(null);
   const [isHovered, setIsHovered] = React.useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
+
+  const closeMobileMenu = () => setMobileMenuOpen(false);
 
   React.useEffect(() => {
     if (isHovered) return;
@@ -99,7 +102,10 @@ const LandingPage = () => {
       <nav className="navbar">
         <div
           className="logo-container"
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          onClick={() => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+            closeMobileMenu();
+          }}
         >
           <img
             src={logoImg}
@@ -112,7 +118,7 @@ const LandingPage = () => {
           </div>
         </div>
 
-        <ul className="nav-links">
+        <ul className="nav-links desktop-only">
           <li>
             <a href="#about">{t.nav.about}</a>
           </li>
@@ -124,13 +130,78 @@ const LandingPage = () => {
           </li>
         </ul>
 
-        <div className="nav-actions">
+        <div className="nav-actions desktop-only">
           <LanguageSelector />
           <button className="btn-nav" onClick={scrollToRegistration}>
             {t.nav.registerBtn}
           </button>
         </div>
+
+        {/* Mobile Header Controls */}
+        <div className="mobile-nav-toggle">
+          <LanguageSelector />
+          <button
+            type="button"
+            className={`hamburger-btn ${mobileMenuOpen ? "open" : ""}`}
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle navigation menu"
+          >
+            <span className="hamburger-line"></span>
+            <span className="hamburger-line"></span>
+            <span className="hamburger-line"></span>
+          </button>
+        </div>
       </nav>
+
+      {/* Mobile Drawer Menu */}
+      <div
+        className={`mobile-drawer-overlay ${mobileMenuOpen ? "active" : ""}`}
+        onClick={closeMobileMenu}
+      />
+      <div className={`mobile-drawer ${mobileMenuOpen ? "active" : ""}`}>
+        <div className="mobile-drawer-header">
+          <div className="logo-text">
+            Digital AgroExpo
+            <span>Tajikistan-2026</span>
+          </div>
+          <button
+            type="button"
+            className="drawer-close-btn"
+            onClick={closeMobileMenu}
+            aria-label="Close menu"
+          >
+            ✕
+          </button>
+        </div>
+        <ul className="mobile-drawer-links">
+          <li>
+            <a href="#about" onClick={closeMobileMenu}>
+              {t.nav.about}
+            </a>
+          </li>
+          <li>
+            <a href="#directions" onClick={closeMobileMenu}>
+              {t.nav.directions}
+            </a>
+          </li>
+          <li>
+            <a href="#partners" onClick={closeMobileMenu}>
+              {t.nav.partners}
+            </a>
+          </li>
+        </ul>
+        <div className="mobile-drawer-footer">
+          <button
+            className="btn-nav btn-drawer-nav"
+            onClick={() => {
+              scrollToRegistration();
+              closeMobileMenu();
+            }}
+          >
+            {t.nav.registerBtn}
+          </button>
+        </div>
+      </div>
 
       <header className="hero" id="about">
         <div className="hero-logo-container">
