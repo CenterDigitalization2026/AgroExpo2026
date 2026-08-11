@@ -7,6 +7,51 @@ import "./RegistrationForm.css";
 const GOOGLE_FORM_ACTION_URL =
   "https://docs.google.com/forms/d/e/1FAIpQLSfuM_HCt97JAN1tg-JuvSoGN4w9DtlXydSKFcJ1Qx7_Hm-T1g/formResponse";
 
+// Конфигурация EmailJS для авто-отправки подтверждающего письма на email
+const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID";
+const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
+const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY";
+
+const sendEmailNotification = async (sanitized) => {
+  if (
+    !EMAILJS_SERVICE_ID ||
+    EMAILJS_SERVICE_ID === "YOUR_SERVICE_ID" ||
+    !EMAILJS_PUBLIC_KEY ||
+    EMAILJS_PUBLIC_KEY === "YOUR_PUBLIC_KEY"
+  ) {
+    console.info(
+      "EmailJS не настроен (укажите SERVICE_ID, TEMPLATE_ID и PUBLIC_KEY в RegistrationForm.jsx)"
+    );
+    return;
+  }
+
+  try {
+    await fetch("https://api.emailjs.com/api/v1.0/email/send", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        service_id: EMAILJS_SERVICE_ID,
+        template_id: EMAILJS_TEMPLATE_ID,
+        user_id: EMAILJS_PUBLIC_KEY,
+        template_params: {
+          to_name: sanitized.fullName,
+          to_email: sanitized.email,
+          phone: sanitized.phone,
+          organization: sanitized.organization,
+          position: sanitized.position,
+          region: sanitized.region,
+          category: sanitized.category,
+          format: sanitized.format,
+        },
+      }),
+    });
+  } catch (err) {
+    console.warn("Ошибка отправки письма через EmailJS:", err);
+  }
+};
+
 const ENTRY_MAP = {
   fullName: "entry.1118557367",
   email: "entry.1520353905",
@@ -130,72 +175,19 @@ export const RegistrationForm = () => {
         Object.keys(ENTRY_MAP).forEach((key) => {
           formBody.append(ENTRY_MAP[key], sanitized[key] || "");
         });
-        const bodyString = formBody.toString();
 
-        // 1. Метод sendBeacon (Самый надежный способ для HTTPS сайтов на продакшене)
-        if (navigator.sendBeacon) {
-          try {
-            const blob = new Blob([bodyString], {
-              type: "application/x-www-form-urlencoded",
-            });
-            navigator.sendBeacon(GOOGLE_FORM_ACTION_URL, blob);
-          } catch (beaconErr) {
-            console.warn("sendBeacon warning:", beaconErr);
-          }
-        }
+        // Единая одиночная отправка в Google Forms
+        await fetch(GOOGLE_FORM_ACTION_URL, {
+          method: "POST",
+          mode: "no-cors",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+          body: formBody.toString(),
+        });
 
-        // 2. Метод fetch с keepalive: true (работает асинхронно даже при сбросе формы)
-        try {
-          await fetch(GOOGLE_FORM_ACTION_URL, {
-            method: "POST",
-            mode: "no-cors",
-            keepalive: true,
-            headers: {
-              "Content-Type": "application/x-www-form-urlencoded",
-            },
-            body: bodyString,
-          });
-        } catch (fetchErr) {
-          console.warn("Fetch warning:", fetchErr);
-        }
-
-        // 3. Традиционная резервная отправка через скрытый iframe
-        try {
-          const iframeName = "hidden_gform_iframe";
-          let iframe = document.getElementById(iframeName);
-          if (!iframe) {
-            iframe = document.createElement("iframe");
-            iframe.id = iframeName;
-            iframe.name = iframeName;
-            iframe.style.display = "none";
-            document.body.appendChild(iframe);
-          }
-
-          const hiddenForm = document.createElement("form");
-          hiddenForm.action = GOOGLE_FORM_ACTION_URL;
-          hiddenForm.method = "POST";
-          hiddenForm.target = iframeName;
-          hiddenForm.style.display = "none";
-
-          Object.keys(ENTRY_MAP).forEach((key) => {
-            const input = document.createElement("input");
-            input.type = "hidden";
-            input.name = ENTRY_MAP[key];
-            input.value = sanitized[key] || "";
-            hiddenForm.appendChild(input);
-          });
-
-          document.body.appendChild(hiddenForm);
-          hiddenForm.submit();
-
-          setTimeout(() => {
-            if (hiddenForm.parentNode) {
-              hiddenForm.parentNode.removeChild(hiddenForm);
-            }
-          }, 1500);
-        } catch (iframeErr) {
-          console.warn("Iframe submit warning:", iframeErr);
-        }
+        // Авто-отправка письма на Email участника через EmailJS
+        await sendEmailNotification(sanitized);
 
         setIsSubmitted(true);
         resetForm();
