@@ -21,8 +21,6 @@ const PARTNER_LOGOS = [
   wfpLogo,
   faoLogo,
   worldBankLogo,
-  null,
-  null,
 ];
 
 const LandingPage = () => {
