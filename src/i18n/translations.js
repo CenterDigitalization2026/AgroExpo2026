@@ -7,12 +7,13 @@ export const translations = {
       registerBtn: "Зарегистрироваться",
     },
     hero: {
-      badge: "Министерство сельского хозяйства РТ • ВПП ООН",
+      badge:
+        "Министерство сельского хозяйства Республики Таджикистан • ВПП ООН (WFP)",
       title: "Digital AgroExpo Tajikistan-2026",
       subtitle:
         "Конференция и выставка проводятся с целью обмена опытом, создания единой цифровой экосистемы и объединения партнеров для устойчивой трансформации агропродовольственных систем и привлечения инвестиций.",
-      location: "📍 г. Душанбе, отель Hyatt Regency",
-      date: "📅 Ноябрь – Декабрь 2026",
+      location: "📍 г. Душанбе, здание Hyatt Regency",
+      date: "📅 Декабрь 2026",
       format: "🤝 B2B & Форум",
       cta: "Принять участие в AgroExpo",
     },
@@ -30,11 +31,11 @@ export const translations = {
       },
       drones: {
         title: "Дроны и ГИС-системы",
-        desc: "Аэромониторинг полей, точечное внесение удобрений и спутниковый анализ состояния чарогохов и пахотных земель.",
+        desc: "Аэромониторинг полей, точечное внесение удобрений и спутниковый анализ состояния пастбищ и пахотных земель.",
       },
       fintech: {
         title: "Агроконсалтинг и Финтех",
-        desc: "Мобильные приложения для фермеров, электронные маркетплейсы, зеленые кредиты и цифровой агролизинг.",
+        desc: "Мобильные приложения для фермеров, цифровые маркетплейсы, зеленые кредиты и цифровой агролизинг.",
       },
     },
     registration: {
@@ -56,7 +57,7 @@ export const translations = {
         fullName: "Например: Рустамов Искандер Алиевич",
         email: "example@domain.tj",
         phone: "+992900112233",
-        organization: "Например: ООО 'АгроТехИнновации' или ДХ 'Саодат'",
+        organization: "Например: ЗАО 'АгроТехИнновации' или ДХ 'Саодат'",
         position: "Например: Главный агроном / Директор / Студент",
       },
       buttons: {
@@ -131,13 +132,11 @@ export const translations = {
         "ВПП ООН (WFP)",
         "ФАО ООН (FAO)",
         "Всемирный Банк",
-        "GIZ / Бонки Эсхата",
-        "Хумо / Арванд",
       ],
     },
     footer: {
       text: "Digital AgroExpo Tajikistan-2026 — Трансформация сельского хозяйства через технологии.",
-      location: "г. Душанбе, отель Hyatt Regency, Республика Таджикистан",
+      location: "г. Душанбе, здание Hyatt Regency, Республика Таджикистан",
       copyright: "© 2026 Digital AgroExpo Tajikistan. Все права защищены.",
     },
   },
@@ -289,12 +288,13 @@ export const translations = {
       registerBtn: "Register Now",
     },
     hero: {
-      badge: "Ministry of Agriculture of RT • UN WFP",
+      badge:
+        "Ministry of Agriculture of the Republic of Tajikistan • UN WFP",
       title: "Digital AgroExpo Tajikistan-2026",
       subtitle:
         "The conference and exhibition are held to exchange experience, create a unified digital ecosystem, and unite partners for the sustainable transformation of agrifood systems and investment attraction.",
-      location: "📍 Dushanbe, Hyatt Regency",
-      date: "📅 November – December 2026",
+      location: "📍 Dushanbe, Hyatt Regency building",
+      date: "📅 December 2026",
       format: "🤝 B2B & Forum",
       cta: "Join AgroExpo",
     },
@@ -304,7 +304,7 @@ export const translations = {
         "Innovative AgTech solutions for sustainable development of Tajikistan's agricultural sector",
       smartIrrigation: {
         title: "Smart Irrigation",
-        desc: "Drip irrigation systems with soil moisture sensors and automated pump stations for water saving.",
+        desc: "Drip irrigation systems with soil moisture sensors and automated pumping stations for water saving.",
       },
       agrometeo: {
         title: "Agrometeorology",
@@ -316,7 +316,7 @@ export const translations = {
       },
       fintech: {
         title: "Agro-consulting & Fintech",
-        desc: "Mobile apps for farmers, digital marketplaces, green credits, and digital agricultural leasing.",
+        desc: "Mobile apps for farmers, digital marketplaces, green credits, and digital agroleasing.",
       },
     },
     registration: {
@@ -338,7 +338,7 @@ export const translations = {
         fullName: "Example: Rustamov Iskandar Alievich",
         email: "example@domain.tj",
         phone: "+992900112233",
-        organization: "Example: LLC 'AgroTech Innovations' or Farm 'Saodat'",
+        organization: "Example: CJSC 'AgroTech Innovations' or Farm 'Saodat'",
         position: "Example: Chief Agronomist / Director / Student",
       },
       buttons: {
@@ -412,13 +412,11 @@ export const translations = {
         "UN WFP",
         "UN FAO",
         "World Bank",
-        "GIZ / Eskhata Bank",
-        "Humo / Arvand",
       ],
     },
     footer: {
       text: "Digital AgroExpo Tajikistan-2026 — Agriculture transformation through technology.",
-      location: "Dushanbe, Hyatt Regency Hotel, Republic of Tajikistan",
+      location: "Dushanbe, Hyatt Regency building, Republic of Tajikistan",
       copyright: "© 2026 Digital AgroExpo Tajikistan. All rights reserved.",
     },
   },
