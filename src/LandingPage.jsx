@@ -264,6 +264,7 @@ const LandingPage = () => {
                       alt={dirData.title}
                       className="panorama-card-img"
                     />
+                    <span className="card-top-tag">AgTech 0{idx + 1}</span>
                     <div className="panorama-card-overlay">
                       <div className="panorama-icon-badge">{item.icon}</div>
                       <h3>{dirData.title}</h3>
