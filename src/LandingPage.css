@@ -472,78 +472,55 @@ body {
 }
 
 /* Directions 3D Carousel Section */
-/* Static 3D Curved Panorama Grid (Matching Screenshot 2) */
+/* Clean Modern Directions Grid (No 3D Panorama Distortion) */
 .directions-panorama-container {
   position: relative;
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 40px 20px 60px;
-  perspective: 1000px;
-  perspective-origin: 50% 50%;
+  padding: 20px 20px 50px;
 }
 
 .directions-panorama-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-  transform-style: preserve-3d;
-  align-items: center;
+  gap: 20px;
+  align-items: stretch;
 }
 
 .panorama-card-wrapper {
   position: relative;
-  height: 395px;
+  height: 390px;
   width: 100%;
   cursor: pointer;
-  transform-style: preserve-3d;
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: transform;
+  transition: transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-/* Deep 3D Arc Curvature Positions for 4 Cards */
-.panorama-card-wrapper.wrapper-pos-0 {
-  transform: rotateY(16deg) translateZ(-20px);
-}
-
-.panorama-card-wrapper.wrapper-pos-1 {
-  transform: rotateY(5deg) translateZ(5px);
-}
-
-.panorama-card-wrapper.wrapper-pos-2 {
-  transform: rotateY(-5deg) translateZ(5px);
-}
-
-.panorama-card-wrapper.wrapper-pos-3 {
-  transform: rotateY(-16deg) translateZ(-20px);
-}
-
-/* True 3D Hover Elevation - Pops Forward towards Viewer */
 .panorama-card-wrapper:hover {
-  transform: rotateY(0deg) translateZ(60px) scale(1.05) !important;
-  z-index: 30;
+  transform: translateY(-8px) scale(1.02);
+  z-index: 10;
 }
 
 .panorama-card {
   position: relative;
   width: 100%;
   height: 100%;
-  border-radius: 22px;
+  border-radius: 20px;
   overflow: hidden;
   background: #112a1e;
-  border: 1.5px solid rgba(255, 255, 255, 0.22);
+  border: 1px solid rgba(27, 67, 50, 0.12);
   transition:
     box-shadow 0.35s ease,
     border-color 0.35s ease;
   user-select: none;
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
 }
 
 .panorama-card-wrapper:hover .panorama-card {
-  border-color: rgba(116, 198, 157, 0.85);
+  border-color: rgba(45, 106, 79, 0.4);
   box-shadow:
-    0 28px 65px rgba(0, 0, 0, 0.45),
-    0 0 40px rgba(82, 183, 136, 0.5);
+    0 22px 50px rgba(27, 67, 50, 0.18),
+    0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .panorama-card-img {
@@ -1177,90 +1154,155 @@ body {
 
   .directions-carousel-track {
     padding: 15px 5px 25px;
-    gap: 16px;
-  }
-
-  .direction-card {
-    flex: 0 0 280px;
-    padding: 14px;
-    border-radius: 16px;
-  }
-
-  .direction-card-img-wrap {
-    height: 155px;
-  }
-
-  .direction-card-body h3 {
-    font-size: 16px;
-  }
-
-  .direction-card-body p {
-    font-size: 12px;
-  }
-
-  .carousel-arrow {
-    width: 40px;
-    height: 40px;
-    font-size: 22px;
-  }
-
-  .carousel-arrow.arrow-left {
-    left: 2px;
-  }
-
-  .carousel-arrow.arrow-right {
-    right: 2px;
-  }
-
-  /* Partners Carousel Mobile */
-  .partners-carousel-wrapper {
-    padding: 0 5px;
-  }
-
-  .partners-carousel-wrapper::before,
-  .partners-carousel-wrapper::after {
-    width: 30px;
-  }
-
-  .partners-carousel-wrapper::before {
-    left: 0;
-  }
-
-  .partners-carousel-wrapper::after {
-    right: 0;
-  }
-
-  .partner-card {
-    flex: 0 0 155px;
-    min-height: 95px;
-    padding: 12px 14px;
-    border-radius: 14px;
-  }
-
-  .partner-logo-img {
-    max-height: 48px;
-  }
-
-  .footer {
-    padding: 35px 16px 20px;
   }
 }
 
-@media (max-width: 480px) {
-  .hero h1 {
-    font-size: 22px;
+/* Responsive Mobile & Smartphone Styles */
+@media (max-width: 992px) {
+  .hero-logo-img {
+    width: 150px;
+    height: 150px;
   }
 
-  .direction-card {
-    flex: 0 0 84vw;
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .hero-badge {
+    font-size: 12px;
+    padding: 8px 18px;
+  }
+
+  .hero-subtitle {
+    font-size: 14px;
+    padding: 20px 22px;
+  }
+
+  .directions-panorama-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .panorama-card-wrapper {
+    height: 350px;
+    transform: none !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 12px 4%;
   }
 
   .logo-text {
-    font-size: 14px;
+    font-size: 15px;
   }
 
-  .logo-text span {
-    font-size: 10px;
+  .hero {
+    padding: 50px 4% 60px;
+  }
+
+  .hero-logo-img {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 16px;
+  }
+
+  .hero-badge {
+    font-size: 11px;
+    line-height: 1.5;
+    padding: 10px 14px;
+    max-width: 100%;
+    margin-bottom: 18px;
+    border-radius: 20px;
+  }
+
+  .hero h1 {
+    font-size: 25px;
+    margin-bottom: 16px;
+    letter-spacing: -0.4px;
+  }
+
+  .hero-subtitle {
+    font-size: 13px;
+    line-height: 1.65;
+    padding: 16px 14px;
+    border-radius: 14px;
+    margin-bottom: 24px;
+  }
+
+  .hero-info-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 28px;
+  }
+
+  .info-card {
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
+    font-size: 13.5px;
+    padding: 10px 18px;
+  }
+
+  .btn-hero {
+    width: 100%;
+    max-width: 320px;
+    padding: 14px 24px;
+    font-size: 16px;
+  }
+
+  .section {
+    padding: 50px 4%;
+  }
+
+  .section-title h2 {
+    font-size: 24px;
+  }
+
+  .section-title p {
+    font-size: 13.5px;
+  }
+
+  .directions-panorama-container {
+    padding: 15px 5px 30px;
+  }
+
+  .directions-panorama-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .panorama-card-wrapper {
+    height: 340px;
+    transform: none !important;
+  }
+
+  .panorama-card-overlay {
+    padding: 18px 16px;
+  }
+
+  .panorama-card-overlay h3 {
+    font-size: 18px;
+  }
+
+  .panorama-card-overlay p {
+    font-size: 12.5px;
+  }
+
+  .partners-carousel-wrapper {
+    padding: 0 4px;
+  }
+
+  .partner-card {
+    flex: 0 0 145px;
+    min-height: 85px;
+    padding: 10px 12px;
+  }
+
+  .partner-logo-img {
+    max-height: 42px;
   }
 }
 

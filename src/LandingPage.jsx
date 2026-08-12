@@ -254,7 +254,10 @@ const LandingPage = () => {
             {DIRECTION_ITEMS.map((item, idx) => {
               const dirData = t.directions[item.key] || {};
               return (
-                <div key={item.key} className={`panorama-card-wrapper wrapper-pos-${idx}`}>
+                <div
+                  key={item.key}
+                  className={`panorama-card-wrapper wrapper-pos-${idx}`}
+                >
                   <div className="panorama-card">
                     <img
                       src={item.img}
@@ -317,23 +320,23 @@ const LandingPage = () => {
               .concat(t.partners.items)
               .concat(t.partners.items)
               .map((partner, idx) => {
-              const originalIdx = idx % t.partners.items.length;
-              const isObj = typeof partner === "object" && partner !== null;
-              const name = isObj ? partner.name : partner;
-              const logo = isObj
-                ? partner.logo
-                : PARTNER_LOGOS[originalIdx] || null;
+                const originalIdx = idx % t.partners.items.length;
+                const isObj = typeof partner === "object" && partner !== null;
+                const name = isObj ? partner.name : partner;
+                const logo = isObj
+                  ? partner.logo
+                  : PARTNER_LOGOS[originalIdx] || null;
 
-              return (
-                <div key={idx} className="partner-card" title={name}>
-                  {logo ? (
-                    <img src={logo} alt={name} className="partner-logo-img" />
-                  ) : (
-                    <span className="partner-name">{name}</span>
-                  )}
-                </div>
-              );
-            })}
+                return (
+                  <div key={idx} className="partner-card" title={name}>
+                    {logo ? (
+                      <img src={logo} alt={name} className="partner-logo-img" />
+                    ) : (
+                      <span className="partner-name">{name}</span>
+                    )}
+                  </div>
+                );
+              })}
           </div>
 
           <button

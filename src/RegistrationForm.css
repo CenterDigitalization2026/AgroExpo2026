@@ -76,7 +76,9 @@
     0 24px 60px -12px rgba(27, 67, 50, 0.18),
     0 10px 25px -5px rgba(0, 0, 0, 0.06),
     0 0 0 1px rgba(255, 255, 255, 0.8) inset;
-  transition: box-shadow 0.35s ease, transform 0.35s ease;
+  transition:
+    box-shadow 0.35s ease,
+    transform 0.35s ease;
 }
 
 .form-container:hover {
@@ -142,7 +144,9 @@
   line-height: 1.3;
   color: #1f2937;
   background-color: #ffffff;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
   color-scheme: light;
   vertical-align: middle;
 }
@@ -219,7 +223,9 @@
 }
 
 /* Label color when field is filled but not focused */
-.floating-group .form-control:not(:focus):not(:placeholder-shown) ~ .floating-label,
+.floating-group
+  .form-control:not(:focus):not(:placeholder-shown)
+  ~ .floating-label,
 .floating-group .form-control:not(:focus):not(.is-empty) ~ .floating-label {
   color: #4b5563;
 }
@@ -351,7 +357,8 @@ select.form-control option[value=""] {
   0% {
     left: -100%;
   }
-  20%, 100% {
+  20%,
+  100% {
     left: 200%;
   }
 }
@@ -419,10 +426,14 @@ select.form-control option[value=""] {
 
 @keyframes successIconPulse {
   0% {
-    box-shadow: 0 0 0 8px #f0fdf4, 0 0 0 0 rgba(34, 197, 94, 0.4);
+    box-shadow:
+      0 0 0 8px #f0fdf4,
+      0 0 0 0 rgba(34, 197, 94, 0.4);
   }
   100% {
-    box-shadow: 0 0 0 14px #f0fdf4, 0 0 20px 4px rgba(34, 197, 94, 0.2);
+    box-shadow:
+      0 0 0 14px #f0fdf4,
+      0 0 20px 4px rgba(34, 197, 94, 0.2);
   }
 }
 
@@ -448,14 +459,14 @@ select.form-control option[value=""] {
   margin: 0 auto;
 }
 
-/* Адаптивность */
+/* Адаптивность для смартфонов */
 @media (max-width: 640px) {
   .registration-wrapper {
-    padding: 20px 12px;
+    padding: 16px 8px;
   }
   .form-container {
-    padding: 24px 18px;
-    border-radius: 16px;
+    padding: 22px 14px;
+    border-radius: 18px;
   }
   .form-row {
     grid-template-columns: 1fr;
@@ -463,5 +474,37 @@ select.form-control option[value=""] {
   }
   .event-header h1 {
     font-size: 22px;
+  }
+  .section-title {
+    font-size: 15.5px;
+    gap: 8px;
+    margin-bottom: 18px;
+  }
+  .section-number {
+    width: 26px;
+    height: 26px;
+    font-size: 12px;
+  }
+  .floating-group {
+    margin-bottom: 18px;
+  }
+  .floating-group .form-control {
+    height: 52px;
+    font-size: 14.5px;
+    padding: 13px 14px 8px 14px;
+  }
+  .floating-label {
+    font-size: 13px;
+    left: 12px;
+    top: 16px;
+  }
+  .checkbox-label {
+    font-size: 13px;
+    gap: 10px;
+  }
+  .submit-btn {
+    padding: 14px 20px;
+    font-size: 15.5px;
+    border-radius: 50px;
   }
 }
