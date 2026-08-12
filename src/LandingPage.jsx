@@ -24,8 +24,6 @@ const PARTNER_LOGOS = [
   CenterForDigital,
   koicaLogo,
   wfpLogo,
-  faoLogo,
-  worldBankLogo,
 ];
 
 const DIRECTION_ITEMS = [
@@ -211,7 +209,9 @@ const LandingPage = () => {
             className="hero-logo-img"
           />
         </div>
-        <span className="hero-badge">{t.hero.badge}</span>
+        <span className="hero-badge" style={{ whiteSpace: "pre-line" }}>
+          {t.hero.badge}
+        </span>
         <h1>{t.hero.title}</h1>
         <p className="hero-subtitle">{t.hero.subtitle}</p>
 

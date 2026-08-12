@@ -434,11 +434,7 @@ export const RegistrationForm = () => {
                   onBlur={formik.handleBlur}
                 />
                 <span>
-                  {t.language === "tj"
-                    ? "Ман ба коркарди маълумоти шахсӣ розигӣ медиҳам"
-                    : t.language === "en"
-                      ? "I consent to the processing of personal data"
-                      : "Я согласен на обработку персональных данных"}{" "}
+                  {t.registration.labels.consentLabel}{" "}
                   <span className="required-star">*</span>
                 </span>
               </label>

@@ -8,11 +8,11 @@ export const translations = {
     },
     hero: {
       badge:
-        "Министерство сельского хозяйства Республики Таджикистан • ВПП ООН (WFP)",
+        "МИНИСТЕРСТВО СЕЛЬСКОГО ХОЗЯЙСТВА РЕСПУБЛИКИ ТАДЖИКИСТАН \n ГУП 'Центр цифровизации, инновации и \n повышения квалификации кадров сельского хозяйства' \n Корейское агентство по международному сотрудничеству (KOICA) \n Всемирная продовольственная программа ООН (WFP)",
       title: "Digital AgroExpo Tajikistan-2026",
       subtitle:
         "Конференция и выставка проводятся с целью обмена опытом, создания единой цифровой экосистемы и объединения партнеров для устойчивой трансформации агропродовольственных систем и привлечения инвестиций.",
-      location: "📍 г. Душанбе, здание Hyatt Regency",
+      location: "📍 ш. Душанбе, бинои Hyatt Regency",
       date: "📅 Декабрь 2026",
       format: "🤝 B2B & Форум",
       cta: "Принять участие в AgroExpo",
@@ -51,6 +51,7 @@ export const translations = {
         region: "Регион / Страна",
         category: "Категория участника",
         format: "Формат участия",
+        consentLabel: "Я согласен на обработку персональных данных",
         selectPlaceholder: "-- Выберите из списка --",
       },
       placeholders: {
@@ -106,8 +107,7 @@ export const translations = {
         emailRequired: "Email обязателен для заполнения",
         emailInvalid: "Введите корректный адрес электронной почты",
         phoneRequired: "Телефон обязателен для заполнения",
-        phoneMatch:
-          "Введите корректный номер телефона (от 7 до 15 цифр)",
+        phoneMatch: "Введите корректный номер телефона (от 7 до 15 цифр)",
         orgRequired: "Название компании / ВУЗа / ДХ обязательно для заполнения",
         orgMin: "Минимальная длина — 2 символа",
         orgMax: "Максимальная длина — 150 символов",
@@ -125,18 +125,15 @@ export const translations = {
       subtitle:
         "При поддержке ведущих государственных и международных структур",
       items: [
-        "Правительство Республики Таджикистан",
-        "Министерство сельского хозяйства РТ",
+        "Министерство сельского хозяйства Республики Таджикистан",
         "ГУП «Центр цифровизации АПК»",
         "KOICA",
         "ВПП ООН (WFP)",
-        "ФАО ООН (FAO)",
-        "Всемирный Банк",
       ],
     },
     footer: {
       text: "Digital AgroExpo Tajikistan-2026 — Трансформация сельского хозяйства через технологии.",
-      location: "г. Душанбе, здание Hyatt Regency, Республика Таджикистан",
+      location: "ш. Душанбе, бинои Hyatt Regency",
       copyright: "© 2026 Digital AgroExpo Tajikistan. Все права защищены.",
     },
   },
@@ -148,7 +145,8 @@ export const translations = {
       registerBtn: "Барӯйхатгирӣ",
     },
     hero: {
-      badge: "Вазорати кишоварзии Ҷумҳурии Тоҷикистон • БОҶ СММ (WFP)",
+      badge:
+        "ВАЗОРАТИ КИШОВАРЗИИ ҶУМҲУРИИ ТОҶИКИСТОН \n КВД 'Маркази рақамикунонӣ, инноватсия ва \n такмили ихтисоси кадрҳои соҳаи кишоварзӣ' \n Агентии Корея оид ба ҳамкориҳои байналмилалӣ (KOICA) \n Барномаи озуқавории ҷаҳонӣ СММ (WFP)",
       title: "Digital AgroExpo Tajikistan-2026",
       subtitle:
         "Конфронс ва намоишгоҳ бо мақсади мубодилаи таҷриба, таъсиси экосистемаи ягонаи рақамӣ ва муттаҳидсозии шарикон барои табдилдиҳии устувори системаҳои агроозуқаворӣ ва ҷалби сармоя баргузор мегардад.",
@@ -191,6 +189,7 @@ export const translations = {
         region: "Минтақа / Кишвар",
         category: "Категорияи иштирокчӣ",
         format: "Формати иштирок",
+        consentLabel: "Ман ба коркарди маълумоти шахсӣ розигӣ медиҳам",
         selectPlaceholder: "-- Аз рӯйхат интихоб кунед --",
       },
       placeholders: {
@@ -246,8 +245,7 @@ export const translations = {
         emailRequired: "Email ҳатмист",
         emailInvalid: "Суроғаи дурусти почтаи электрониро ворид кунед",
         phoneRequired: "Рақами телефон ҳатмист",
-        phoneMatch:
-          "Рақами телефони дурустро ворид кунед (аз 7 то 15 рақам)",
+        phoneMatch: "Рақами телефони дурустро ворид кунед (аз 7 то 15 рақам)",
         orgRequired: "Номи ширкат / ДДҲ / ХД ҳатмист",
         orgMin: "Дарозии ҳадди ақал — 2 аломат",
         orgMax: "Дарозии ҳадди аксар — 150 аломат",
@@ -269,8 +267,6 @@ export const translations = {
         "КАТ «Маркази рақамикунонии КҲ»",
         "KOICA",
         "БҶҲ ООН (WFP)",
-        "ФАО ООН (FAO)",
-        "Бонки Ҷаҳонӣ",
       ],
     },
     footer: {
@@ -289,7 +285,7 @@ export const translations = {
     },
     hero: {
       badge:
-        "Ministry of Agriculture of the Republic of Tajikistan • UN WFP",
+        "MINISTRY OF AGRICULTURE OF THE REPUBLIC OF TAJIKISTAN \n SUE 'Center for Digitalization, Innovation and \n Capacity building of Agricultural Employees' \n Korea International Cooperation Agency (KOICA) \n UN World Food Programme (WFP)",
       title: "Digital AgroExpo Tajikistan-2026",
       subtitle:
         "The conference and exhibition are held to exchange experience, create a unified digital ecosystem, and unite partners for the sustainable transformation of agrifood systems and investment attraction.",
@@ -332,6 +328,7 @@ export const translations = {
         region: "Region / Country",
         category: "Participant Category",
         format: "Participation Format",
+        consentLabel: "I consent to the processing of personal data",
         selectPlaceholder: "-- Select from list --",
       },
       placeholders: {
@@ -387,8 +384,7 @@ export const translations = {
         emailRequired: "Email is required",
         emailInvalid: "Enter a valid email address",
         phoneRequired: "Phone number is required",
-        phoneMatch:
-          "Enter a valid phone number (7 to 15 digits)",
+        phoneMatch: "Enter a valid phone number (7 to 15 digits)",
         orgRequired: "Organization name is required",
         orgMin: "Minimum length is 2 characters",
         orgMax: "Maximum length is 150 characters",
@@ -405,18 +401,15 @@ export const translations = {
       title: "Organizers & Partners",
       subtitle: "Supported by leading government and international entities",
       items: [
-        "Government of the Republic of Tajikistan",
-        "Ministry of Agriculture of RT",
+        "Ministry of Agriculture of the Republic of Tajikistan",
         "SUE 'Agro Digitalization Center'",
         "KOICA",
         "UN WFP",
-        "UN FAO",
-        "World Bank",
       ],
     },
     footer: {
       text: "Digital AgroExpo Tajikistan-2026 — Agriculture transformation through technology.",
-      location: "Dushanbe, Hyatt Regency building, Republic of Tajikistan",
+      location: "Dushanbe, Hyatt Regency building",
       copyright: "© 2026 Digital AgroExpo Tajikistan. All rights reserved.",
     },
   },
