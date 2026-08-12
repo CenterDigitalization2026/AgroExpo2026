@@ -2,62 +2,11 @@ import React, { useState, useMemo } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useLanguage } from "./i18n/LanguageContext";
-import emailjs from "@emailjs/browser";
 import "./RegistrationForm.css";
 
-const GOOGLE_FORM_ACTION_URL =
-  "https://docs.google.com/forms/d/e/1FAIpQLSfuM_HCt97JAN1tg-JuvSoGN4w9DtlXydSKFcJ1Qx7_Hm-T1g/formResponse";
-
-// Конфигурация EmailJS для авто-отправки подтверждающего письма на email
-const EMAILJS_SERVICE_ID = "service_1ctngd8";
-const EMAILJS_TEMPLATE_ID = "template_67a2psq";
-const EMAILJS_PUBLIC_KEY = "O5XmaJPSPgFBquV79pW5r";
-
-const sendEmailNotification = async (sanitized) => {
-  if (
-    !EMAILJS_SERVICE_ID ||
-    EMAILJS_SERVICE_ID === "YOUR_SERVICE_ID" ||
-    !EMAILJS_PUBLIC_KEY ||
-    EMAILJS_PUBLIC_KEY === "YOUR_PUBLIC_KEY"
-  ) {
-    console.info(
-      "EmailJS не настроен (укажите SERVICE_ID, TEMPLATE_ID и PUBLIC_KEY в RegistrationForm.jsx)",
-    );
-    return;
-  }
-
-  try {
-    const response = await emailjs.send(
-      EMAILJS_SERVICE_ID,
-      EMAILJS_TEMPLATE_ID,
-      {
-        to_name: sanitized.fullName,
-        to_email: sanitized.email,
-        phone: sanitized.phone,
-        organization: sanitized.organization,
-        position: sanitized.position,
-        region: sanitized.region,
-        category: sanitized.category,
-        format: sanitized.format,
-      },
-      EMAILJS_PUBLIC_KEY
-    );
-    console.log("EmailJS SUCCESS!", response.status, response.text);
-  } catch (err) {
-    console.error("Ошибка отправки письма через EmailJS:", err);
-  }
-};
-
-const ENTRY_MAP = {
-  fullName: "entry.1118557367",
-  email: "entry.1520353905",
-  phone: "entry.993995540",
-  organization: "entry.1316552799",
-  position: "entry.413589800",
-  region: "entry.768601955",
-  category: "entry.820850013",
-  format: "entry.1009362225",
-};
+// Google Apps Script Web App REST API URL
+const GOOGLE_APPS_SCRIPT_URL =
+  "https://script.google.com/macros/s/AKfycbyMW3dZEMsQNns1eCm3u8YtERvkf45JTijTLLd9hE2rEAmhhGGRQB9HAPyDtxYKr9VAJw/exec";
 
 export const REGION_OPTIONS = [
   "г. Душанбе",
@@ -88,7 +37,7 @@ export const FORMAT_OPTIONS = [
 ];
 
 const FIO_REGEX = /^[a-zA-Zа-яА-ЯёЁҒғӢӣҚқӮӯҲҳҶҷ\s-]+$/;
-const TAJIKISTAN_PHONE_REGEX = /^\+992\d{9}$/;
+const PHONE_REGEX = /^\+?\d{7,15}$/;
 
 export const sanitizeValues = (values) => {
   let cleanedPhone = (values.phone || "").trim().replace(/[^\d+]/g, "");
@@ -96,6 +45,8 @@ export const sanitizeValues = (values) => {
     cleanedPhone = "+" + cleanedPhone;
   } else if (/^\d{9}$/.test(cleanedPhone)) {
     cleanedPhone = "+992" + cleanedPhone;
+  } else if (cleanedPhone.length > 0 && !cleanedPhone.startsWith("+")) {
+    cleanedPhone = "+" + cleanedPhone;
   }
 
   return {
@@ -129,7 +80,7 @@ export const RegistrationForm = () => {
         .email(val.emailInvalid),
       phone: Yup.string()
         .required(val.phoneRequired)
-        .matches(TAJIKISTAN_PHONE_REGEX, val.phoneMatch),
+        .matches(PHONE_REGEX, val.phoneMatch),
       organization: Yup.string()
         .trim()
         .required(val.orgRequired)
@@ -167,28 +118,35 @@ export const RegistrationForm = () => {
       const sanitized = sanitizeValues(rawValues);
 
       try {
-        const formBody = new URLSearchParams();
-        Object.keys(ENTRY_MAP).forEach((key) => {
-          formBody.append(ENTRY_MAP[key], sanitized[key] || "");
-        });
+        if (
+          !GOOGLE_APPS_SCRIPT_URL ||
+          GOOGLE_APPS_SCRIPT_URL.includes("УКАЖИТЕ_ВАШ_WEB_APP_URL")
+        ) {
+          console.warn(
+            "Google Apps Script Web App URL не установлен в RegistrationForm.jsx",
+          );
+        }
 
-        // Единая одиночная отправка в Google Forms
-        await fetch(GOOGLE_FORM_ACTION_URL, {
+        const response = await fetch(GOOGLE_APPS_SCRIPT_URL, {
           method: "POST",
-          mode: "no-cors",
           headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
+            "Content-Type": "text/plain;charset=utf-8",
           },
-          body: formBody.toString(),
+          body: JSON.stringify(sanitized),
         });
 
-        // Авто-отправка письма на Email участника через EmailJS
-        await sendEmailNotification(sanitized);
+        const result = await response.json();
 
-        setIsSubmitted(true);
-        resetForm();
+        if (result && result.status === "success") {
+          setIsSubmitted(true);
+          resetForm();
+        } else {
+          throw new Error(
+            (result && result.message) || "Ошибка записи на сервере",
+          );
+        }
       } catch (error) {
-        console.error("Ошибка отправки формы:", error);
+        console.error("Ошибка при отправке формы:", error);
         alert(t.registration.messages.errorDesc);
       } finally {
         setIsSubmitting(false);

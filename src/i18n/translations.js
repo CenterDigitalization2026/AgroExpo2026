@@ -107,7 +107,7 @@ export const translations = {
         emailInvalid: "Введите корректный адрес электронной почты",
         phoneRequired: "Телефон обязателен для заполнения",
         phoneMatch:
-          "Введите корректный номер Таджикистана в формате +992XXXXXXXXX",
+          "Введите корректный номер телефона (от 7 до 15 цифр)",
         orgRequired: "Название компании / ВУЗа / ДХ обязательно для заполнения",
         orgMin: "Минимальная длина — 2 символа",
         orgMax: "Максимальная длина — 150 символов",
@@ -247,7 +247,7 @@ export const translations = {
         emailInvalid: "Суроғаи дурусти почтаи электрониро ворид кунед",
         phoneRequired: "Рақами телефон ҳатмист",
         phoneMatch:
-          "Рақами дурусти Тоҷикистонро дар формати +992XXXXXXXXX ворид кунед",
+          "Рақами телефони дурустро ворид кунед (аз 7 то 15 рақам)",
         orgRequired: "Номи ширкат / ДДҲ / ХД ҳатмист",
         orgMin: "Дарозии ҳадди ақал — 2 аломат",
         orgMax: "Дарозии ҳадди аксар — 150 аломат",
@@ -388,7 +388,7 @@ export const translations = {
         emailInvalid: "Enter a valid email address",
         phoneRequired: "Phone number is required",
         phoneMatch:
-          "Enter a valid Tajikistan phone number in format +992XXXXXXXXX",
+          "Enter a valid phone number (7 to 15 digits)",
         orgRequired: "Organization name is required",
         orgMin: "Minimum length is 2 characters",
         orgMax: "Maximum length is 150 characters",
