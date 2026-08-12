@@ -107,21 +107,45 @@ body {
 }
 
 .btn-nav {
-  padding: 10px 22px;
-  background-color: var(--accent-green);
+  position: relative;
+  overflow: hidden;
+  padding: 11px 26px;
+  background: linear-gradient(135deg, #52b788 0%, #2d6a4f 100%);
   color: var(--white);
-  border: none;
-  border-radius: 8px;
-  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.3px;
   cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  box-shadow: 0 4px 12px rgba(45, 106, 79, 0.25);
+  transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 6px 20px rgba(45, 106, 79, 0.4);
+}
+
+.btn-nav::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -100%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.35),
+    transparent
+  );
+  transform: rotate(25deg);
+  animation: heroBtnShimmer 4s infinite;
 }
 
 .btn-nav:hover {
-  background-color: var(--primary-green);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(27, 67, 50, 0.35);
+  background: linear-gradient(135deg, #74c69d 0%, #1b4332 100%);
+  transform: translateY(-3px) scale(1.03);
+  box-shadow:
+    0 12px 30px rgba(82, 183, 136, 0.55),
+    0 0 18px rgba(116, 198, 157, 0.3);
+  border-color: rgba(255, 255, 255, 0.6);
 }
 
 /* Hero Section - Animated & Redesigned */
@@ -146,6 +170,54 @@ body {
   text-align: center;
   overflow: hidden;
   box-shadow: inset 0 -20px 30px rgba(0, 0, 0, 0.15);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -10%;
+  left: 10%;
+  width: 320px;
+  height: 320px;
+  background: rgba(116, 198, 157, 0.22);
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 1;
+  animation: ambientFloat1 9s ease-in-out infinite alternate;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: -10%;
+  right: 10%;
+  width: 380px;
+  height: 380px;
+  background: rgba(82, 183, 136, 0.2);
+  border-radius: 50%;
+  filter: blur(90px);
+  pointer-events: none;
+  z-index: 1;
+  animation: ambientFloat2 11s ease-in-out infinite alternate;
+}
+
+@keyframes ambientFloat1 {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    transform: translate(45px, 35px) scale(1.18);
+  }
+}
+
+@keyframes ambientFloat2 {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    transform: translate(-35px, -45px) scale(1.22);
+  }
 }
 
 .footer-logo-wrap {
@@ -328,12 +400,12 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 16px 42px;
+  padding: 16px 48px;
   background: linear-gradient(135deg, #52b788 0%, #2d6a4f 100%);
   color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 30px;
-  font-size: 17px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50px;
+  font-size: 18px;
   font-weight: 700;
   cursor: pointer;
   letter-spacing: 0.3px;
@@ -372,7 +444,10 @@ body {
 .btn-hero:hover {
   transform: translateY(-5px) scale(1.03);
   background: linear-gradient(135deg, #74c69d 0%, #1b4332 100%);
-  box-shadow: 0 16px 40px rgba(82, 183, 136, 0.65);
+  box-shadow:
+    0 16px 40px rgba(82, 183, 136, 0.65),
+    0 0 24px rgba(116, 198, 157, 0.4);
+  border-color: rgba(255, 255, 255, 0.65);
 }
 
 /* About Section */
@@ -397,101 +472,144 @@ body {
 }
 
 /* Directions 3D Carousel Section */
-.directions-carousel-wrapper {
+/* 3D Coverflow Curved Carousel Section */
+.directions-coverflow-container {
   position: relative;
   width: 100%;
-  max-width: 1280px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 10px 44px 35px;
-}
-
-.directions-carousel-track {
-  display: flex;
-  gap: 24px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  padding: 25px 15px 35px;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  align-items: stretch;
-}
-
-.directions-carousel-track::-webkit-scrollbar {
-  display: none;
-}
-
-.direction-card {
-  flex: 0 0 310px;
-  background: var(--white);
-  border-radius: 20px;
-  padding: 16px;
-  border: 1px solid rgba(27, 67, 50, 0.1);
-  box-shadow:
-    0 12px 35px rgba(0, 0, 0, 0.07),
-    0 4px 10px rgba(0, 0, 0, 0.03);
-  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-  cursor: pointer;
-  position: relative;
-  user-select: none;
-  display: flex;
-  flex-direction: column;
-}
-
-.direction-card:hover {
-  transform: translateY(-8px) scale(1.03);
-  box-shadow:
-    0 24px 50px rgba(27, 67, 50, 0.16),
-    0 8px 18px rgba(0, 0, 0, 0.06);
-  border-color: rgba(45, 106, 79, 0.4);
-}
-
-.direction-card.active {
-  transform: scale(1.03) translateY(-4px);
-  box-shadow: 0 20px 45px rgba(27, 67, 50, 0.18);
-  border-color: rgba(45, 106, 79, 0.5);
-}
-
-.direction-card-img-wrap {
-  position: relative;
-  width: 100%;
-  height: 185px;
-  border-radius: 14px;
+  padding: 30px 48px 50px;
+  perspective: 1200px;
+  perspective-origin: 50% 50%;
   overflow: hidden;
-  margin-bottom: 14px;
-  background: #f1f5f9;
 }
 
-.direction-card-img {
+.directions-coverflow-track {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 420px;
+  position: relative;
+  transform-style: preserve-3d;
+  padding: 20px 0;
+}
+
+.coverflow-card {
+  position: relative;
+  width: 310px;
+  height: 380px;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  background: #112a1e;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  user-select: none;
+  margin: 0 -35px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  flex-shrink: 0;
+}
+
+.coverflow-card-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.4s ease;
+  transition: transform 0.5s ease;
 }
 
-.direction-card:hover .direction-card-img {
-  transform: scale(1.07);
+.coverflow-card:hover .coverflow-card-img {
+  transform: scale(1.08);
 }
 
-.direction-icon-badge {
+.coverflow-card-overlay {
   position: absolute;
-  bottom: 12px;
-  left: 12px;
-  width: 42px;
-  height: 42px;
-  background: #ffffff;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(10, 30, 20, 0.95) 0%,
+    rgba(15, 45, 30, 0.75) 45%,
+    rgba(0, 0, 0, 0.15) 100%
+  );
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: #ffffff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  text-align: left;
+}
+
+.coverflow-icon-badge {
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(12px);
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 22px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
-  border: 1px solid rgba(255, 255, 255, 0.9);
+  margin-bottom: 12px;
   transition: transform 0.3s ease;
-  z-index: 2;
 }
 
-.direction-card:hover .direction-icon-badge {
+.coverflow-card:hover .coverflow-icon-badge {
   transform: scale(1.15) rotate(6deg);
+}
+
+.coverflow-card-overlay h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #ffffff;
+  letter-spacing: -0.3px;
+}
+
+.coverflow-card-overlay p {
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: #d8f3dc;
+  opacity: 0.92;
+}
+
+/* 3D Curved Arc Transformations */
+.coverflow-card.coverflow-center {
+  transform: scale(1.06) rotateY(0deg) translateZ(60px);
+  z-index: 10;
+  opacity: 1;
+  border-color: rgba(116, 198, 157, 0.8);
+  box-shadow:
+    0 25px 55px rgba(0, 0, 0, 0.45),
+    0 0 35px rgba(82, 183, 136, 0.45);
+}
+
+.coverflow-card.coverflow-left-1 {
+  transform: translateX(-40px) rotateY(24deg) translateZ(-40px) scale(0.88);
+  z-index: 5;
+  opacity: 0.88;
+  filter: brightness(0.85);
+}
+
+.coverflow-card.coverflow-right-1 {
+  transform: translateX(40px) rotateY(-24deg) translateZ(-40px) scale(0.88);
+  z-index: 5;
+  opacity: 0.88;
+  filter: brightness(0.85);
+}
+
+.coverflow-card.coverflow-left-far {
+  transform: translateX(-80px) rotateY(38deg) translateZ(-110px) scale(0.76);
+  z-index: 2;
+  opacity: 0.6;
+  filter: brightness(0.7);
+}
+
+.coverflow-card.coverflow-right-far {
+  transform: translateX(80px) rotateY(-38deg) translateZ(-110px) scale(0.76);
+  z-index: 2;
+  opacity: 0.6;
+  filter: brightness(0.7);
 }
 
 .direction-card-body {

@@ -37,44 +37,61 @@ const LandingPage = () => {
   const { t } = useLanguage();
   const carouselRef = React.useRef(null);
   const [isHovered, setIsHovered] = React.useState(false);
+  const [userInteracted, setUserInteracted] = React.useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
+  const userTimerRef = React.useRef(null);
 
   const closeMobileMenu = () => setMobileMenuOpen(false);
 
   React.useEffect(() => {
-    if (isHovered) return;
+    if (isHovered || userInteracted) return;
 
-    const interval = setInterval(() => {
+    let animFrameId;
+    const step = () => {
       if (carouselRef.current) {
         const { scrollLeft, scrollWidth, clientWidth } = carouselRef.current;
-        if (scrollLeft + clientWidth >= scrollWidth - 10) {
+        if (scrollLeft + clientWidth >= scrollWidth - 2) {
           carouselRef.current.scrollLeft = 0;
         } else {
-          carouselRef.current.scrollBy({ left: 1, behavior: "auto" });
+          carouselRef.current.scrollLeft += 0.8;
         }
       }
-    }, 25);
+      animFrameId = requestAnimationFrame(step);
+    };
 
-    return () => clearInterval(interval);
-  }, [isHovered]);
+    animFrameId = requestAnimationFrame(step);
+
+    return () => {
+      if (animFrameId) cancelAnimationFrame(animFrameId);
+    };
+  }, [isHovered, userInteracted]);
 
   const dirCarouselRef = React.useRef(null);
-  const [activeDirIndex, setActiveDirIndex] = React.useState(2);
+  const [activeDirIndex, setActiveDirIndex] = React.useState(1);
 
   const scrollCarousel = (direction) => {
+    setUserInteracted(true);
+    if (userTimerRef.current) clearTimeout(userTimerRef.current);
+
     if (carouselRef.current) {
-      const scrollAmount = direction === "left" ? -280 : 280;
+      const scrollAmount = direction === "left" ? -300 : 300;
       carouselRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
     }
+
+    userTimerRef.current = setTimeout(() => {
+      setUserInteracted(false);
+    }, 3500);
   };
 
   const scrollDirections = (direction) => {
-    if (dirCarouselRef.current) {
-      const scrollAmount = direction === "left" ? -330 : 330;
-      dirCarouselRef.current.scrollBy({
-        left: scrollAmount,
-        behavior: "smooth",
-      });
+    if (direction === "left") {
+      setActiveDirIndex((prev) =>
+        prev > 0 ? prev - 1 : DIRECTION_ITEMS.length - 1,
+      );
+    } else {
+      setActiveDirIndex((prev) =>
+        prev < DIRECTION_ITEMS.length - 1 ? prev + 1 : 0,
+      );
     }
   };
 
@@ -232,7 +249,7 @@ const LandingPage = () => {
           <p>{t.directions.subtitle}</p>
         </div>
 
-        <div className="directions-carousel-wrapper">
+        <div className="directions-coverflow-container">
           <button
             type="button"
             className="carousel-arrow arrow-left"
@@ -242,37 +259,31 @@ const LandingPage = () => {
             ‹
           </button>
 
-          <div
-            className="directions-carousel-track"
-            ref={dirCarouselRef}
-            onScroll={handleDirScroll}
-          >
+          <div className="directions-coverflow-track">
             {DIRECTION_ITEMS.map((item, idx) => {
               const dirData = t.directions[item.key] || {};
-              const isCenter = idx === activeDirIndex;
+              const offset = idx - activeDirIndex;
+              let cardClass = "coverflow-card";
+
+              if (offset === 0) cardClass += " coverflow-center";
+              else if (offset === -1) cardClass += " coverflow-left-1";
+              else if (offset === 1) cardClass += " coverflow-right-1";
+              else if (offset < -1) cardClass += " coverflow-left-far";
+              else if (offset > 1) cardClass += " coverflow-right-far";
 
               return (
                 <div
                   key={item.key}
-                  className={`direction-card ${isCenter ? "active" : ""}`}
-                  onClick={() => {
-                    if (dirCarouselRef.current) {
-                      dirCarouselRef.current.scrollTo({
-                        left: idx * 320,
-                        behavior: "smooth",
-                      });
-                    }
-                  }}
+                  className={cardClass}
+                  onClick={() => setActiveDirIndex(idx)}
                 >
-                  <div className="direction-card-img-wrap">
-                    <img
-                      src={item.img}
-                      alt={dirData.title}
-                      className="direction-card-img"
-                    />
-                    <div className="direction-icon-badge">{item.icon}</div>
-                  </div>
-                  <div className="direction-card-body">
+                  <img
+                    src={item.img}
+                    alt={dirData.title}
+                    className="coverflow-card-img"
+                  />
+                  <div className="coverflow-card-overlay">
+                    <div className="coverflow-icon-badge">{item.icon}</div>
                     <h3>{dirData.title}</h3>
                     <p>{dirData.desc}</p>
                   </div>
@@ -296,14 +307,7 @@ const LandingPage = () => {
               <span
                 key={idx}
                 className={`dot ${idx === activeDirIndex ? "active" : ""}`}
-                onClick={() => {
-                  if (dirCarouselRef.current) {
-                    dirCarouselRef.current.scrollTo({
-                      left: idx * 320,
-                      behavior: "smooth",
-                    });
-                  }
-                }}
+                onClick={() => setActiveDirIndex(idx)}
               />
             ))}
           </div>
@@ -341,7 +345,10 @@ const LandingPage = () => {
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
-            {t.partners.items.concat(t.partners.items).map((partner, idx) => {
+            {t.partners.items
+              .concat(t.partners.items)
+              .concat(t.partners.items)
+              .map((partner, idx) => {
               const originalIdx = idx % t.partners.items.length;
               const isObj = typeof partner === "object" && partner !== null;
               const name = isObj ? partner.name : partner;
