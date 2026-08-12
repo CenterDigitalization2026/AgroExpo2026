@@ -287,74 +287,31 @@ const LandingPage = () => {
       </section>
 
       <section className="section partners-section" id="partners">
-        <div className="section-title">
-          <h2>{t.partners.title}</h2>
-          <p>{t.partners.subtitle}</p>
-        </div>
-
-        <div className="partners-carousel-wrapper">
-          <button
-            type="button"
-            className="carousel-arrow arrow-left"
-            onClick={() => scrollCarousel("left")}
-            aria-label="Previous partners"
-          >
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M15 18l-6-6 6-6" />
-            </svg>
-          </button>
-
-          <div
-            className="partners-carousel-track"
-            ref={carouselRef}
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-          >
-            {t.partners.items
-              .concat(t.partners.items)
-              .concat(t.partners.items)
-              .map((partner, idx) => {
-                const originalIdx = idx % t.partners.items.length;
-                const isObj = typeof partner === "object" && partner !== null;
-                const name = isObj ? partner.name : partner;
-                const logo = isObj
-                  ? partner.logo
-                  : PARTNER_LOGOS[originalIdx] || null;
-
-                return (
-                  <div key={idx} className="partner-card" title={name}>
-                    {logo ? (
-                      <img src={logo} alt={name} className="partner-logo-img" />
-                    ) : (
-                      <span className="partner-name">{name}</span>
-                    )}
-                  </div>
-                );
-              })}
+        <div className="partners-strip-container">
+          <div className="partners-strip-header">
+            <h3>{t.partners.title}</h3>
+            <span className="partners-strip-subtitle">
+              {t.partners.subtitle}
+            </span>
           </div>
 
-          <button
-            type="button"
-            className="carousel-arrow arrow-right"
-            onClick={() => scrollCarousel("right")}
-            aria-label="Next partners"
-          >
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M9 18l6-6-6-6" />
-            </svg>
-          </button>
+          <div className="partners-logos-strip">
+            {t.partners.items.map((partner, idx) => {
+              const isObj = typeof partner === "object" && partner !== null;
+              const name = isObj ? partner.name : partner;
+              const logo = isObj ? partner.logo : PARTNER_LOGOS[idx] || null;
+
+              return (
+                <div key={idx} className="partner-strip-item" title={name}>
+                  {logo ? (
+                    <img src={logo} alt={name} className="partner-strip-logo" />
+                  ) : (
+                    <span className="partner-strip-name">{name}</span>
+                  )}
+                </div>
+              );
+            })}
+          </div>
         </div>
       </section>
 
