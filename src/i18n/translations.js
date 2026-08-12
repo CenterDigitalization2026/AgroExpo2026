@@ -13,7 +13,7 @@ export const translations = {
       subtitle:
         "Конференция и выставка проводятся с целью обмена опытом, создания единой цифровой экосистемы и объединения партнеров для устойчивой трансформации агропродовольственных систем и привлечения инвестиций.",
       location: "📍 ш. Душанбе, бинои Hyatt Regency",
-      date: "📅 Декабрь 2026",
+      date: "📅 3 декабря 2026",
       format: "🤝 B2B & Форум",
       cta: "Принять участие в AgroExpo",
     },
@@ -151,7 +151,7 @@ export const translations = {
       subtitle:
         "Конфронс ва намоишгоҳ бо мақсади мубодилаи таҷриба, таъсиси экосистемаи ягонаи рақамӣ ва муттаҳидсозии шарикон барои табдилдиҳии устувори системаҳои агроозуқаворӣ ва ҷалби сармоя баргузор мегардад.",
       location: "📍 ш. Душанбе, бинои Hyatt Regency",
-      date: "📅 Декабр 2026",
+      date: "📅 3 декабри 2026",
       format: "🤝 B2B ва Форум",
       cta: "Иштирок дар AgroExpo",
     },
@@ -290,7 +290,7 @@ export const translations = {
       subtitle:
         "The conference and exhibition are held to exchange experience, create a unified digital ecosystem, and unite partners for the sustainable transformation of agrifood systems and investment attraction.",
       location: "📍 Dushanbe, Hyatt Regency building",
-      date: "📅 December 2026",
+      date: "📅 3 December 2026",
       format: "🤝 B2B & Forum",
       cta: "Join AgroExpo",
     },
