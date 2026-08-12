@@ -64,6 +64,7 @@ export const translations = {
       buttons: {
         submit: "Зарегистрироваться на AgroExpo-2026",
         submitting: "Отправка...",
+        newRegistration: "Подать ещё одну заявку",
       },
       messages: {
         successTitle: "Заявка успешно отправлена!",
@@ -208,6 +209,7 @@ export const translations = {
       buttons: {
         submit: "Барӯйхатгирӣ дар AgroExpo-2026",
         submitting: "Фиристодан...",
+        newRegistration: "Фиристодани дархости нав",
       },
       messages: {
         successTitle: "Дархост бо муваффақият фиристода шуд!",
@@ -353,6 +355,7 @@ export const translations = {
       buttons: {
         submit: "Register for AgroExpo-2026",
         submitting: "Submitting...",
+        newRegistration: "Submit another application",
       },
       messages: {
         successTitle: "Application submitted successfully!",

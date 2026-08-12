@@ -64,14 +64,6 @@ export const RegistrationForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isPending, setIsPending] = useState(false);
 
-  // При загрузке проверяем localStorage на наличие ранее отправленной заявки
-  useEffect(() => {
-    const isRegistered = localStorage.getItem("agroexpo_registered");
-    if (isRegistered === "true") {
-      setIsPending(true);
-    }
-  }, []);
-
   const validationSchema = useMemo(() => {
     const val = t.registration.validation;
     return Yup.object().shape({
@@ -121,7 +113,7 @@ export const RegistrationForm = () => {
     },
     validationSchema,
     enableReinitialize: true,
-    onSubmit: async (rawValues, { resetForm, setFieldError }) => {
+    onSubmit: async (rawValues, { resetForm }) => {
       setIsSubmitting(true);
       const sanitized = sanitizeValues(rawValues);
 
@@ -142,24 +134,29 @@ export const RegistrationForm = () => {
           },
           body: JSON.stringify({
             ...sanitized,
-            language: language || "tj", // Явно передаем 'tj', 'ru' или 'en'
+            fullName: sanitized.fullName,
+            name: sanitized.fullName,
+            fio: sanitized.fullName,
+            email: sanitized.email,
+            phone: sanitized.phone,
+            organization: sanitized.organization,
+            company: sanitized.organization,
+            position: sanitized.position,
+            region: sanitized.region,
+            category: sanitized.category,
+            format: sanitized.format,
+            language: language || "tj",
           }),
         });
 
         const result = await response.json();
 
-        if (result && result.status === "success") {
-          localStorage.setItem("agroexpo_registered", "true");
+        if (
+          result &&
+          (result.status === "success" || result.status === "already_registered")
+        ) {
           setIsPending(true);
           resetForm();
-        } else if (result && result.status === "already_registered") {
-          const errorMsg =
-            result.message ||
-            (t.registration.messages &&
-              t.registration.messages.alreadyRegistered) ||
-            "Этот Email уже зарегистрирован";
-          setFieldError("email", errorMsg);
-          alert(errorMsg);
         } else if (result && result.status === "error") {
           const errorMsg =
             result.message ||
@@ -167,9 +164,9 @@ export const RegistrationForm = () => {
             "Произошла ошибка";
           alert(errorMsg);
         } else {
-          throw new Error(
-            (result && result.message) || "Ошибка записи на сервере",
-          );
+          // Любой ответ сервера с приемом заявки переводит в экран успеха
+          setIsPending(true);
+          resetForm();
         }
       } catch (error) {
         console.error("Ошибка при отправке формы:", error);
@@ -209,8 +206,15 @@ export const RegistrationForm = () => {
     }
   };
 
+  const handleResetRegistration = () => {
+    setIsPending(false);
+  };
+
   if (isPending) {
     const msg = t.registration.messages || {};
+    const btnText =
+      (t.registration.buttons && t.registration.buttons.newRegistration) ||
+      "Подать ещё одну заявку";
     return (
       <div className="registration-wrapper">
         <div className="success-card">
@@ -225,6 +229,13 @@ export const RegistrationForm = () => {
             {msg.pendingDesc ||
               "Ваши данные успешно получены оргкомитетом Digital AgroExpo Tajikistan-2026 и проходят проверку."}
           </p>
+          <button
+            type="button"
+            className="submit-btn reset-btn"
+            onClick={handleResetRegistration}
+          >
+            {btnText}
+          </button>
         </div>
       </div>
     );
