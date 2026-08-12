@@ -60,7 +60,7 @@ export const sanitizeValues = (values) => {
 };
 
 export const RegistrationForm = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -132,7 +132,10 @@ export const RegistrationForm = () => {
           headers: {
             "Content-Type": "text/plain;charset=utf-8",
           },
-          body: JSON.stringify(sanitized),
+          body: JSON.stringify({
+            ...sanitized,
+            language: language || t.language || "ru",
+          }),
         });
 
         const result = await response.json();
