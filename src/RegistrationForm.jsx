@@ -134,7 +134,7 @@ export const RegistrationForm = () => {
           },
           body: JSON.stringify({
             ...sanitized,
-            language: language || t.language || "ru",
+            language: language || "tj", // Явно передаем 'tj', 'ru' или 'en'
           }),
         });
 
