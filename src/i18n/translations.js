@@ -132,6 +132,7 @@ export const translations = {
       subtitle:
         "При поддержке ведущих государственных и международных структур",
       items: [
+        "Правительство Республики Таджикистан",
         "Министерство сельского хозяйства Республики Таджикистан",
         "ГУП «Центр цифровизации АПК»",
         "KOICA",
@@ -422,6 +423,7 @@ export const translations = {
       title: "Organizers & Partners",
       subtitle: "Supported by leading government and international entities",
       items: [
+        "Government of the Republic of Tajikistan",
         "Ministry of Agriculture of the Republic of Tajikistan",
         "SUE 'Agro Digitalization Center'",
         "KOICA",
