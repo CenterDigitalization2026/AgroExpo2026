@@ -249,67 +249,27 @@ const LandingPage = () => {
           <p>{t.directions.subtitle}</p>
         </div>
 
-        <div className="directions-coverflow-container">
-          <button
-            type="button"
-            className="carousel-arrow arrow-left"
-            onClick={() => scrollDirections("left")}
-            aria-label="Previous direction"
-          >
-            ‹
-          </button>
-
-          <div className="directions-coverflow-track">
+        <div className="directions-panorama-container">
+          <div className="directions-panorama-grid">
             {DIRECTION_ITEMS.map((item, idx) => {
               const dirData = t.directions[item.key] || {};
-              const offset = idx - activeDirIndex;
-              let cardClass = "coverflow-card";
-
-              if (offset === 0) cardClass += " coverflow-center";
-              else if (offset === -1) cardClass += " coverflow-left-1";
-              else if (offset === 1) cardClass += " coverflow-right-1";
-              else if (offset < -1) cardClass += " coverflow-left-far";
-              else if (offset > 1) cardClass += " coverflow-right-far";
-
               return (
-                <div
-                  key={item.key}
-                  className={cardClass}
-                  onClick={() => setActiveDirIndex(idx)}
-                >
-                  <img
-                    src={item.img}
-                    alt={dirData.title}
-                    className="coverflow-card-img"
-                  />
-                  <div className="coverflow-card-overlay">
-                    <div className="coverflow-icon-badge">{item.icon}</div>
-                    <h3>{dirData.title}</h3>
-                    <p>{dirData.desc}</p>
+                <div key={item.key} className={`panorama-card-wrapper wrapper-pos-${idx}`}>
+                  <div className="panorama-card">
+                    <img
+                      src={item.img}
+                      alt={dirData.title}
+                      className="panorama-card-img"
+                    />
+                    <div className="panorama-card-overlay">
+                      <div className="panorama-icon-badge">{item.icon}</div>
+                      <h3>{dirData.title}</h3>
+                      <p>{dirData.desc}</p>
+                    </div>
                   </div>
                 </div>
               );
             })}
-          </div>
-
-          <button
-            type="button"
-            className="carousel-arrow arrow-right"
-            onClick={() => scrollDirections("right")}
-            aria-label="Next direction"
-          >
-            ›
-          </button>
-
-          {/* Pagination Dots */}
-          <div className="carousel-dots">
-            {DIRECTION_ITEMS.map((_, idx) => (
-              <span
-                key={idx}
-                className={`dot ${idx === activeDirIndex ? "active" : ""}`}
-                onClick={() => setActiveDirIndex(idx)}
-              />
-            ))}
           </div>
         </div>
       </section>
@@ -336,7 +296,15 @@ const LandingPage = () => {
             onClick={() => scrollCarousel("left")}
             aria-label="Previous partners"
           >
-            ‹
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M15 18l-6-6 6-6" />
+            </svg>
           </button>
 
           <div
@@ -374,7 +342,15 @@ const LandingPage = () => {
             onClick={() => scrollCarousel("right")}
             aria-label="Next partners"
           >
-            ›
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M9 18l6-6-6-6" />
+            </svg>
           </button>
         </div>
       </section>
