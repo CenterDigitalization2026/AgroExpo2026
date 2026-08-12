@@ -69,9 +69,15 @@ export const translations = {
         successTitle: "Заявка успешно отправлена!",
         successDesc:
           "Спасибо за регистрацию. Наш оргкомитет свяжется с вами для подтверждения бейджа.",
+        pendingBadge: "⏳ На рассмотрении",
+        pendingTitle: "Заявка на рассмотрении",
+        pendingDesc:
+          "Ваши данные успешно получены оргкомитетом Digital AgroExpo Tajikistan-2026 и проходят проверку. Бейдж участника будет отправлен после подтверждения.",
+        alreadyRegistered:
+          "Участник с таким Email уже зарегистрирован в системе.",
         errorTitle: "Ошибка при отправке",
         errorDesc:
-          "Произошла ошибка при отправке формы в Google Forms. Пожалуйста, попробуйте еще раз.",
+          "Произошла ошибка при отправке формы. Пожалуйста, попробуйте еще раз.",
       },
       regions: [
         "г. Душанбе",
@@ -207,9 +213,15 @@ export const translations = {
         successTitle: "Дархост бо муваффақият фиристода шуд!",
         successDesc:
           "Ташаккур барои бақайдгирӣ. Кумитаи ташкилӣ барои тасдиқи бейҷ бо шумо тамос мегирад.",
+        pendingBadge: "⏳ Дар баррасӣ",
+        pendingTitle: "Дархост дар баррасӣ қарор дорад",
+        pendingDesc:
+          "Маълумоти шумо бо муваффақият аз ҷониби кумитаи ташкилии Digital AgroExpo Tajikistan-2026 қабул гардид ва мавриди санҷиш қарор дорад. Бейҷи иштирокчӣ пас аз тасдиқ фиристода мешавад.",
+        alreadyRegistered:
+          "Иштирокчӣ бо чунин Email аллакай дар система ба қайд гирифта шудааст.",
         errorTitle: "Хатогӣ ҳангоми фиристодан",
         errorDesc:
-          "Ҳангоми фиристодани форма ба Google Forms хатогӣ рух дод. Лутфан, дубора кӯшиш кунед.",
+          "Ҳангоми фиристодани форма хатогӣ рух дод. Лутфан, дубора кӯшиш кунед.",
       },
       regions: [
         "ш. Душанбе",
@@ -346,9 +358,15 @@ export const translations = {
         successTitle: "Application submitted successfully!",
         successDesc:
           "Thank you for registering. Our organizing committee will contact you for badge confirmation.",
+        pendingBadge: "⏳ Under Review",
+        pendingTitle: "Application is under review",
+        pendingDesc:
+          "Your details have been successfully received by the organizing committee of Digital AgroExpo Tajikistan-2026 and are currently under review. The participant badge will be sent upon confirmation.",
+        alreadyRegistered:
+          "A participant with this Email is already registered in the system.",
         errorTitle: "Submission Error",
         errorDesc:
-          "An error occurred while sending data to Google Forms. Please try again.",
+          "An error occurred while submitting the form. Please try again.",
       },
       regions: [
         "Dushanbe city",

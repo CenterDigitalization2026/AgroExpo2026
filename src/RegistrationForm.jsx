@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useLanguage } from "./i18n/LanguageContext";
@@ -62,7 +62,15 @@ export const sanitizeValues = (values) => {
 export const RegistrationForm = () => {
   const { t, language } = useLanguage();
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isPending, setIsPending] = useState(false);
+
+  // При загрузке проверяем localStorage на наличие ранее отправленной заявки
+  useEffect(() => {
+    const isRegistered = localStorage.getItem("agroexpo_registered");
+    if (isRegistered === "true") {
+      setIsPending(true);
+    }
+  }, []);
 
   const validationSchema = useMemo(() => {
     const val = t.registration.validation;
@@ -113,7 +121,7 @@ export const RegistrationForm = () => {
     },
     validationSchema,
     enableReinitialize: true,
-    onSubmit: async (rawValues, { resetForm }) => {
+    onSubmit: async (rawValues, { resetForm, setFieldError }) => {
       setIsSubmitting(true);
       const sanitized = sanitizeValues(rawValues);
 
@@ -141,8 +149,23 @@ export const RegistrationForm = () => {
         const result = await response.json();
 
         if (result && result.status === "success") {
-          setIsSubmitted(true);
+          localStorage.setItem("agroexpo_registered", "true");
+          setIsPending(true);
           resetForm();
+        } else if (result && result.status === "already_registered") {
+          const errorMsg =
+            result.message ||
+            (t.registration.messages &&
+              t.registration.messages.alreadyRegistered) ||
+            "Этот Email уже зарегистрирован";
+          setFieldError("email", errorMsg);
+          alert(errorMsg);
+        } else if (result && result.status === "error") {
+          const errorMsg =
+            result.message ||
+            (t.registration.messages && t.registration.messages.errorDesc) ||
+            "Произошла ошибка";
+          alert(errorMsg);
         } else {
           throw new Error(
             (result && result.message) || "Ошибка записи на сервере",
@@ -150,7 +173,10 @@ export const RegistrationForm = () => {
         }
       } catch (error) {
         console.error("Ошибка при отправке формы:", error);
-        alert(t.registration.messages.errorDesc);
+        alert(
+          (t.registration.messages && t.registration.messages.errorDesc) ||
+            "Произошла ошибка при отправке формы. Пожалуйста, попробуйте еще раз.",
+        );
       } finally {
         setIsSubmitting(false);
       }
@@ -183,22 +209,22 @@ export const RegistrationForm = () => {
     }
   };
 
-  if (isSubmitted) {
+  if (isPending) {
+    const msg = t.registration.messages || {};
     return (
       <div className="registration-wrapper">
         <div className="success-card">
-          <div className="success-icon" aria-hidden="true">
-            ✓
+          <div className="pending-badge-tag">
+            {msg.pendingBadge || "⏳ На рассмотрении"}
           </div>
-          <h2>{t.registration.messages.successTitle}</h2>
-          <p>{t.registration.messages.successDesc}</p>
-          <button
-            type="button"
-            className="submit-btn reset-btn"
-            onClick={() => setIsSubmitted(false)}
-          >
-            {t.registration.buttons.submit}
-          </button>
+          <div className="success-icon pending-icon" aria-hidden="true">
+            ⏳
+          </div>
+          <h2>{msg.pendingTitle || "Заявка на рассмотрении"}</h2>
+          <p>
+            {msg.pendingDesc ||
+              "Ваши данные успешно получены оргкомитетом Digital AgroExpo Tajikistan-2026 и проходят проверку."}
+          </p>
         </div>
       </div>
     );
