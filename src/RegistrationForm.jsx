@@ -351,7 +351,7 @@ export const RegistrationForm = () => {
               >
                 <option value=""></option>
                 {regRegions.map((option, idx) => (
-                  <option key={idx} value={REGION_OPTIONS[idx] || option}>
+                  <option key={idx} value={option}>
                     {option}
                   </option>
                 ))}
@@ -383,7 +383,7 @@ export const RegistrationForm = () => {
               >
                 <option value=""></option>
                 {regCategories.map((option, idx) => (
-                  <option key={idx} value={CATEGORY_OPTIONS[idx] || option}>
+                  <option key={idx} value={option}>
                     {option}
                   </option>
                 ))}
@@ -407,7 +407,7 @@ export const RegistrationForm = () => {
               >
                 <option value=""></option>
                 {regFormats.map((option, idx) => (
-                  <option key={idx} value={FORMAT_OPTIONS[idx] || option}>
+                  <option key={idx} value={option}>
                     {option}
                   </option>
                 ))}
