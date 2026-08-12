@@ -44,6 +44,16 @@ const LandingPage = () => {
   const closeMobileMenu = () => setMobileMenuOpen(false);
 
   React.useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape" && mobileMenuOpen) {
+        closeMobileMenu();
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [mobileMenuOpen]);
+
+  React.useEffect(() => {
     if (isHovered || userInteracted) return;
 
     let animFrameId;
@@ -160,6 +170,8 @@ const LandingPage = () => {
             className={`hamburger-btn ${mobileMenuOpen ? "open" : ""}`}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle navigation menu"
+            aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-drawer-menu"
           >
             <span className="hamburger-line"></span>
             <span className="hamburger-line"></span>
@@ -173,7 +185,10 @@ const LandingPage = () => {
         className={`mobile-drawer-overlay ${mobileMenuOpen ? "active" : ""}`}
         onClick={closeMobileMenu}
       />
-      <div className={`mobile-drawer ${mobileMenuOpen ? "active" : ""}`}>
+      <div
+        id="mobile-drawer-menu"
+        className={`mobile-drawer ${mobileMenuOpen ? "active" : ""}`}
+      >
         <div className="mobile-drawer-header">
           <div className="logo-text">
             Digital AgroExpo

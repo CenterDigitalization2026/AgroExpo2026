@@ -20,6 +20,11 @@
     sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 85px;
+}
+
 html,
 body {
   background-color: var(--bg-light);
@@ -37,15 +42,22 @@ body {
 }
 
 /* Навигация */
+.landing-container {
+  padding-top: 75px;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 8%;
+  padding: 14px 8%;
   background-color: var(--white);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  position: sticky;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
   z-index: 1000;
 }
 
