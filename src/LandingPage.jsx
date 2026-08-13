@@ -28,9 +28,9 @@ const PARTNER_LOGOS = [
 
 const DIRECTION_ITEMS = [
   { key: "smartIrrigation", icon: "💧", img: irrigationImg },
+  { key: "fintech", icon: "📱", img: fintechImg },
   { key: "agrometeo", icon: "🌤️", img: agrometeoImg },
   { key: "drones", icon: "🛸", img: dronesImg },
-  { key: "fintech", icon: "📱", img: fintechImg },
 ];
 
 const LandingPage = () => {

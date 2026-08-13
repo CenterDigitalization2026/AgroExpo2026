@@ -8,10 +8,10 @@ export const translations = {
     },
     hero: {
       badge:
-        "МИНИСТЕРСТВО СЕЛЬСКОГО ХОЗЯЙСТВА РЕСПУБЛИКИ ТАДЖИКИСТАН \n ГУП 'Центр цифровизации, инновации и \n повышения квалификации кадров сельского хозяйства' \n Корейское агентство по международному сотрудничеству (KOICA) \n Всемирная продовольственная программа ООН (WFP)",
+        "Организовано МИНИСТЕРСТВОМ СЕЛЬСКОГО ХОЗЯЙСТВА РЕСПУБЛИКИ ТАДЖИКИСТАН, \n ГУП 'Центр цифровизации, инновации и повышения квалификации кадров сельского хозяйства' \n в рамках проекта Всемирной продовольственной программы ООН (WFP) 'Привлечение молодежи малых фермерских хозяйств посредством \n использования агротехнологий для улучшения продовольственной безопасности и цепочек добавленной стоимости продукции', \n финансируемого Корейским агентством по международному сотрудничеству (KOICA)",
       title: "Digital AgroExpo Tajikistan-2026",
       subtitle:
-        "Конференция и выставка проводятся с целью обмена опытом, создания единой цифровой экосистемы и объединения партнеров для устойчивой трансформации агропродовольственных систем и привлечения инвестиций.",
+        "Эта выставка станет национальной платформой для объединения государственных структур, партнеров по развитию, частного сектора, финансовых институтов, науки и фермеров в создании единой экосистемы цифрового сельского хозяйства, ускоряющей климатически устойчивую, рыночно-ориентированную и инклюзивную трансформацию агропродовольственных систем Республики Таджикистана.",
       location: "📍 ш. Душанбе, бинои Hyatt Regency",
       date: "📅 3 декабря 2026",
       format: "🤝 B2B & Форум",
@@ -22,7 +22,7 @@ export const translations = {
       subtitle:
         "Инновационные AgTech решения для устойчивого развития АПК Таджикистана",
       smartIrrigation: {
-        title: "Умное орошение",
+        title: "Технологии полевого и тепличного хозяйства",
         desc: "Системы капельного полива с датчиками влажности почвы и автоматизированными насосными станциями для экономии воды.",
       },
       agrometeo: {
@@ -154,10 +154,10 @@ export const translations = {
     },
     hero: {
       badge:
-        "ВАЗОРАТИ КИШОВАРЗИИ ҶУМҲУРИИ ТОҶИКИСТОН \n КВД 'Маркази рақамикунонӣ, инноватсия ва \n такмили ихтисоси кадрҳои соҳаи кишоварзӣ' \n Агентии Корея оид ба ҳамкориҳои байналмилалӣ (KOICA) \n Барномаи озуқавории ҷаҳонӣ СММ (WFP)",
+        "Бо ташаббуси ВАЗОРАТИ КИШОВАРЗИИ ҶУМҲУРИИ ТОҶИКИСТОН, \n КВД 'Маркази рақамикунонӣ, инноватсия ва такмили ихтисоси кадрҳои соҳаи кишоварзӣ' \n дар доираи лоиҳаи Барномаи озуқавории ҷаҳонии СММ (WFP) 'Ҷалб намудани ҷавонони хоҷагиҳои \n фермерии хурд тавассути истифода намудани технологияи кишоварзӣ барои беҳтар намудани амнияти озуқаворӣ ва \n занҷираҳои арзиши маҳсулот', ки аз ҷониби Агентии Корея оид ба ҳамкории байналмилалӣ (KOICA) маблағгузорӣ карда мешавад",
       title: "Digital AgroExpo Tajikistan-2026",
       subtitle:
-        "Конфронс ва намоишгоҳ бо мақсади мубодилаи таҷриба, таъсиси экосистемаи ягонаи рақамӣ ва муттаҳидсозии шарикон барои табдилдиҳии устувори системаҳои агроозуқаворӣ ва ҷалби сармоя баргузор мегардад.",
+        "Ин намоишгоҳ ҳамчун майдони миллии муттаҳидсозии сохторҳои давлатӣ, шарикони рушд, бахши хусусӣ, муассисаҳои молиявӣ, илм ва деҳқонон дар эҷоди экосистемаи воҳиди кишоварзии рақамӣ хизмат мекунад, ки ба табдилдиҳии мутобиқ ба иқлим, бозоргирӣ ва фарогирии низомҳои агроозуқавории Ҷумҳурии Тоҷикистон суръат мебахшад.",
       location: "📍 ш. Душанбе, бинои Hyatt Regency",
       date: "📅 3 декабри 2026",
       format: "🤝 B2B ва Форум",
@@ -168,7 +168,7 @@ export const translations = {
       subtitle:
         "Қарорҳои инноватсионии AgTech барои рушди устувори КИА Тоҷикистон",
       smartIrrigation: {
-        title: "Обиёрии ҳушманд",
+        title: "Технологияҳои кишоварзии саҳроӣ ва гармхонаӣ",
         desc: "Системаҳои обиёрии қатрагӣ бо сенсорҳои намии хок ва пойгоҳҳои автоматии насосӣ барои сарфаи об.",
       },
       agrometeo: {
@@ -300,10 +300,10 @@ export const translations = {
     },
     hero: {
       badge:
-        "MINISTRY OF AGRICULTURE OF THE REPUBLIC OF TAJIKISTAN \n SUE 'Center for Digitalization, Innovation and \n Capacity building of Agricultural Employees' \n Korea International Cooperation Agency (KOICA) \n UN World Food Programme (WFP)",
+        "Organized by MINISTRY OF AGRICULTURE OF THE REPUBLIC OF TAJIKISTAN, \n SUE 'Center for Digitalization, Innovation and Capacity building of Agricultural Employees' \n under the UN World Food Programme (WFP) Project 'Engaging Youth Smallholder Farmers through \n Agri-Tech for Improved Food Security and Value Chains' funded by the Korea International Cooperation Agency (KOICA)",
       title: "Digital AgroExpo Tajikistan-2026",
       subtitle:
-        "The conference and exhibition are held to exchange experience, create a unified digital ecosystem, and unite partners for the sustainable transformation of agrifood systems and investment attraction.",
+        "This Expo will serve as a national platform to unite government institutions, development partners, private sector actors, financial institutions, academia, and farmers in building a cohesive digital agriculture ecosystem that accelerates climate-resilient, market-oriented, and inclusive transformation of the agrifood systems of the Republic of Tajikistan.",
       location: "📍 Dushanbe, Hyatt Regency building",
       date: "📅 3 December 2026",
       format: "🤝 B2B & Forum",
@@ -314,7 +314,7 @@ export const translations = {
       subtitle:
         "Innovative AgTech solutions for sustainable development of Tajikistan's agricultural sector",
       smartIrrigation: {
-        title: "Smart Irrigation",
+        title: "Field and Greenhouse Agriculture Technologies",
         desc: "Drip irrigation systems with soil moisture sensors and automated pumping stations for water saving.",
       },
       agrometeo: {
