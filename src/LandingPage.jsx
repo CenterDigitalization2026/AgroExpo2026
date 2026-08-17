@@ -2,7 +2,7 @@ import React from "react";
 import RegistrationForm from "./RegistrationForm";
 import LanguageSelector from "./components/LanguageSelector";
 import { useLanguage } from "./i18n/LanguageContext";
-import logoImg from "./assets/logo-photo.png";
+import logoImg from "./assets/logo-500.png";
 import moaLogo from "./assets/partners/MoA.png";
 import wfpLogo from "./assets/partners/WFP.png";
 import faoLogo from "./assets/partners/FAO.png";

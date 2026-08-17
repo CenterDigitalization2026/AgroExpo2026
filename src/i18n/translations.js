@@ -23,7 +23,7 @@ export const translations = {
         "Инновационные AgTech решения для устойчивого развития АПК Таджикистана",
       smartIrrigation: {
         title: "Технологии полевого и тепличного хозяйства",
-        desc: "Системы капельного полива с датчиками влажности почвы и автоматизированными насосными станциями для экономии воды.",
+        desc: "Системы капельного орошения, датчики влажности почвы и автоматизация климат-контроля теплиц.",
       },
       agrometeo: {
         title: "Агрометеорология",
@@ -169,7 +169,7 @@ export const translations = {
         "Қарорҳои инноватсионии AgTech барои рушди устувори КИА Тоҷикистон",
       smartIrrigation: {
         title: "Технологияҳои кишоварзии саҳроӣ ва гармхонаӣ",
-        desc: "Системаҳои обиёрии қатрагӣ бо сенсорҳои намии хок ва пойгоҳҳои автоматии насосӣ барои сарфаи об.",
+        desc: "Системаҳои обёрии қатрагӣ, сенсорҳои намии хок ва идоракунии худкори иқлими гармхонаҳо.",
       },
       agrometeo: {
         title: "Агрометеорология",
@@ -315,7 +315,7 @@ export const translations = {
         "Innovative AgTech solutions for sustainable development of Tajikistan's agricultural sector",
       smartIrrigation: {
         title: "Field and Greenhouse Agriculture Technologies",
-        desc: "Drip irrigation systems with soil moisture sensors and automated pumping stations for water saving.",
+        desc: "Drip irrigation systems, soil moisture sensors, and greenhouse climate control automation.",
       },
       agrometeo: {
         title: "Agrometeorology",
