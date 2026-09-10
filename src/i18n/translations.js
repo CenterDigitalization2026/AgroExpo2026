@@ -9,13 +9,13 @@ export const translations = {
     hero: {
       badge:
         "Организовано МИНИСТЕРСТВОМ СЕЛЬСКОГО ХОЗЯЙСТВА РЕСПУБЛИКИ ТАДЖИКИСТАН, \n ГУП 'Центр цифровизации, инновации и повышения квалификации кадров сельского хозяйства' \n в рамках проекта Всемирной продовольственной программы ООН (WFP) 'Привлечение молодежи малых фермерских хозяйств посредством \n использования агротехнологий для улучшения продовольственной безопасности и цепочек добавленной стоимости продукции', \n финансируемого Корейским агентством по международному сотрудничеству (KOICA)",
-      title: "Digital AgroExpo Tajikistan-2026",
+      title: "Digital AgriExpo Tajikistan-2026",
       subtitle:
         "Эта выставка станет национальной платформой для объединения государственных структур, партнеров по развитию, частного сектора, финансовых институтов, науки и фермеров в создании единой экосистемы цифрового сельского хозяйства, ускоряющей климатически устойчивую, рыночно-ориентированную и инклюзивную трансформацию агропродовольственных систем Республики Таджикистана.",
       location: "📍 ш. Душанбе, бинои Hyatt Regency",
       date: "📅 3 декабря 2026",
       format: "🤝 B2B & Форум",
-      cta: "Принять участие в AgroExpo",
+      cta: "Принять участие в AgriExpo",
     },
     directions: {
       title: "Ключевые направления выставки (Expo)",
@@ -62,7 +62,7 @@ export const translations = {
         position: "Например: Главный агроном / Директор / Студент",
       },
       buttons: {
-        submit: "Зарегистрироваться на AgroExpo-2026",
+        submit: "Зарегистрироваться на AgriExpo-2026",
         submitting: "Отправка...",
         newRegistration: "Подать ещё одну заявку",
       },
@@ -73,7 +73,7 @@ export const translations = {
         pendingBadge: "⏳ На рассмотрении",
         pendingTitle: "Заявка на рассмотрении",
         pendingDesc:
-          "Ваши данные успешно получены оргкомитетом Digital AgroExpo Tajikistan-2026 и проходят проверку. Бейдж участника будет отправлен после подтверждения.",
+          "Ваши данные успешно получены оргкомитетом Digital AgriExpo Tajikistan-2026 и проходят проверку. Бейдж участника будет отправлен после подтверждения.",
         alreadyRegistered:
           "Участник с таким Email уже зарегистрирован в системе.",
         errorTitle: "Ошибка при отправке",
@@ -140,9 +140,9 @@ export const translations = {
       ],
     },
     footer: {
-      text: "Digital AgroExpo Tajikistan-2026 — Трансформация сельского хозяйства через технологии.",
+      text: "Digital AgriExpo Tajikistan-2026 — Трансформация сельского хозяйства через технологии.",
       location: "ш. Душанбе, бинои Hyatt Regency",
-      copyright: "© 2026 Digital AgroExpo Tajikistan. Все права защищены.",
+      copyright: "© 2026 Digital AgriExpo Tajikistan. Все права защищены.",
     },
   },
   tj: {
@@ -155,13 +155,13 @@ export const translations = {
     hero: {
       badge:
         "Бо ташаббуси ВАЗОРАТИ КИШОВАРЗИИ ҶУМҲУРИИ ТОҶИКИСТОН, \n КВД 'Маркази рақамикунонӣ, инноватсия ва такмили ихтисоси кадрҳои соҳаи кишоварзӣ' \n дар доираи лоиҳаи Барномаи озуқавории ҷаҳонии СММ (WFP) 'Ҷалб намудани ҷавонони хоҷагиҳои \n фермерии хурд тавассути истифода намудани технологияи кишоварзӣ барои беҳтар намудани амнияти озуқаворӣ ва \n занҷираҳои арзиши маҳсулот', ки аз ҷониби Агентии Корея оид ба ҳамкории байналмилалӣ (KOICA) маблағгузорӣ карда мешавад",
-      title: "Digital AgroExpo Tajikistan-2026",
+      title: "Digital AgriExpo Tajikistan-2026",
       subtitle:
         "Ин намоишгоҳ ҳамчун майдони миллии муттаҳидсозии сохторҳои давлатӣ, шарикони рушд, бахши хусусӣ, муассисаҳои молиявӣ, илм ва деҳқонон дар эҷоди экосистемаи воҳиди кишоварзии рақамӣ хизмат мекунад, ки ба табдилдиҳии мутобиқ ба иқлим, бозоргирӣ ва фарогирии низомҳои агроозуқавории Ҷумҳурии Тоҷикистон суръат мебахшад.",
       location: "📍 ш. Душанбе, бинои Hyatt Regency",
       date: "📅 3 декабри 2026",
       format: "🤝 B2B ва Форум",
-      cta: "Иштирок дар AgroExpo",
+      cta: "Иштирок дар AgriExpo",
     },
     directions: {
       title: "Самтҳои асосии намоишгоҳ (Expo)",
@@ -208,7 +208,7 @@ export const translations = {
         position: "Масалан: Агрономи калон / Директор / Донишҷӯ",
       },
       buttons: {
-        submit: "Барӯйхатгирӣ дар AgroExpo-2026",
+        submit: "Барӯйхатгирӣ дар AgriExpo-2026",
         submitting: "Фиристодан...",
         newRegistration: "Фиристодани дархости нав",
       },
@@ -219,7 +219,7 @@ export const translations = {
         pendingBadge: "⏳ Дар баррасӣ",
         pendingTitle: "Дархост дар баррасӣ қарор дорад",
         pendingDesc:
-          "Маълумоти шумо бо муваффақият аз ҷониби кумитаи ташкилии Digital AgroExpo Tajikistan-2026 қабул гардид ва мавриди санҷиш қарор дорад. Бейҷи иштирокчӣ пас аз тасдиқ фиристода мешавад.",
+          "Маълумоти шумо бо муваффақият аз ҷониби кумитаи ташкилии Digital AgriExpo Tajikistan-2026 қабул гардид ва мавриди санҷиш қарор дорад. Бейҷи иштирокчӣ пас аз тасдиқ фиристода мешавад.",
         alreadyRegistered:
           "Иштирокчӣ бо чунин Email аллакай дар система ба қайд гирифта шудааст.",
         errorTitle: "Хатогӣ ҳангоми фиристодан",
@@ -285,10 +285,10 @@ export const translations = {
       ],
     },
     footer: {
-      text: "Digital AgroExpo Tajikistan-2026 — Гузариш ба кишоварзии рақамӣ тавассути технологияҳо.",
+      text: "Digital AgriExpo Tajikistan-2026 — Гузариш ба кишоварзии рақамӣ тавассути технологияҳо.",
       location: "ш. Душанбе, бинои Hyatt Regency, Ҷумҳурии Тоҷикистон",
       copyright:
-        "© 2026 Digital AgroExpo Tajikistan. Ҳамаи ҳуқуқҳо ҳифз шудаанд.",
+        "© 2026 Digital AgriExpo Tajikistan. Ҳамаи ҳуқуқҳо ҳифз шудаанд.",
     },
   },
   en: {
@@ -301,13 +301,13 @@ export const translations = {
     hero: {
       badge:
         "Organized by MINISTRY OF AGRICULTURE OF THE REPUBLIC OF TAJIKISTAN, \n SUE 'Center for Digitalization, Innovation and Capacity building of Agricultural Employees' \n under the UN World Food Programme (WFP) Project 'Engaging Youth Smallholder Farmers through \n Agri-Tech for Improved Food Security and Value Chains' funded by the Korea International Cooperation Agency (KOICA)",
-      title: "Digital AgroExpo Tajikistan-2026",
+      title: "Digital AgriExpo Tajikistan-2026",
       subtitle:
         "This Expo will serve as a national platform to unite government institutions, development partners, private sector actors, financial institutions, academia, and farmers in building a cohesive digital agriculture ecosystem that accelerates climate-resilient, market-oriented, and inclusive transformation of the agrifood systems of the Republic of Tajikistan.",
       location: "📍 Dushanbe, Hyatt Regency building",
       date: "📅 3 December 2026",
       format: "🤝 B2B & Forum",
-      cta: "Join AgroExpo",
+      cta: "Join AgriExpo",
     },
     directions: {
       title: "Key Exhibition Directions (Expo)",
@@ -354,7 +354,7 @@ export const translations = {
         position: "Example: Chief Agronomist / Director / Student",
       },
       buttons: {
-        submit: "Register for AgroExpo-2026",
+        submit: "Register for AgriExpo-2026",
         submitting: "Submitting...",
         newRegistration: "Submit another application",
       },
@@ -365,7 +365,7 @@ export const translations = {
         pendingBadge: "⏳ Under Review",
         pendingTitle: "Application is under review",
         pendingDesc:
-          "Your details have been successfully received by the organizing committee of Digital AgroExpo Tajikistan-2026 and are currently under review. The participant badge will be sent upon confirmation.",
+          "Your details have been successfully received by the organizing committee of Digital AgriExpo Tajikistan-2026 and are currently under review. The participant badge will be sent upon confirmation.",
         alreadyRegistered:
           "A participant with this Email is already registered in the system.",
         errorTitle: "Submission Error",
@@ -431,9 +431,9 @@ export const translations = {
       ],
     },
     footer: {
-      text: "Digital AgroExpo Tajikistan-2026 — Agriculture transformation through technology.",
+      text: "Digital AgriExpo Tajikistan-2026 — Agriculture transformation through technology.",
       location: "Dushanbe, Hyatt Regency building",
-      copyright: "© 2026 Digital AgroExpo Tajikistan. All rights reserved.",
+      copyright: "© 2026 Digital AgriExpo Tajikistan. All rights reserved.",
     },
   },
 };

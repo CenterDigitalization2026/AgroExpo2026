@@ -227,7 +227,7 @@ export const RegistrationForm = () => {
           <h2>{msg.pendingTitle || "Заявка на рассмотрении"}</h2>
           <p>
             {msg.pendingDesc ||
-              "Ваши данные успешно получены оргкомитетом Digital AgroExpo Tajikistan-2026 и проходят проверку."}
+              "Ваши данные успешно получены оргкомитетом Digital AgriExpo Tajikistan-2026 и проходят проверку."}
           </p>
           <button
             type="button"

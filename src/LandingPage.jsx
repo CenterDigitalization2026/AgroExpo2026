@@ -134,11 +134,11 @@ const LandingPage = () => {
         >
           <img
             src={logoImg}
-            alt="Digital AgroExpo Tajikistan-2026"
+            alt="Digital AgriExpo Tajikistan-2026"
             className="navbar-logo-img"
           />
           <div className="logo-text">
-            Digital AgroExpo
+            Digital AgriExpo
             <span>Tajikistan-2026</span>
           </div>
         </div>
@@ -191,7 +191,7 @@ const LandingPage = () => {
       >
         <div className="mobile-drawer-header">
           <div className="logo-text">
-            Digital AgroExpo
+            Digital AgriExpo
             <span>Tajikistan-2026</span>
           </div>
           <button
@@ -237,7 +237,7 @@ const LandingPage = () => {
         <div className="hero-logo-container">
           <img
             src={logoImg}
-            alt="Digital AgroExpo Logo"
+            alt="Digital AgriExpo Logo"
             className="hero-logo-img"
           />
         </div>
@@ -335,7 +335,7 @@ const LandingPage = () => {
         <div className="footer-logo-wrap">
           <img
             src={logoImg}
-            alt="Digital AgroExpo Tajikistan-2026"
+            alt="Digital AgriExpo Tajikistan-2026"
             className="footer-logo-img"
           />
         </div>
