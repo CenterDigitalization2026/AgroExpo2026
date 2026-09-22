@@ -131,17 +131,24 @@ body {
 .btn-nav {
   position: relative;
   overflow: hidden;
-  padding: 11px 26px;
-  background: linear-gradient(135deg, #52b788 0%, #2d6a4f 100%);
-  color: var(--white);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 50px;
+  padding: 11px 28px;
+  background-color: #1a4d33;
+  background-image: url("/button-wheat-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  border: 2px solid #84c99e;
+  border-radius: 9999px;
   font-weight: 700;
   font-size: 14px;
   letter-spacing: 0.3px;
   cursor: pointer;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 2px 6px rgba(0, 0, 0, 0.5);
   transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  box-shadow: 0 6px 20px rgba(45, 106, 79, 0.4);
+  box-shadow:
+    0 8px 22px rgba(18, 55, 36, 0.4),
+    inset 0 1px 1px rgba(255, 255, 255, 0.35),
+    inset 0 -1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .btn-nav::after {
@@ -154,20 +161,27 @@ body {
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(255, 255, 255, 0.35),
+    rgba(255, 255, 255, 0.25),
     transparent
   );
   transform: rotate(25deg);
   animation: heroBtnShimmer 4s infinite;
+  pointer-events: none;
 }
 
 .btn-nav:hover {
-  background: linear-gradient(135deg, #74c69d 0%, #1b4332 100%);
   transform: translateY(-3px) scale(1.03);
+  filter: brightness(1.08);
+  border-color: #a3e4be;
   box-shadow:
-    0 12px 30px rgba(82, 183, 136, 0.55),
-    0 0 18px rgba(116, 198, 157, 0.3);
-  border-color: rgba(255, 255, 255, 0.6);
+    0 12px 30px rgba(22, 75, 48, 0.55),
+    0 0 18px rgba(132, 201, 158, 0.35),
+    inset 0 1px 2px rgba(255, 255, 255, 0.45);
+}
+
+.btn-nav:active {
+  transform: translateY(1px) scale(0.98);
+  filter: brightness(0.96);
 }
 
 /* Hero Section - Animated & Redesigned */
@@ -422,17 +436,24 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 16px 48px;
-  background: linear-gradient(135deg, #52b788 0%, #2d6a4f 100%);
+  padding: 16px 52px;
+  background-color: #1a4d33;
+  background-image: url("/button-wheat-bg.jpg");
+  background-size: cover;
+  background-position: center;
   color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  border-radius: 50px;
-  font-size: 18px;
+  border: 2.5px solid #84c99e;
+  border-radius: 9999px;
+  font-size: 19px;
   font-weight: 700;
   cursor: pointer;
   letter-spacing: 0.3px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 2px 8px rgba(0, 0, 0, 0.5);
   transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  box-shadow: 0 8px 25px rgba(45, 106, 79, 0.5);
+  box-shadow:
+    0 10px 30px rgba(18, 55, 36, 0.45),
+    inset 0 1px 1px rgba(255, 255, 255, 0.4),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.35);
   animation: fadeInUp 1.3s ease-out;
 }
 
@@ -446,11 +467,12 @@ body {
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(255, 255, 255, 0.35),
+    rgba(255, 255, 255, 0.25),
     transparent
   );
   transform: rotate(25deg);
   animation: heroBtnShimmer 4s infinite;
+  pointer-events: none;
 }
 
 @keyframes heroBtnShimmer {
@@ -464,12 +486,18 @@ body {
 }
 
 .btn-hero:hover {
-  transform: translateY(-5px) scale(1.03);
-  background: linear-gradient(135deg, #74c69d 0%, #1b4332 100%);
+  transform: translateY(-4px) scale(1.03);
+  filter: brightness(1.08);
+  border-color: #a3e4be;
   box-shadow:
-    0 16px 40px rgba(82, 183, 136, 0.65),
-    0 0 24px rgba(116, 198, 157, 0.4);
-  border-color: rgba(255, 255, 255, 0.65);
+    0 18px 45px rgba(22, 75, 48, 0.6),
+    0 0 24px rgba(132, 201, 158, 0.4),
+    inset 0 1px 2px rgba(255, 255, 255, 0.5);
+}
+
+.btn-hero:active {
+  transform: translateY(1px) scale(0.98);
+  filter: brightness(0.96);
 }
 
 /* About Section */

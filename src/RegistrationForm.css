@@ -319,17 +319,24 @@ select.form-control option[value=""] {
   position: relative;
   overflow: hidden;
   width: 100%;
-  padding: 16px 32px;
-  background: linear-gradient(135deg, #52b788 0%, #2d6a4f 100%);
+  padding: 16px 36px;
+  background-color: #1a4d33;
+  background-image: url("/button-wheat-bg.jpg");
+  background-size: cover;
+  background-position: center;
   color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  border-radius: 50px;
+  border: 2px solid #84c99e;
+  border-radius: 9999px;
   font-size: 17px;
   font-weight: 700;
   letter-spacing: 0.3px;
   cursor: pointer;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 2px 8px rgba(0, 0, 0, 0.5);
   transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  box-shadow: 0 8px 25px rgba(45, 106, 79, 0.4);
+  box-shadow:
+    0 10px 28px rgba(18, 55, 36, 0.4),
+    inset 0 1px 1px rgba(255, 255, 255, 0.35),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -346,11 +353,12 @@ select.form-control option[value=""] {
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(255, 255, 255, 0.35),
+    rgba(255, 255, 255, 0.25),
     transparent
   );
   transform: rotate(25deg);
   animation: formBtnShimmer 4s infinite;
+  pointer-events: none;
 }
 
 @keyframes formBtnShimmer {
@@ -364,23 +372,26 @@ select.form-control option[value=""] {
 }
 
 .submit-btn:hover:not(:disabled) {
-  background: linear-gradient(135deg, #74c69d 0%, #1b4332 100%);
+  filter: brightness(1.08);
+  border-color: #a3e4be;
   box-shadow:
-    0 14px 35px rgba(82, 183, 136, 0.55),
-    0 0 20px rgba(116, 198, 157, 0.35);
+    0 16px 38px rgba(22, 75, 48, 0.55),
+    0 0 22px rgba(132, 201, 158, 0.38),
+    inset 0 1px 2px rgba(255, 255, 255, 0.45);
   transform: translateY(-3px) scale(1.02);
-  border-color: rgba(255, 255, 255, 0.6);
 }
 
 .submit-btn:active:not(:disabled) {
-  transform: translateY(0);
-  box-shadow: 0 2px 8px rgba(22, 101, 52, 0.2);
+  transform: translateY(1px) scale(0.98);
+  filter: brightness(0.96);
+  box-shadow: 0 4px 12px rgba(18, 55, 36, 0.3);
 }
 
 .submit-btn:disabled {
   opacity: 0.65;
   cursor: not-allowed;
   transform: none;
+  filter: grayscale(0.5);
 }
 
 /* Экран успешной регистрации и ожидания статуса */
@@ -558,6 +569,6 @@ select.form-control option[value=""] {
   .submit-btn {
     padding: 14px 20px;
     font-size: 15.5px;
-    border-radius: 50px;
+    border-radius: 9999px;
   }
 }
