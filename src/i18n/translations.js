@@ -3,6 +3,8 @@ export const translations = {
     nav: {
       about: "О конференции",
       directions: "Направления",
+      program: "Программа",
+      location: "Локация",
       partners: "Партнеры",
       registerBtn: "Зарегистрироваться",
     },
@@ -13,7 +15,7 @@ export const translations = {
       subtitle:
         "Эта выставка станет национальной платформой для объединения государственных структур, партнеров по развитию, частного сектора, финансовых институтов, науки и фермеров в создании единой экосистемы цифрового сельского хозяйства, ускоряющей климатически устойчивую, рыночно-ориентированную и инклюзивную трансформацию агропродовольственных систем Республики Таджикистана.",
       location: "📍 ш. Душанбе, бинои Hyatt Regency",
-      date: "📅 3 декабря 2026",
+      date: "📅 3–4 декабря 2026",
       format: "🤝 B2B & Форум",
       cta: "Принять участие в AgriExpo",
     },
@@ -22,20 +24,28 @@ export const translations = {
       subtitle:
         "Инновационные AgTech решения для устойчивого развития АПК Таджикистана",
       smartIrrigation: {
-        title: "Технологии полевого и тепличного хозяйства",
-        desc: "Системы капельного орошения, датчики влажности почвы и автоматизация климат-контроля теплиц.",
+        title: "Умное орошение",
+        desc: "Системы капельного орошения с датчиками влажности почвы, автоматизированные насосные станции.",
       },
       agrometeo: {
-        title: "Агрометеорология",
-        desc: "Мультиспектральный мониторинг, системы раннего предупреждения заморозков и сервисы погоды для защиты урожая.",
+        title: "Агрометеорология и раннее предупреждение",
+        desc: "Управление климатическими рисками: метеостанции, агрометеорологические службы, платформы климатической информации и раннего оповещения.",
+      },
+      smartGreenhouse: {
+        title: "Умная теплица",
+        desc: "Автоматизированная система климат-контроля, гидропоника и точное земледелие в закрытом грунте.",
       },
       drones: {
-        title: "Дроны и ГИС-системы",
-        desc: "Аэромониторинг полей, точечное внесение удобрений и спутниковый анализ состояния пастбищ и пахотных земель.",
+        title: "Аэромониторинг и ГИС",
+        desc: "Дроны для анализа состояния полей, мультиспектральные камеры и спутниковые системы мониторинга пастбищ.",
       },
-      fintech: {
-        title: "Агроконсалтинг и Финтех",
-        desc: "Мобильные приложения для фермеров, цифровые маркетплейсы, зеленые кредиты и цифровой агролизинг.",
+      agroconsulting: {
+        title: "Агроконсалтинг",
+        desc: "Мобильные приложения, чат-боты, информационные порталы и другие электронные аграрные сервисы.",
+      },
+      marketplace: {
+        title: "Маркетплейсы и цифровой AgriTech",
+        desc: "Платформы электронной коммерции (E-commerce), цифровые банковские сервисы и блокчейн-решения для цепочек поставок.",
       },
     },
     registration: {
@@ -149,6 +159,8 @@ export const translations = {
     nav: {
       about: "Дар бораи конфронс",
       directions: "Самтҳо",
+      program: "Барнома",
+      location: "Макон",
       partners: "Шарикон",
       registerBtn: "Барӯйхатгирӣ",
     },
@@ -159,7 +171,7 @@ export const translations = {
       subtitle:
         "Ин намоишгоҳ ҳамчун майдони миллии муттаҳидсозии сохторҳои давлатӣ, шарикони рушд, бахши хусусӣ, муассисаҳои молиявӣ, илм ва деҳқонон дар эҷоди экосистемаи воҳиди кишоварзии рақамӣ хизмат мекунад, ки ба табдилдиҳии мутобиқ ба иқлим, бозоргирӣ ва фарогирии низомҳои агроозуқавории Ҷумҳурии Тоҷикистон суръат мебахшад.",
       location: "📍 ш. Душанбе, бинои Hyatt Regency",
-      date: "📅 3 декабри 2026",
+      date: "📅 3–4 декабри 2026",
       format: "🤝 B2B ва Форум",
       cta: "Иштирок дар AgriExpo",
     },
@@ -168,20 +180,28 @@ export const translations = {
       subtitle:
         "Қарорҳои инноватсионии AgTech барои рушди устувори КИА Тоҷикистон",
       smartIrrigation: {
-        title: "Технологияҳои кишоварзии саҳроӣ ва гармхонаӣ",
-        desc: "Системаҳои обёрии қатрагӣ, сенсорҳои намии хок ва идоракунии худкори иқлими гармхонаҳо.",
+        title: "Обёрии ҳушманд",
+        desc: "Системаҳои обёрии қатрагӣ бо датчикҳои намнокии хок, пойгоҳҳои автоматикунонидашудаи насосӣ.",
       },
       agrometeo: {
-        title: "Агрометеорология",
-        desc: "Мониторинги мултиспектралӣ, системаҳои огоҳонии барвақти сардӣ ва хизматрасониҳои обу ҳаво барои ҳифзи ҳосил.",
+        title: "Агрометеорология ва огоҳонии барвақтӣ",
+        desc: "Идоракунии хавфҳои иқлимӣ, метеостансияҳо, хадамоти агрометеорологӣ ва абзорҳои рақамии машваратӣ барои мутобиқшавӣ ба иқлим.",
+      },
+      smartGreenhouse: {
+        title: "Гармхонаи ҳушманд",
+        desc: "Системаи автоматикунонидашудаи назорати иқлим, гидропоника ва зироаткории дақиқ дар шароити пӯшида.",
       },
       drones: {
-        title: "Дронҳо ва системаҳои ГИС",
-        desc: "Аэромониторинги майдонҳо, ворид намудани нуриҳо ва таҳлили моҳвораии чарогоҳҳо ва заминҳои корам.",
+        title: "Мониторинги ҳавоӣ ва ГИС",
+        desc: "Дронҳо барои таҳлили ҳолати киштзор, камераҳои мултиспектралӣ ва системаҳои моҳворавии мониторинги чарогоҳҳо.",
       },
-      fintech: {
-        title: "Агроконсалтинг ва Финтех",
-        desc: "Барномаҳои мобилӣ барои деҳқонон, маркетплейсҳои рақамӣ, кредитҳои сабз ва агролизинги рақамӣ.",
+      agroconsulting: {
+        title: "Агроконсалтинг",
+        desc: "Барномаҳои мобилӣ (приложения), чатботҳо, порталҳои иттилоотӣ ва дигар хизматрасониҳои электронии аграрӣ.",
+      },
+      marketplace: {
+        title: "Маркетплейсҳо ва AgriTech-и рақамӣ",
+        desc: "Платформаҳои тиҷорати электронӣ (E-commerce), хизматрасониҳои рақамии бонкӣ ва қарорҳо дар заминаи блокчейн барои занҷираҳои таҳвилот.",
       },
     },
     registration: {
@@ -295,6 +315,8 @@ export const translations = {
     nav: {
       about: "About Conference",
       directions: "Directions",
+      program: "Program",
+      location: "Venue & Map",
       partners: "Partners",
       registerBtn: "Register Now",
     },
@@ -305,7 +327,7 @@ export const translations = {
       subtitle:
         "This Expo will serve as a national platform to unite government institutions, development partners, private sector actors, financial institutions, academia, and farmers in building a cohesive digital agriculture ecosystem that accelerates climate-resilient, market-oriented, and inclusive transformation of the agrifood systems of the Republic of Tajikistan.",
       location: "📍 Dushanbe, Hyatt Regency building",
-      date: "📅 3 December 2026",
+      date: "📅 3–4 December 2026",
       format: "🤝 B2B & Forum",
       cta: "Join AgriExpo",
     },
@@ -314,20 +336,28 @@ export const translations = {
       subtitle:
         "Innovative AgTech solutions for sustainable development of Tajikistan's agricultural sector",
       smartIrrigation: {
-        title: "Field and Greenhouse Agriculture Technologies",
-        desc: "Drip irrigation systems, soil moisture sensors, and greenhouse climate control automation.",
+        title: "Smart Irrigation",
+        desc: "Drip irrigation systems with soil moisture sensors, automated pumping stations.",
       },
       agrometeo: {
-        title: "Agrometeorology",
-        desc: "Multispectral monitoring, early frost warning systems, and weather services for crop protection.",
+        title: "Agrometeorology & Early Warning",
+        desc: "Climate risk management: weather stations, agrometeorological services, climate info platforms, and early warning advisory tools.",
+      },
+      smartGreenhouse: {
+        title: "Smart Greenhouse",
+        desc: "Automated climate control systems, hydroponics, and precision farming in controlled environments.",
       },
       drones: {
-        title: "Drones & GIS Systems",
-        desc: "Aerial crop monitoring, targeted fertilizer application, and satellite analysis of pastures and arable lands.",
+        title: "Aerial Monitoring & GIS",
+        desc: "Drones for crop condition analysis, multispectral cameras, and satellite pasture monitoring systems.",
       },
-      fintech: {
-        title: "Agro-consulting & Fintech",
-        desc: "Mobile apps for farmers, digital marketplaces, green credits, and digital agroleasing.",
+      agroconsulting: {
+        title: "Agro-consulting",
+        desc: "Mobile applications, chatbots, information portals, and other digital agricultural e-services.",
+      },
+      marketplace: {
+        title: "Marketplaces & Digital AgriTech",
+        desc: "E-commerce platforms, digital banking services, and blockchain-based supply chain traceability solutions.",
       },
     },
     registration: {

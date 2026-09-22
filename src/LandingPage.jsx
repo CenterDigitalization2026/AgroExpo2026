@@ -1,20 +1,22 @@
 import React from "react";
 import RegistrationForm from "./RegistrationForm";
 import LanguageSelector from "./components/LanguageSelector";
+import ProgramSection from "./components/ProgramSection";
+import VenueMap from "./components/VenueMap";
 import { useLanguage } from "./i18n/LanguageContext";
 import logoImg from "./assets/logo-500.png";
 import moaLogo from "./assets/partners/MoA.png";
 import wfpLogo from "./assets/partners/WFP.png";
-import faoLogo from "./assets/partners/FAO.png";
-import worldBankLogo from "./assets/partners/WORLD BANK.png";
 import koicaLogo from "./assets/partners/KOICA.png";
 import EmblemOfTJK from "./assets/partners/EmblemTJK.png";
 import CenterForDigital from "./assets/partners/CenterForDigital.png";
 
 import irrigationImg from "./assets/directions/irrigation.png";
 import agrometeoImg from "./assets/directions/agrometeo.png";
+import greenhouseImg from "./assets/directions/greenhouse.png";
 import dronesImg from "./assets/directions/drones.png";
-import fintechImg from "./assets/directions/fintech.png";
+import consultingImg from "./assets/directions/fintech.png";
+import marketplaceImg from "./assets/directions/marketplace.png";
 
 import "./LandingPage.css";
 
@@ -28,18 +30,16 @@ const PARTNER_LOGOS = [
 
 const DIRECTION_ITEMS = [
   { key: "smartIrrigation", icon: "💧", img: irrigationImg },
-  { key: "fintech", icon: "📱", img: fintechImg },
   { key: "agrometeo", icon: "🌤️", img: agrometeoImg },
+  { key: "smartGreenhouse", icon: "🏡", img: greenhouseImg },
   { key: "drones", icon: "🛸", img: dronesImg },
+  { key: "agroconsulting", icon: "📱", img: consultingImg },
+  { key: "marketplace", icon: "🛒", img: marketplaceImg },
 ];
 
 const LandingPage = () => {
-  const { t } = useLanguage();
-  const carouselRef = React.useRef(null);
-  const [isHovered, setIsHovered] = React.useState(false);
-  const [userInteracted, setUserInteracted] = React.useState(false);
+  const { language, t } = useLanguage();
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
-  const userTimerRef = React.useRef(null);
 
   const closeMobileMenu = () => setMobileMenuOpen(false);
 
@@ -52,68 +52,6 @@ const LandingPage = () => {
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [mobileMenuOpen]);
-
-  React.useEffect(() => {
-    if (isHovered || userInteracted) return;
-
-    let animFrameId;
-    const step = () => {
-      if (carouselRef.current) {
-        const { scrollLeft, scrollWidth, clientWidth } = carouselRef.current;
-        if (scrollLeft + clientWidth >= scrollWidth - 2) {
-          carouselRef.current.scrollLeft = 0;
-        } else {
-          carouselRef.current.scrollLeft += 0.8;
-        }
-      }
-      animFrameId = requestAnimationFrame(step);
-    };
-
-    animFrameId = requestAnimationFrame(step);
-
-    return () => {
-      if (animFrameId) cancelAnimationFrame(animFrameId);
-    };
-  }, [isHovered, userInteracted]);
-
-  const dirCarouselRef = React.useRef(null);
-  const [activeDirIndex, setActiveDirIndex] = React.useState(1);
-
-  const scrollCarousel = (direction) => {
-    setUserInteracted(true);
-    if (userTimerRef.current) clearTimeout(userTimerRef.current);
-
-    if (carouselRef.current) {
-      const scrollAmount = direction === "left" ? -300 : 300;
-      carouselRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
-    }
-
-    userTimerRef.current = setTimeout(() => {
-      setUserInteracted(false);
-    }, 3500);
-  };
-
-  const scrollDirections = (direction) => {
-    if (direction === "left") {
-      setActiveDirIndex((prev) =>
-        prev > 0 ? prev - 1 : DIRECTION_ITEMS.length - 1,
-      );
-    } else {
-      setActiveDirIndex((prev) =>
-        prev < DIRECTION_ITEMS.length - 1 ? prev + 1 : 0,
-      );
-    }
-  };
-
-  const handleDirScroll = () => {
-    if (dirCarouselRef.current) {
-      const { scrollLeft } = dirCarouselRef.current;
-      const index = Math.round(scrollLeft / 330);
-      setActiveDirIndex(
-        Math.min(Math.max(index, 0), DIRECTION_ITEMS.length - 1),
-      );
-    }
-  };
 
   const scrollToRegistration = () => {
     const regSection = document.getElementById("registration");
@@ -149,6 +87,12 @@ const LandingPage = () => {
           </li>
           <li>
             <a href="#directions">{t.nav.directions}</a>
+          </li>
+          <li>
+            <a href="#program">{t.nav.program || "Программа"}</a>
+          </li>
+          <li>
+            <a href="#location">{t.nav.location || "Локация"}</a>
           </li>
           <li>
             <a href="#partners">{t.nav.partners}</a>
@@ -215,6 +159,16 @@ const LandingPage = () => {
             </a>
           </li>
           <li>
+            <a href="#program" onClick={closeMobileMenu}>
+              {t.nav.program || "Программа"}
+            </a>
+          </li>
+          <li>
+            <a href="#location" onClick={closeMobileMenu}>
+              {t.nav.location || "Локация"}
+            </a>
+          </li>
+          <li>
             <a href="#partners" onClick={closeMobileMenu}>
               {t.nav.partners}
             </a>
@@ -248,9 +202,30 @@ const LandingPage = () => {
         <p className="hero-subtitle">{t.hero.subtitle}</p>
 
         <div className="hero-info-cards">
-          <div className="info-card">{t.hero.location}</div>
-          <div className="info-card">{t.hero.date}</div>
-          <div className="info-card">{t.hero.format}</div>
+          <a
+            href="#location"
+            className="info-card info-card-link"
+            title="Макон ва Харита / Посмотреть на карте"
+          >
+            <span>{t.hero.location}</span>
+            <span className="info-card-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a
+            href="#program"
+            className="info-card info-card-link"
+            title="Барномаи Форум / Программа мероприятий"
+          >
+            <span>{t.hero.date}</span>
+            <span className="info-card-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a
+            href="#directions"
+            className="info-card info-card-link"
+            title="Самтҳои асосӣ / Направления выставки"
+          >
+            <span>{t.hero.format}</span>
+            <span className="info-card-arrow" aria-hidden="true">↗</span>
+          </a>
         </div>
 
         <button className="btn-hero" onClick={scrollToRegistration}>
@@ -292,6 +267,12 @@ const LandingPage = () => {
           </div>
         </div>
       </section>
+
+      {/* Program Section */}
+      <ProgramSection currentLang={language} />
+
+      {/* Venue & Map Section */}
+      <VenueMap currentLang={language} />
 
       <section className="section registration-section" id="registration">
         <div className="section-title">

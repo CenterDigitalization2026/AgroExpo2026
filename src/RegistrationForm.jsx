@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useMemo } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useLanguage } from "./i18n/LanguageContext";
@@ -8,38 +8,12 @@ import "./RegistrationForm.css";
 const GOOGLE_APPS_SCRIPT_URL =
   "https://script.google.com/macros/s/AKfycbyMW3dZEMsQNns1eCm3u8YtERvkf45JTijTLLd9hE2rEAmhhGGRQB9HAPyDtxYKr9VAJw/exec";
 
-export const REGION_OPTIONS = [
-  "г. Душанбе",
-  "Согдийская область",
-  "Хатлонская область",
-  "Горно-Бадахшанская автономная область (ГБАО)",
-  "Районы республиканского подчинения (РРП)",
-  "Зарубежный участник / Международный делегат",
-];
 
-export const CATEGORY_OPTIONS = [
-  "Государственный сектор (Министерства, ведомства)",
-  "Дехканское хозяйство / Фермер / Агрохолдинг / Кооператив",
-  "IT-компания / Разработчик AgTech / Поставщик оборудования",
-  "Международная организация / Донорская структура / НПО",
-  "Финансовый институт / Банк / МФО / Страховая компания",
-  "Научно-исследовательский институт / ВУЗ / Преподаватель / Студент",
-  "Маркетплейс / Логистическая компания / Переработчик",
-  "СМИ / Пресса",
-];
-
-export const FORMAT_OPTIONS = [
-  "Посетитель выставки (Expo) — свободный осмотр демо-зон и стендов",
-  "Делегат конференции (Forum) — участие в сессиях",
-  "Участник со стендом (Экспонент) — демонстрация решений",
-  "Спикер / Докладчик — выступление на сессии",
-  "Студент-гид / Волонтер — сопровождение техно-туров",
-];
 
 const FIO_REGEX = /^[a-zA-Zа-яА-ЯёЁҒғӢӣҚқӮӯҲҳҶҷ\s-]+$/;
 const PHONE_REGEX = /^\+?\d{7,15}$/;
 
-export const sanitizeValues = (values) => {
+const sanitizeValues = (values) => {
   let cleanedPhone = (values.phone || "").trim().replace(/[^\d+]/g, "");
   if (cleanedPhone.startsWith("992") && !cleanedPhone.startsWith("+992")) {
     cleanedPhone = "+" + cleanedPhone;

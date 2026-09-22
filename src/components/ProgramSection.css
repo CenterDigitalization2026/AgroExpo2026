@@ -1,0 +1,338 @@
+/* Program Section Styles */
+.program-section {
+  position: relative;
+  background: radial-gradient(circle at 50% 0%, rgba(82, 183, 136, 0.08) 0%, transparent 70%);
+  padding: 80px 8%;
+}
+
+.program-badge-tag {
+  display: inline-block;
+  padding: 6px 16px;
+  background: rgba(82, 183, 136, 0.15);
+  border: 1px solid rgba(132, 201, 158, 0.4);
+  border-radius: 9999px;
+  color: #52b788;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.program-container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* Day Switcher Tabs */
+.program-tabs-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.program-day-tab {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  background: #ffffff;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 9999px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #374151;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.program-day-tab:hover {
+  border-color: #74c69d;
+  color: #1b4332;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(45, 106, 79, 0.1);
+}
+
+.program-day-tab.active {
+  background: linear-gradient(135deg, #2d6a4f 0%, #1b4332 100%);
+  color: #ffffff;
+  border-color: #52b788;
+  box-shadow:
+    0 10px 24px rgba(27, 67, 50, 0.3),
+    0 0 0 3px rgba(82, 183, 136, 0.25);
+}
+
+.tab-date-icon {
+  font-size: 18px;
+}
+
+.tab-label {
+  letter-spacing: 0.2px;
+}
+
+/* Day Summary Card */
+.day-summary-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(45, 106, 79, 0.08) 0%, rgba(82, 183, 136, 0.15) 100%);
+  border: 1.5px solid rgba(82, 183, 136, 0.3);
+  border-radius: 20px;
+  padding: 22px 28px;
+  margin-bottom: 36px;
+  backdrop-filter: blur(8px);
+}
+
+.day-date-pill {
+  display: inline-block;
+  background: #1b4332;
+  color: #a7f3d0;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  letter-spacing: 0.4px;
+}
+
+.day-summary-badge {
+  font-size: 19px;
+  font-weight: 700;
+  color: #166534;
+  margin: 0;
+}
+
+.day-sessions-count {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #d1fae5;
+  border-radius: 14px;
+  padding: 10px 20px;
+  box-shadow: 0 4px 12px rgba(45, 106, 79, 0.08);
+}
+
+.day-sessions-count span {
+  font-size: 24px;
+  font-weight: 800;
+  color: #1b4332;
+  line-height: 1;
+}
+
+.day-sessions-count small {
+  font-size: 11px;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 4px;
+}
+
+/* Timeline */
+.program-timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 140px 48px 1fr;
+  align-items: flex-start;
+  position: relative;
+}
+
+.timeline-time-col {
+  padding-top: 6px;
+}
+
+.time-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #ffffff;
+  border: 1.5px solid #d1d5db;
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #1b4332;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.time-pill .clock-icon {
+  font-size: 13px;
+}
+
+/* Timeline node & line */
+.timeline-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  position: relative;
+}
+
+.timeline-dot {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid #52b788;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  z-index: 2;
+  box-shadow: 0 4px 10px rgba(82, 183, 136, 0.25);
+  transition: all 0.25s ease;
+}
+
+.timeline-item:hover .timeline-dot {
+  background: #2d6a4f;
+  border-color: #74c69d;
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(45, 106, 79, 0.4);
+}
+
+.timeline-line {
+  position: absolute;
+  top: 38px;
+  bottom: -20px;
+  width: 3px;
+  background: linear-gradient(180deg, #52b788 0%, rgba(82, 183, 136, 0.2) 100%);
+}
+
+/* Content Card */
+.timeline-content-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 20px 24px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.timeline-item:hover .timeline-content-card {
+  border-color: #84c99e;
+  transform: translateY(-2px);
+  box-shadow:
+    0 10px 25px rgba(45, 106, 79, 0.08),
+    0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.timeline-header {
+  margin-bottom: 8px;
+}
+
+.category-tag {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: rgba(82, 183, 136, 0.12);
+  color: #166534;
+  border: 1px solid rgba(82, 183, 136, 0.3);
+}
+
+.category-ceremony,
+.category-plenary,
+.category-resolution {
+  background: rgba(234, 179, 8, 0.12);
+  color: #854d0e;
+  border-color: rgba(234, 179, 8, 0.35);
+}
+
+.category-panel,
+.category-tour,
+.category-workshop {
+  background: rgba(59, 130, 246, 0.12);
+  color: #1d4ed8;
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+.category-lunch,
+.category-networking,
+.category-welcome {
+  background: rgba(16, 185, 129, 0.12);
+  color: #047857;
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+.timeline-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 6px 0;
+  line-height: 1.4;
+}
+
+.timeline-description {
+  font-size: 14.5px;
+  color: #4b5563;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .program-section {
+    padding: 50px 16px;
+  }
+
+  .timeline-item {
+    grid-template-columns: 36px 1fr;
+    gap: 12px;
+  }
+
+  .timeline-time-col {
+    grid-column: 2;
+    grid-row: 1;
+    margin-bottom: 6px;
+  }
+
+  .timeline-node {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+  }
+
+  .timeline-content-card {
+    grid-column: 2;
+    grid-row: 2;
+    padding: 16px 18px;
+  }
+
+  .timeline-dot {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+
+  .timeline-line {
+    top: 32px;
+  }
+
+  .day-summary-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 18px 20px;
+  }
+
+  .day-sessions-count {
+    align-self: flex-start;
+  }
+
+  .program-day-tab {
+    padding: 11px 20px;
+    font-size: 14.5px;
+  }
+}
