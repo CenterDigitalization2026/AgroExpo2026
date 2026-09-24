@@ -2,12 +2,19 @@ export const programData = {
   tg: {
     title: "Барномаи Форум",
     subtitle: "Ҷадвали муфассали намоишгоҳ ва конфронс барои 3 ва 4 декабри соли 2026",
+    exhibition: {
+      title: "Минтақаи намоишгоҳ (Exhibition Zone)",
+      description:
+        "Стендҳои намоишгоҳ дар тӯли ҳар ду рӯз кушода мебошанд ва ба иштирокчиён имкон медиҳанд, ки технологияҳо, маҳсулот, хизматрасониҳо ва инноватсияҳои марбут ба соҳаи кишоварзиро намоиш диҳанд.",
+    },
     days: [
       {
         id: 1,
         date: "3 декабри соли 2026",
         label: "Рӯзи 1 (3 декабр)",
         badge: "Рӯзи аввал • Ифтитоҳ ва Сессияҳои асосӣ",
+        overview:
+          "Рӯзи 1 (3 декабр): Чорабинӣ сохторҳои давлатӣ, шарикони рушд, намояндагони бахши хусусӣ, муассисаҳои молиявӣ ва дигар ҷонибҳои манфиатдорро барои иштирок дар ҷаласаҳои пленарӣ ва муҳокимаҳои панелӣ оид ба технологияҳои кишоварзӣ ва инноватсияҳо дар Тоҷикистон ҷамъ меорад.",
         schedule: [
           {
             time: "08:30 – 09:00",
@@ -72,6 +79,8 @@ export const programData = {
         date: "4 декабри соли 2026",
         label: "Рӯзи 2 (4 декабр)",
         badge: "Рӯзи дуюм • Тех-тур, Тренингҳо ва B2B",
+        overview:
+          "Рӯзи 2 (4 декабр): Чорабинӣ ба воркшопи махсус барои деҳқонон бо баргузории сессияҳои мубодилаи дониш ва ҳамкорӣ бо таъминкунандагони технологияҳо бахшида мешавад.",
         schedule: [
           {
             time: "09:00 – 09:30",
@@ -108,12 +117,19 @@ export const programData = {
   ru: {
     title: "Программа Форума",
     subtitle: "Подробное расписание выставки и конференции на 3 и 4 декабря 2026 года",
+    exhibition: {
+      title: "Выставочная зона (Exhibition Zone)",
+      description:
+        "Выставочные стенды будут открыты на протяжении обоих дней, позволяя участникам демонстрировать технологии, продукты, услуги и инновации для агросектора.",
+    },
     days: [
       {
         id: 1,
         date: "3 декабря 2026 г.",
         label: "День 1 (3 декабря)",
         badge: "День 1 • Открытие и ключевые сессии",
+        overview:
+          "День 1 (3 декабря): Мероприятие объединит государственные структуры, партнеров по развитию, представителей частного сектора, финансовые институты и других стейкхолдеров для участия в пленарных заседаниях и панельных дискуссиях по агротехнологиям и инновациям в Таджикистане.",
         schedule: [
           {
             time: "08:30 – 09:00",
@@ -178,6 +194,8 @@ export const programData = {
         date: "4 декабря 2026 г.",
         label: "День 2 (4 декабря)",
         badge: "День 2 • Тех-тур, Тренинги и B2B",
+        overview:
+          "День 2 (4 декабря): Мероприятие сосредоточится на специализированном воркшопе для фермеров с сессиями обмена опытом и взаимодействием с поставщиками технологий.",
         schedule: [
           {
             time: "09:00 – 09:30",
@@ -214,12 +232,19 @@ export const programData = {
   en: {
     title: "Forum Program",
     subtitle: "Comprehensive schedule of the Expo & Conference for December 3–4, 2026",
+    exhibition: {
+      title: "Exhibition Zone",
+      description:
+        "Exhibition booths will remain open throughout both days, allowing participants to showcase technologies, products, services, and innovations relevant to the agricultural sector.",
+    },
     days: [
       {
         id: 1,
         date: "December 3, 2026",
         label: "Day 1 (Dec 3)",
         badge: "Day 1 • Official Opening & Plenary Sessions",
+        overview:
+          "Day 1 (3 December): The event will bring together government institutions, development partners, private sector representatives, financial institutions, and other stakeholders to participate in plenary sessions and panel discussions on agricultural technologies and innovation in Tajikistan.",
         schedule: [
           {
             time: "08:30 – 09:00",
@@ -284,6 +309,8 @@ export const programData = {
         date: "December 4, 2026",
         label: "Day 2 (Dec 4)",
         badge: "Day 2 • Tech Tour, Workshops & B2B",
+        overview:
+          "Day 2 (4 December): The event will focus on a dedicated workshop for farmers, featuring knowledge-sharing sessions and engagement with technology providers.",
         schedule: [
           {
             time: "09:00 – 09:30",

@@ -60,7 +60,10 @@ export const translations = {
         position: "Должность / Специализация",
         region: "Регион / Страна",
         category: "Категория участника",
+        otherCategory: "Укажите вашу категорию",
         format: "Формат участия",
+        speakerRole: "Формат выступления спикера",
+        speakerRolePlaceholder: "-- Выберите формат выступления --",
         consentLabel: "Я согласен на обработку персональных данных",
         selectPlaceholder: "-- Выберите из списка --",
       },
@@ -70,6 +73,7 @@ export const translations = {
         phone: "+992900112233",
         organization: "Например: ЗАО 'АгроТехИнновации' или ДХ 'Саодат'",
         position: "Например: Главный агроном / Директор / Студент",
+        otherCategory: "Например: Стартап / Международный консультант",
       },
       buttons: {
         submit: "Зарегистрироваться на AgriExpo-2026",
@@ -83,13 +87,18 @@ export const translations = {
         pendingBadge: "⏳ На рассмотрении",
         pendingTitle: "Заявка на рассмотрении",
         pendingDesc:
-          "Ваши данные успешно получены оргкомитетом Digital AgriExpo Tajikistan-2026 и проходят проверку. Бейдж участника будет отправлен после подтверждения.",
+          "Ваши данные успешно получены оргкомитетом Digital AgriExpo Tajikistan-2026 и проходят проверку. После завершения рассмотрения вы получите официальное приглашение и подтверждение участия на указанный адрес электронной почты.",
         alreadyRegistered:
           "Участник с таким Email уже зарегистрирован в системе.",
         errorTitle: "Ошибка при отправке",
         errorDesc:
           "Произошла ошибка при отправке формы. Пожалуйста, попробуйте еще раз.",
       },
+      speakerRoles: [
+        "1. Участие в панельной дискуссии",
+        "2. Презентация / Доклад (6–8 мин)",
+        "3. Модерация сессии",
+      ],
       regions: [
         "г. Душанбе",
         "Согдийская область",
@@ -107,6 +116,7 @@ export const translations = {
         "Научно-исследовательский институт / ВУЗ / Преподаватель / Студент",
         "Маркетплейс / Логистическая компания / Переработчик",
         "СМИ / Пресса",
+        "Другое / Other",
       ],
       formats: [
         "Посетитель выставки (Expo) — свободный осмотр демо-зон и стендов",
@@ -216,7 +226,10 @@ export const translations = {
         position: "Вазифа / Ихтисос",
         region: "Минтақа / Кишвар",
         category: "Категорияи иштирокчӣ",
+        otherCategory: "Категорияи худро нишон диҳед",
         format: "Формати иштирок",
+        speakerRole: "Формати баромади спикер",
+        speakerRolePlaceholder: "-- Формати баромадро интихоб кунед --",
         consentLabel: "Ман ба коркарди маълумоти шахсӣ розигӣ медиҳам",
         selectPlaceholder: "-- Аз рӯйхат интихоб кунед --",
       },
@@ -226,6 +239,7 @@ export const translations = {
         phone: "+992900112233",
         organization: "Масалан: ҶШМ 'АгроТехИнновация' ё ХД 'Саодат'",
         position: "Масалан: Агрономи калон / Директор / Донишҷӯ",
+        otherCategory: "Масалан: Стартап / Мушовири байналмилалӣ",
       },
       buttons: {
         submit: "Барӯйхатгирӣ дар AgriExpo-2026",
@@ -239,13 +253,18 @@ export const translations = {
         pendingBadge: "⏳ Дар баррасӣ",
         pendingTitle: "Дархост дар баррасӣ қарор дорад",
         pendingDesc:
-          "Маълумоти шумо бо муваффақият аз ҷониби кумитаи ташкилии Digital AgriExpo Tajikistan-2026 қабул гардид ва мавриди санҷиш қарор дорад. Бейҷи иштирокчӣ пас аз тасдиқ фиристода мешавад.",
+          "Маълумоти шумо бо муваффақият аз ҷониби кумитаи ташкилии Digital AgriExpo Tajikistan-2026 қабул гардид ва мавриди санҷиш қарор дорад. Пас аз анҷоми баррасӣ ба суроғаи почтаи электронии шумо даъватномаи расмӣ ва тасдиқи иштирок фиристода мешавад.",
         alreadyRegistered:
           "Иштирокчӣ бо чунин Email аллакай дар система ба қайд гирифта шудааст.",
         errorTitle: "Хатогӣ ҳангоми фиристодан",
         errorDesc:
           "Ҳангоми фиристодани форма хатогӣ рух дод. Лутфан, дубора кӯшиш кунед.",
       },
+      speakerRoles: [
+        "1. Иштирок дар муҳокимаи панелӣ",
+        "2. Муаррифӣ / Баромад (6–8 дақ.)",
+        "3. Модератсияи сессия",
+      ],
       regions: [
         "ш. Душанбе",
         "Вилояти Суғд",
@@ -263,6 +282,7 @@ export const translations = {
         "Институти илмӣ-тадқиқотӣ / ДДҲ / Муаллим / Донишҷӯ",
         "Маркетплейс / Ширкати логистикӣ / Коркардкунанда",
         "КАТ / Пресса",
+        "Дигар / Other",
       ],
       formats: [
         "Иштирокчии намоишгоҳ (Expo) — тамошои озоди минтақаҳои демо ва стендҳо",
@@ -372,7 +392,10 @@ export const translations = {
         position: "Position / Specialization",
         region: "Region / Country",
         category: "Participant Category",
+        otherCategory: "Specify your category",
         format: "Participation Format",
+        speakerRole: "Speaker Role / Format",
+        speakerRolePlaceholder: "-- Select speaker format --",
         consentLabel: "I consent to the processing of personal data",
         selectPlaceholder: "-- Select from list --",
       },
@@ -382,6 +405,7 @@ export const translations = {
         phone: "+992900112233",
         organization: "Example: CJSC 'AgroTech Innovations' or Farm 'Saodat'",
         position: "Example: Chief Agronomist / Director / Student",
+        otherCategory: "Example: AgTech Startup / International Consultant",
       },
       buttons: {
         submit: "Register for AgriExpo-2026",
@@ -395,13 +419,18 @@ export const translations = {
         pendingBadge: "⏳ Under Review",
         pendingTitle: "Application is under review",
         pendingDesc:
-          "Your details have been successfully received by the organizing committee of Digital AgriExpo Tajikistan-2026 and are currently under review. The participant badge will be sent upon confirmation.",
+          "Your details have been successfully received by the organizing committee of Digital AgriExpo Tajikistan-2026 and are currently under review. You will receive an official email invitation confirming your participation upon completion of the review process.",
         alreadyRegistered:
           "A participant with this Email is already registered in the system.",
         errorTitle: "Submission Error",
         errorDesc:
           "An error occurred while submitting the form. Please try again.",
       },
+      speakerRoles: [
+        "1. Participation in the panel discussion",
+        "2. Presentation (6-8 mins)",
+        "3. Moderation",
+      ],
       regions: [
         "Dushanbe city",
         "Sughd Region",
@@ -419,6 +448,7 @@ export const translations = {
         "Research Institute / University / Professor / Student",
         "Marketplace / Logistics Company / Processor",
         "Media / Press",
+        "Other",
       ],
       formats: [
         "Exhibition Visitor (Expo) — Free access to demo zones and stands",

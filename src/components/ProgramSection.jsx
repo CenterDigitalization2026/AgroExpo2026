@@ -54,6 +54,21 @@ const ProgramSection = ({ currentLang }) => {
       </div>
 
       <div className="program-container">
+        {/* Exhibition Zone Banner (Open throughout both days) */}
+        {data.exhibition && (
+          <div className="exhibition-zone-banner">
+            <div className="exhibition-banner-header">
+              <span className="exhibition-badge-pill">
+                🏛️ {data.exhibition.title}
+              </span>
+              <span className="exhibition-duration-badge">
+                📅 {normalizedLang === "en" ? "Both Days: Dec 3–4" : normalizedLang === "ru" ? "Оба дня: 3–4 декабря" : "Ҳар ду рӯз: 3–4 декабр"}
+              </span>
+            </div>
+            <p className="exhibition-banner-desc">{data.exhibition.description}</p>
+          </div>
+        )}
+
         {/* Day Tabs */}
         <div className="program-tabs-wrapper" role="tablist" aria-label="Program days">
           {data.days.map((day) => {
@@ -80,6 +95,9 @@ const ProgramSection = ({ currentLang }) => {
           <div className="day-summary-info">
             <span className="day-date-pill">{currentDay.date}</span>
             <h3 className="day-summary-badge">{currentDay.badge}</h3>
+            {currentDay.overview && (
+              <p className="day-overview-text">{currentDay.overview}</p>
+            )}
           </div>
           <div className="day-sessions-count">
             <span>{currentDay.schedule.length}</span>

@@ -30,6 +30,8 @@ const sanitizeValues = (values) => {
     phone: cleanedPhone,
     organization: (values.organization || "").trim().replace(/\s+/g, " "),
     position: (values.position || "").trim().replace(/\s+/g, " "),
+    speakerRole: (values.speakerRole || "").trim(),
+    otherCategory: (values.otherCategory || "").trim(),
   };
 };
 
@@ -66,12 +68,29 @@ export const RegistrationForm = () => {
         .min(2, val.posMin),
       region: Yup.string().required(val.regionRequired),
       category: Yup.string().required(val.categoryRequired),
+      otherCategory: Yup.string().trim(),
       format: Yup.string().required(val.formatRequired),
+      speakerRole: Yup.string().when("format", {
+        is: (val) =>
+          val &&
+          (val.toLowerCase().includes("спикер") ||
+            val.toLowerCase().includes("маър") ||
+            val.toLowerCase().includes("speaker")),
+        then: (schema) =>
+          schema.required(
+            language === "en"
+              ? "Please select your presentation format"
+              : language === "ru"
+              ? "Выберите формат выступления спикера"
+              : "Формати баромади спикерро интихоб кунед"
+          ),
+        otherwise: (schema) => schema.notRequired(),
+      }),
       consent: Yup.boolean()
         .oneOf([true], val.consentRequired || val.fullNameRequired)
         .required(),
     });
-  }, [t]);
+  }, [t, language]);
 
   const formik = useFormik({
     initialValues: {
@@ -82,7 +101,9 @@ export const RegistrationForm = () => {
       position: "",
       region: "",
       category: "",
+      otherCategory: "",
       format: "",
+      speakerRole: "",
       consent: false,
     },
     validationSchema,
@@ -90,6 +111,22 @@ export const RegistrationForm = () => {
     onSubmit: async (rawValues, { resetForm }) => {
       setIsSubmitting(true);
       const sanitized = sanitizeValues(rawValues);
+
+      const finalCategory =
+        sanitized.otherCategory &&
+        (sanitized.category.toLowerCase().includes("друг") ||
+          sanitized.category.toLowerCase().includes("дигар") ||
+          sanitized.category.toLowerCase().includes("other"))
+          ? `${sanitized.category}: ${sanitized.otherCategory}`
+          : sanitized.category;
+
+      const finalFormat =
+        sanitized.speakerRole &&
+        (sanitized.format.toLowerCase().includes("спикер") ||
+          sanitized.format.toLowerCase().includes("маър") ||
+          sanitized.format.toLowerCase().includes("speaker"))
+          ? `${sanitized.format} (${sanitized.speakerRole})`
+          : sanitized.format;
 
       try {
         if (
@@ -117,8 +154,10 @@ export const RegistrationForm = () => {
             company: sanitized.organization,
             position: sanitized.position,
             region: sanitized.region,
-            category: sanitized.category,
-            format: sanitized.format,
+            category: finalCategory,
+            otherCategory: sanitized.otherCategory,
+            format: finalFormat,
+            speakerRole: sanitized.speakerRole,
             language: language || "tj",
           }),
         });
@@ -203,6 +242,16 @@ export const RegistrationForm = () => {
             {msg.pendingDesc ||
               "Ваши данные успешно получены оргкомитетом Digital AgriExpo Tajikistan-2026 и проходят проверку."}
           </p>
+          <div className="email-invitation-box">
+            <span className="email-invitation-icon">✉️</span>
+            <span>
+              {language === "en"
+                ? "An official email invitation confirming your participation will be sent after the review process."
+                : language === "ru"
+                ? "Официальное приглашение с подтверждением участия будет отправлено на ваш Email после проверки."
+                : "Даъватномаи расмӣ бо тасдиқи иштирок пас аз баррасӣ ба Email-и шумо фиристода мешавад."}
+            </span>
+          </div>
           <button
             type="button"
             className="submit-btn reset-btn"
@@ -219,6 +268,20 @@ export const RegistrationForm = () => {
   const regRegions = t.registration.regions;
   const regCategories = t.registration.categories;
   const regFormats = t.registration.formats;
+
+  const isSpeaker = Boolean(
+    formik.values.format &&
+      (formik.values.format.toLowerCase().includes("спикер") ||
+        formik.values.format.toLowerCase().includes("маър") ||
+        formik.values.format.toLowerCase().includes("speaker"))
+  );
+
+  const isOtherCategory = Boolean(
+    formik.values.category &&
+      (formik.values.category.toLowerCase().includes("друг") ||
+        formik.values.category.toLowerCase().includes("дигар") ||
+        formik.values.category.toLowerCase().includes("other"))
+  );
 
   return (
     <div className="registration-wrapper">
@@ -407,6 +470,24 @@ export const RegistrationForm = () => {
               )}
             </div>
 
+            {isOtherCategory && (
+              <div className="form-group floating-group sub-option-group">
+                <input
+                  id="otherCategory"
+                  name="otherCategory"
+                  type="text"
+                  className={getFieldClass("otherCategory")}
+                  placeholder=" "
+                  value={formik.values.otherCategory}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                />
+                <label htmlFor="otherCategory" className="floating-label">
+                  {regLabels.otherCategory || "Укажите вашу категорию"}
+                </label>
+              </div>
+            )}
+
             <div className="form-group floating-group">
               <select
                 id="format"
@@ -430,6 +511,35 @@ export const RegistrationForm = () => {
                 <div className="error-message">{formik.errors.format}</div>
               )}
             </div>
+
+            {isSpeaker && (
+              <div className="form-group floating-group sub-option-group">
+                <select
+                  id="speakerRole"
+                  name="speakerRole"
+                  className={getFieldClass("speakerRole")}
+                  value={formik.values.speakerRole}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                >
+                  <option value=""></option>
+                  {(t.registration.speakerRoles || []).map((option, idx) => (
+                    <option key={idx} value={option}>
+                      {option}
+                    </option>
+                  ))}
+                </select>
+                <label htmlFor="speakerRole" className="floating-label">
+                  {regLabels.speakerRole || "Формат выступления спикера"}{" "}
+                  <span className="required-star">*</span>
+                </label>
+                {formik.touched.speakerRole && formik.errors.speakerRole && (
+                  <div className="error-message">
+                    {formik.errors.speakerRole}
+                  </div>
+                )}
+              </div>
+            )}
           </div>
 
           {/* ФУТЕР ФОРМЫ */}

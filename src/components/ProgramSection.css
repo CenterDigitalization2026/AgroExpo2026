@@ -74,17 +74,78 @@
   letter-spacing: 0.2px;
 }
 
+/* Exhibition Zone Banner (Open throughout both days) */
+.exhibition-zone-banner {
+  background: linear-gradient(135deg, #f0fdf4 0%, #e6f4ea 100%);
+  border: 1.5px solid #86efac;
+  border-radius: 18px;
+  padding: 18px 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 16px rgba(45, 106, 79, 0.08);
+}
+
+.exhibition-banner-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.exhibition-badge-pill {
+  font-size: 15px;
+  font-weight: 700;
+  color: #166534;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.exhibition-duration-badge {
+  background: #166534;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  letter-spacing: 0.3px;
+}
+
+.exhibition-banner-desc {
+  color: #374151;
+  font-size: 14.5px;
+  line-height: 1.55;
+  margin: 0;
+}
+
 /* Day Summary Card */
 .day-summary-card {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  gap: 20px;
   background: linear-gradient(135deg, rgba(45, 106, 79, 0.08) 0%, rgba(82, 183, 136, 0.15) 100%);
   border: 1.5px solid rgba(82, 183, 136, 0.3);
   border-radius: 20px;
   padding: 22px 28px;
   margin-bottom: 36px;
   backdrop-filter: blur(8px);
+}
+
+.day-summary-info {
+  flex: 1;
+}
+
+.day-overview-text {
+  margin-top: 10px;
+  color: #2d4a3e;
+  font-size: 14.5px;
+  line-height: 1.55;
+  background: rgba(255, 255, 255, 0.65);
+  padding: 10px 14px;
+  border-radius: 10px;
+  border-left: 3px solid #2d6a4f;
 }
 
 .day-date-pill {
