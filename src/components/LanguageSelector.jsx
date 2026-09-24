@@ -3,9 +3,9 @@ import { useLanguage } from "../i18n/LanguageContext";
 import { FlagTJ, FlagRU, FlagUS } from "./Flags";
 
 const languages = [
-  { code: "tj", label: "Тоҷикӣ", flagEmoji: "🇹🇯", flagComponent: <FlagTJ /> },
-  { code: "ru", label: "Русский", flagEmoji: "🇷🇺", flagComponent: <FlagRU /> },
-  { code: "en", label: "English", flagEmoji: "🇺🇸", flagComponent: <FlagUS /> },
+  { code: "tj", shortCode: "TJ", label: "Тоҷикӣ", flagEmoji: "🇹🇯", flagComponent: <FlagTJ /> },
+  { code: "ru", shortCode: "RU", label: "Русский", flagEmoji: "🇷🇺", flagComponent: <FlagRU /> },
+  { code: "en", shortCode: "EN", label: "English", flagEmoji: "🇺🇸", flagComponent: <FlagUS /> },
 ];
 
 const LanguageSelector = () => {
@@ -34,7 +34,8 @@ const LanguageSelector = () => {
         aria-label="Выбор языка"
       >
         <span className="lang-flag-svg">{selectedLang.flagComponent}</span>
-        <span className="lang-label">{selectedLang.label}</span>
+        <span className="lang-trigger-label-full">{selectedLang.label}</span>
+        <span className="lang-trigger-label-short">{selectedLang.shortCode}</span>
         <span className="lang-chevron">▾</span>
       </button>
 
@@ -50,7 +51,7 @@ const LanguageSelector = () => {
               }}
             >
               <span className="lang-flag-svg">{lang.flagComponent}</span>
-              <span className="lang-label">{lang.label}</span>
+              <span className="lang-option-text">{lang.label}</span>
               {language === lang.code && <span className="check-mark">✓</span>}
             </li>
           ))}

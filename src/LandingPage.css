@@ -1509,13 +1509,20 @@ body {
   }
 
   .mobile-nav-toggle .lang-select-trigger {
-    padding: 6px 8px;
-    gap: 5px;
+    padding: 6px 10px;
+    gap: 6px;
     font-size: 13px;
   }
 
-  .mobile-nav-toggle .lang-label {
+  .mobile-nav-toggle .lang-trigger-label-full {
     display: none;
+  }
+
+  .mobile-nav-toggle .lang-trigger-label-short {
+    display: inline;
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--primary-green);
   }
 
   .hamburger-btn {
@@ -1666,6 +1673,20 @@ body {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
 }
 
-.lang-label {
+.lang-label,
+.lang-trigger-label-full {
   font-size: 14px;
+  display: inline;
 }
+
+.lang-trigger-label-short {
+  display: none;
+}
+
+.lang-option-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-dark);
+  display: inline-block;
+}
+
