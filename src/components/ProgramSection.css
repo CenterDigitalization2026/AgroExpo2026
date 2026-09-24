@@ -396,4 +396,61 @@
     padding: 11px 20px;
     font-size: 14.5px;
   }
+
+  .exhibition-zone-banner {
+    padding: 14px 18px;
+    border-radius: 14px;
+    margin-bottom: 20px;
+  }
+
+  .exhibition-banner-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .exhibition-badge-pill {
+    font-size: 14px;
+  }
+
+  .exhibition-duration-badge {
+    font-size: 11px;
+    padding: 3px 8px;
+  }
+
+  .exhibition-banner-desc {
+    font-size: 13px;
+  }
 }
+
+@media (max-width: 480px) {
+  .program-tabs-wrapper {
+    gap: 8px;
+  }
+
+  .program-day-tab {
+    flex: 1 1 calc(50% - 8px);
+    justify-content: center;
+    padding: 10px 10px;
+    font-size: 13px;
+  }
+
+  .tab-date-icon {
+    font-size: 14px;
+  }
+
+  .day-summary-card {
+    padding: 14px 16px;
+    border-radius: 16px;
+  }
+
+  .day-summary-badge {
+    font-size: 17px;
+  }
+
+  .day-overview-text {
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+}
+

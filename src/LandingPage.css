@@ -1467,7 +1467,7 @@ body {
   }
 
   .partners-carousel-wrapper {
-    padding: 0 4px;
+    padding: 8px 38px;
   }
 
   .partner-card {
@@ -1478,6 +1478,71 @@ body {
 
   .partner-logo-img {
     max-height: 42px;
+  }
+}
+
+/* Extra-small Mobile Optimizations (<= 480px, e.g. iPhone SE, 360px-390px screens) */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px 12px;
+  }
+
+  .logo-container {
+    gap: 8px;
+  }
+
+  .navbar-logo-img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .logo-text {
+    font-size: 14px;
+  }
+
+  .logo-text span {
+    font-size: 11px;
+  }
+
+  .mobile-nav-toggle {
+    gap: 8px;
+  }
+
+  .mobile-nav-toggle .lang-select-trigger {
+    padding: 6px 8px;
+    gap: 5px;
+    font-size: 13px;
+  }
+
+  .mobile-nav-toggle .lang-label {
+    display: none;
+  }
+
+  .hamburger-btn {
+    width: 38px;
+    height: 38px;
+  }
+
+  .hamburger-line {
+    width: 18px;
+  }
+
+  .hero-badge {
+    word-break: break-word;
+    overflow-wrap: break-word;
+    font-size: 10.5px;
+    padding: 8px 12px;
+  }
+
+  .hero-subtitle {
+    word-break: break-word;
+    overflow-wrap: break-word;
+    font-size: 12.5px;
+    padding: 14px 12px;
+  }
+
+  .hero h1 {
+    font-size: 23px;
   }
 }
 
