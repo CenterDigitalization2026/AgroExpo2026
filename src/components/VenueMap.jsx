@@ -1,4 +1,13 @@
 import React from "react";
+import {
+  MapPin,
+  Calendar,
+  Clock,
+  Building2,
+  Info,
+  Map,
+  Navigation,
+} from "lucide-react";
 import { useLanguage } from "../i18n/LanguageContext";
 import "./VenueMap.css";
 
@@ -87,7 +96,7 @@ const VenueMap = ({ currentLang }) => {
         <div className="venue-card">
           <div className="venue-card-header">
             <div className="venue-icon-box" aria-hidden="true">
-              📍
+              <MapPin size={26} color="#059669" />
             </div>
             <div>
               <h3 className="venue-name">{t.venueName}</h3>
@@ -97,7 +106,9 @@ const VenueMap = ({ currentLang }) => {
 
           <div className="venue-details-grid">
             <div className="venue-detail-item">
-              <span className="detail-icon">📅</span>
+              <span className="detail-icon">
+                <Calendar size={18} />
+              </span>
               <div>
                 <span className="detail-label">{t.datesLabel}</span>
                 <strong className="detail-value">{t.datesValue}</strong>
@@ -105,7 +116,9 @@ const VenueMap = ({ currentLang }) => {
             </div>
 
             <div className="venue-detail-item">
-              <span className="detail-icon">⏰</span>
+              <span className="detail-icon">
+                <Clock size={18} />
+              </span>
               <div>
                 <span className="detail-label">{t.timeLabel}</span>
                 <strong className="detail-value">{t.timeValue}</strong>
@@ -113,7 +126,9 @@ const VenueMap = ({ currentLang }) => {
             </div>
 
             <div className="venue-detail-item">
-              <span className="detail-icon">🏛️</span>
+              <span className="detail-icon">
+                <Building2 size={18} />
+              </span>
               <div>
                 <span className="detail-label">{t.hallsLabel}</span>
                 <strong className="detail-value">{t.hallsValue}</strong>
@@ -121,7 +136,9 @@ const VenueMap = ({ currentLang }) => {
             </div>
 
             <div className="venue-detail-item">
-              <span className="detail-icon">💡</span>
+              <span className="detail-icon">
+                <Info size={18} />
+              </span>
               <div>
                 <span className="detail-label">{t.landmarkTitle}</span>
                 <p className="detail-desc">{t.landmarkDesc}</p>
@@ -137,7 +154,9 @@ const VenueMap = ({ currentLang }) => {
               rel="noopener noreferrer"
               className="venue-btn venue-btn-primary"
             >
-              <span className="btn-icon">🗺️</span>
+              <span className="btn-icon">
+                <Map size={16} />
+              </span>
               {t.btnYandexMaps}
             </a>
             <a
@@ -146,7 +165,9 @@ const VenueMap = ({ currentLang }) => {
               rel="noopener noreferrer"
               className="venue-btn venue-btn-secondary"
             >
-              <span className="btn-icon">🧭</span>
+              <span className="btn-icon">
+                <Navigation size={16} />
+              </span>
               {t.btnNavigator}
             </a>
           </div>

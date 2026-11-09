@@ -1,4 +1,16 @@
 import React from "react";
+import {
+  Droplets,
+  CloudSun,
+  Warehouse,
+  Plane,
+  Smartphone,
+  ShoppingCart,
+  MapPin,
+  Calendar,
+  Users,
+  ArrowUpRight,
+} from "lucide-react";
 import RegistrationForm from "./RegistrationForm";
 import LanguageSelector from "./components/LanguageSelector";
 import ProgramSection from "./components/ProgramSection";
@@ -29,12 +41,12 @@ const PARTNER_LOGOS = [
 ];
 
 const DIRECTION_ITEMS = [
-  { key: "smartIrrigation", icon: "💧", img: irrigationImg },
-  { key: "agrometeo", icon: "🌤️", img: agrometeoImg },
-  { key: "smartGreenhouse", icon: "🏡", img: greenhouseImg },
-  { key: "drones", icon: "🛸", img: dronesImg },
-  { key: "agroconsulting", icon: "📱", img: consultingImg },
-  { key: "marketplace", icon: "🛒", img: marketplaceImg },
+  { key: "smartIrrigation", Icon: Droplets, img: irrigationImg },
+  { key: "agrometeo", Icon: CloudSun, img: agrometeoImg },
+  { key: "smartGreenhouse", Icon: Warehouse, img: greenhouseImg },
+  { key: "drones", Icon: Plane, img: dronesImg },
+  { key: "agroconsulting", Icon: Smartphone, img: consultingImg },
+  { key: "marketplace", Icon: ShoppingCart, img: marketplaceImg },
 ];
 
 const LandingPage = () => {
@@ -207,24 +219,27 @@ const LandingPage = () => {
             className="info-card info-card-link"
             title="Макон ва Харита / Посмотреть на карте"
           >
+            <MapPin size={18} className="hero-card-icon" />
             <span>{t.hero.location}</span>
-            <span className="info-card-arrow" aria-hidden="true">↗</span>
+            <ArrowUpRight size={16} className="info-card-arrow" aria-hidden="true" />
           </a>
           <a
             href="#program"
             className="info-card info-card-link"
             title="Барномаи Форум / Программа мероприятий"
           >
+            <Calendar size={18} className="hero-card-icon" />
             <span>{t.hero.date}</span>
-            <span className="info-card-arrow" aria-hidden="true">↗</span>
+            <ArrowUpRight size={16} className="info-card-arrow" aria-hidden="true" />
           </a>
           <a
             href="#directions"
             className="info-card info-card-link"
             title="Самтҳои асосӣ / Направления выставки"
           >
+            <Users size={18} className="hero-card-icon" />
             <span>{t.hero.format}</span>
-            <span className="info-card-arrow" aria-hidden="true">↗</span>
+            <ArrowUpRight size={16} className="info-card-arrow" aria-hidden="true" />
           </a>
         </div>
 
@@ -256,7 +271,9 @@ const LandingPage = () => {
                     />
                     <span className="card-top-tag">AgTech 0{idx + 1}</span>
                     <div className="panorama-card-overlay">
-                      <div className="panorama-icon-badge">{item.icon}</div>
+                      <div className="panorama-icon-badge">
+                        <item.Icon size={24} strokeWidth={2} />
+                      </div>
                       <h3>{dirData.title}</h3>
                       <p>{dirData.desc}</p>
                     </div>

@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { Clock, Mail } from "lucide-react";
 import { useLanguage } from "./i18n/LanguageContext";
 import "./RegistrationForm.css";
 
@@ -232,10 +233,11 @@ export const RegistrationForm = () => {
       <div className="registration-wrapper">
         <div className="success-card">
           <div className="pending-badge-tag">
-            {msg.pendingBadge || "⏳ На рассмотрении"}
+            <Clock size={15} style={{ marginRight: 6, verticalAlign: "middle" }} />
+            {msg.pendingBadge || "На рассмотрении"}
           </div>
           <div className="success-icon pending-icon" aria-hidden="true">
-            ⏳
+            <Clock size={44} strokeWidth={1.8} color="#059669" />
           </div>
           <h2>{msg.pendingTitle || "Заявка на рассмотрении"}</h2>
           <p>
@@ -243,7 +245,7 @@ export const RegistrationForm = () => {
               "Ваши данные успешно получены оргкомитетом Digital AgriExpo Tajikistan-2026 и проходят проверку."}
           </p>
           <div className="email-invitation-box">
-            <span className="email-invitation-icon">✉️</span>
+            <Mail size={18} className="email-invitation-icon" style={{ flexShrink: 0, marginTop: 2 }} />
             <span>
               {language === "en"
                 ? "An official email invitation confirming your participation will be sent after the review process."

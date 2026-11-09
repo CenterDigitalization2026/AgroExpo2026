@@ -275,8 +275,8 @@ select.form-control option[value=""] {
 }
 
 .error-message::before {
-  content: "⚠";
-  font-size: 12px;
+  content: "";
+  display: none;
 }
 
 /* Чекбокс согласия */

@@ -14,9 +14,9 @@ export const translations = {
       title: "Digital AgriExpo Tajikistan-2026",
       subtitle:
         "Эта выставка станет национальной платформой для объединения государственных структур, партнеров по развитию, частного сектора, финансовых институтов, науки и фермеров в создании единой экосистемы цифрового сельского хозяйства, ускоряющей климатически устойчивую, рыночно-ориентированную и инклюзивную трансформацию агропродовольственных систем Республики Таджикистана.",
-      location: "📍 ш. Душанбе, бинои Hyatt Regency",
-      date: "📅 3–4 декабря 2026",
-      format: "🤝 B2B & Форум",
+      location: "ш. Душанбе, бинои Hyatt Regency",
+      date: "3–4 декабря 2026",
+      format: "B2B & Форум",
       cta: "Принять участие в AgriExpo",
     },
     directions: {
@@ -84,7 +84,7 @@ export const translations = {
         successTitle: "Заявка успешно отправлена!",
         successDesc:
           "Спасибо за регистрацию. Наш оргкомитет свяжется с вами для подтверждения бейджа.",
-        pendingBadge: "⏳ На рассмотрении",
+        pendingBadge: "На рассмотрении",
         pendingTitle: "Заявка на рассмотрении",
         pendingDesc:
           "Ваши данные успешно получены оргкомитетом Digital AgriExpo Tajikistan-2026 и проходят проверку. После завершения рассмотрения вы получите официальное приглашение и подтверждение участия на указанный адрес электронной почты.",
@@ -180,9 +180,9 @@ export const translations = {
       title: "Digital AgriExpo Tajikistan-2026",
       subtitle:
         "Ин намоишгоҳ ҳамчун майдони миллии муттаҳидсозии сохторҳои давлатӣ, шарикони рушд, бахши хусусӣ, муассисаҳои молиявӣ, илм ва деҳқонон дар эҷоди экосистемаи воҳиди кишоварзии рақамӣ хизмат мекунад, ки ба табдилдиҳии мутобиқ ба иқлим, бозоргирӣ ва фарогирии низомҳои агроозуқавории Ҷумҳурии Тоҷикистон суръат мебахшад.",
-      location: "📍 ш. Душанбе, бинои Hyatt Regency",
-      date: "📅 3–4 декабри 2026",
-      format: "🤝 B2B ва Форум",
+      location: "ш. Душанбе, бинои Hyatt Regency",
+      date: "3–4 декабри 2026",
+      format: "B2B ва Форум",
       cta: "Иштирок дар AgriExpo",
     },
     directions: {
@@ -250,7 +250,7 @@ export const translations = {
         successTitle: "Дархост бо муваффақият фиристода шуд!",
         successDesc:
           "Ташаккур барои бақайдгирӣ. Кумитаи ташкилӣ барои тасдиқи бейҷ бо шумо тамос мегирад.",
-        pendingBadge: "⏳ Дар баррасӣ",
+        pendingBadge: "Дар баррасӣ",
         pendingTitle: "Дархост дар баррасӣ қарор дорад",
         pendingDesc:
           "Маълумоти шумо бо муваффақият аз ҷониби кумитаи ташкилии Digital AgriExpo Tajikistan-2026 қабул гардид ва мавриди санҷиш қарор дорад. Пас аз анҷоми баррасӣ ба суроғаи почтаи электронии шумо даъватномаи расмӣ ва тасдиқи иштирок фиристода мешавад.",
@@ -346,9 +346,9 @@ export const translations = {
       title: "Digital AgriExpo Tajikistan-2026",
       subtitle:
         "This Expo will serve as a national platform to unite government institutions, development partners, private sector actors, financial institutions, academia, and farmers in building a cohesive digital agriculture ecosystem that accelerates climate-resilient, market-oriented, and inclusive transformation of the agrifood systems of the Republic of Tajikistan.",
-      location: "📍 Dushanbe, Hyatt Regency building",
-      date: "📅 3–4 December 2026",
-      format: "🤝 B2B & Forum",
+      location: "Dushanbe, Hyatt Regency building",
+      date: "3–4 December 2026",
+      format: "B2B & Forum",
       cta: "Join AgriExpo",
     },
     directions: {
@@ -416,7 +416,7 @@ export const translations = {
         successTitle: "Application submitted successfully!",
         successDesc:
           "Thank you for registering. Our organizing committee will contact you for badge confirmation.",
-        pendingBadge: "⏳ Under Review",
+        pendingBadge: "Under Review",
         pendingTitle: "Application is under review",
         pendingDesc:
           "Your details have been successfully received by the organizing committee of Digital AgriExpo Tajikistan-2026 and are currently under review. You will receive an official email invitation confirming your participation upon completion of the review process.",

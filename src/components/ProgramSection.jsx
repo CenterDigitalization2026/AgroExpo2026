@@ -1,4 +1,20 @@
 import React, { useState } from "react";
+import {
+  Coffee,
+  Award,
+  Mic,
+  Utensils,
+  MessagesSquare,
+  Handshake,
+  FileText,
+  Compass,
+  Sprout,
+  Briefcase,
+  Bookmark,
+  Calendar,
+  Clock,
+  Building2,
+} from "lucide-react";
 import { programData } from "../data/programData";
 import { useLanguage } from "../i18n/LanguageContext";
 import "./ProgramSection.css";
@@ -6,27 +22,27 @@ import "./ProgramSection.css";
 const getCategoryIcon = (type) => {
   switch (type) {
     case "welcome":
-      return "☕";
+      return <Coffee size={18} />;
     case "ceremony":
-      return "✨";
+      return <Award size={18} />;
     case "plenary":
-      return "🎙️";
+      return <Mic size={18} />;
     case "lunch":
-      return "🍽️";
+      return <Utensils size={18} />;
     case "panel":
-      return "💬";
+      return <MessagesSquare size={18} />;
     case "networking":
-      return "🤝";
+      return <Handshake size={18} />;
     case "resolution":
-      return "📜";
+      return <FileText size={18} />;
     case "tour":
-      return "🚀";
+      return <Compass size={18} />;
     case "workshop":
-      return "🌱";
+      return <Sprout size={18} />;
     case "b2b":
-      return "💼";
+      return <Briefcase size={18} />;
     default:
-      return "📌";
+      return <Bookmark size={18} />;
   }
 };
 
@@ -59,10 +75,12 @@ const ProgramSection = ({ currentLang }) => {
           <div className="exhibition-zone-banner">
             <div className="exhibition-banner-header">
               <span className="exhibition-badge-pill">
-                🏛️ {data.exhibition.title}
+                <Building2 size={16} style={{ marginRight: 6, verticalAlign: "middle" }} />
+                {data.exhibition.title}
               </span>
               <span className="exhibition-duration-badge">
-                📅 {normalizedLang === "en" ? "Both Days: Dec 3–4" : normalizedLang === "ru" ? "Оба дня: 3–4 декабря" : "Ҳар ду рӯз: 3–4 декабр"}
+                <Calendar size={14} style={{ marginRight: 6, verticalAlign: "middle" }} />
+                {normalizedLang === "en" ? "Both Days: Dec 3–4" : normalizedLang === "ru" ? "Оба дня: 3–4 декабря" : "Ҳар ду рӯз: 3–4 декабр"}
               </span>
             </div>
             <p className="exhibition-banner-desc">{data.exhibition.description}</p>
@@ -82,7 +100,7 @@ const ProgramSection = ({ currentLang }) => {
                 className={`program-day-tab ${isActive ? "active" : ""}`}
                 onClick={() => setActiveDayId(day.id)}
               >
-                <span className="tab-date-icon">📅</span>
+                <Calendar size={16} className="tab-date-icon" />
                 <span className="tab-label">{day.label}</span>
                 {isActive && <span className="tab-active-indicator" />}
               </button>
@@ -119,7 +137,7 @@ const ProgramSection = ({ currentLang }) => {
               <div key={idx} className="timeline-item">
                 <div className="timeline-time-col">
                   <div className="time-pill">
-                    <span className="clock-icon">🕒</span>
+                    <Clock size={14} className="clock-icon" />
                     <span>{item.time}</span>
                   </div>
                 </div>
