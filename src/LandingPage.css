@@ -531,18 +531,18 @@ body {
   padding: 80px 8%;
 }
 
-.section-title {
+.section > .section-title {
   text-align: center;
   margin-bottom: 50px;
 }
 
-.section-title h2 {
+.section > .section-title h2 {
   font-size: 32px;
   color: var(--primary-green);
   margin-bottom: 10px;
 }
 
-.section-title p {
+.section > .section-title p {
   color: var(--text-muted);
   font-size: 16px;
 }
@@ -1310,15 +1310,15 @@ body {
     padding: 48px 16px;
   }
 
-  .section-title {
+  .section > .section-title {
     margin-bottom: 30px;
   }
 
-  .section-title h2 {
+  .section > .section-title h2 {
     font-size: 24px;
   }
 
-  .section-title p {
+  .section > .section-title p {
     font-size: 14px;
   }
 
@@ -1432,11 +1432,11 @@ body {
     padding: 50px 4%;
   }
 
-  .section-title h2 {
+  .section > .section-title h2 {
     font-size: 24px;
   }
 
-  .section-title p {
+  .section > .section-title p {
     font-size: 13.5px;
   }
 
