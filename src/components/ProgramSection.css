@@ -339,8 +339,9 @@
 .timeline-description {
   font-size: 14.5px;
   color: #4b5563;
-  line-height: 1.6;
+  line-height: 1.65;
   margin: 0;
+  white-space: pre-line;
 }
 
 /* Responsive adjustments */
