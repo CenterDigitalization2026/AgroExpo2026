@@ -687,10 +687,16 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 22px;
+  padding: 0;
   margin-bottom: 12px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
   transition: all 0.35s ease;
+}
+
+.panorama-icon-badge svg {
+  display: block;
+  margin: auto;
+  flex-shrink: 0;
 }
 
 .panorama-card-wrapper:hover .panorama-icon-badge {

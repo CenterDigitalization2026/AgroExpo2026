@@ -144,7 +144,7 @@ const ProgramSection = ({ currentLang }) => {
 
                 <div className="timeline-node">
                   <div className="timeline-dot" aria-hidden="true">
-                    <span>{icon}</span>
+                    {icon}
                   </div>
                   {idx < currentDay.schedule.length - 1 && (
                     <div className="timeline-line" />
