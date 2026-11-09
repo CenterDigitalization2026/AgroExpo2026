@@ -64,7 +64,7 @@ const ProgramSection = ({ currentLang }) => {
 
   return (
     <section className="section program-section" id="program">
-      <div className="section-title">
+      <div className="landing-section-heading">
         <h2>{data.title}</h2>
         <p>{data.subtitle}</p>
       </div>

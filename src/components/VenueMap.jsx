@@ -86,7 +86,7 @@ const VenueMap = ({ currentLang }) => {
 
   return (
     <section className="section venue-section" id="location">
-      <div className="section-title">
+      <div className="landing-section-heading">
         <h2>{t.title}</h2>
         <p>{t.subtitle}</p>
       </div>

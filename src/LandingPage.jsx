@@ -249,7 +249,7 @@ const LandingPage = () => {
       </header>
 
       <section className="section" id="directions">
-        <div className="section-title">
+        <div className="landing-section-heading">
           <h2>{t.directions.title}</h2>
           <p>{t.directions.subtitle}</p>
         </div>
@@ -292,7 +292,7 @@ const LandingPage = () => {
       <VenueMap currentLang={language} />
 
       <section className="section registration-section" id="registration">
-        <div className="section-title">
+        <div className="landing-section-heading">
           <h2>{t.registration.title}</h2>
           <p>{t.registration.subtitle}</p>
         </div>
