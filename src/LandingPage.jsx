@@ -26,8 +26,7 @@ import worldBankLogo from "./assets/partners/WORLD_BANK.png";
 import adbLogo from "./assets/partners/ADB.webp";
 import faoLogo from "./assets/partners/FAO.png";
 import iofsLogo from "./assets/partners/IOFS.jpg";
-import globalGatewayLogo from "./assets/partners/GlobalGateway.png";
-import euCofundedLogo from "./assets/partners/EU_Cofunded.png";
+import euGlobalGatewayLogo from "./assets/partners/EU_GlobalGateway.png";
 import gizLogo from "./assets/partners/GIZ.jpg";
 import caritasLogo from "./assets/partners/CARITAS.png";
 
@@ -50,8 +49,7 @@ const PARTNER_LOGOS = [
   adbLogo,
   faoLogo,
   iofsLogo,
-  globalGatewayLogo,
-  euCofundedLogo,
+  euGlobalGatewayLogo,
   gizLogo,
   caritasLogo,
 ];
