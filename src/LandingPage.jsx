@@ -22,6 +22,14 @@ import wfpLogo from "./assets/partners/WFP.png";
 import koicaLogo from "./assets/partners/KOICA.png";
 import EmblemOfTJK from "./assets/partners/EmblemTJK.png";
 import CenterForDigital from "./assets/partners/CenterForDigital.png";
+import worldBankLogo from "./assets/partners/WORLD_BANK.png";
+import adbLogo from "./assets/partners/ADB.webp";
+import faoLogo from "./assets/partners/FAO.png";
+import iofsLogo from "./assets/partners/IOFS.jpg";
+import globalGatewayLogo from "./assets/partners/GlobalGateway.png";
+import euCofundedLogo from "./assets/partners/EU_Cofunded.png";
+import gizLogo from "./assets/partners/GIZ.jpg";
+import caritasLogo from "./assets/partners/CARITAS.png";
 
 import irrigationImg from "./assets/directions/irrigation.png";
 import agrometeoImg from "./assets/directions/agrometeo.png";
@@ -36,8 +44,16 @@ const PARTNER_LOGOS = [
   EmblemOfTJK,
   moaLogo,
   CenterForDigital,
-  koicaLogo,
   wfpLogo,
+  koicaLogo,
+  worldBankLogo,
+  adbLogo,
+  faoLogo,
+  iofsLogo,
+  globalGatewayLogo,
+  euCofundedLogo,
+  gizLogo,
+  caritasLogo,
 ];
 
 const DIRECTION_ITEMS = [
@@ -207,9 +223,6 @@ const LandingPage = () => {
             className="hero-logo-img"
           />
         </div>
-        <span className="hero-badge" style={{ whiteSpace: "pre-line" }}>
-          {t.hero.badge}
-        </span>
         <h1>{t.hero.title}</h1>
         <p className="hero-subtitle">{t.hero.subtitle}</p>
 
@@ -309,22 +322,57 @@ const LandingPage = () => {
             </span>
           </div>
 
-          <div className="partners-logos-strip">
-            {t.partners.items.map((partner, idx) => {
-              const isObj = typeof partner === "object" && partner !== null;
-              const name = isObj ? partner.name : partner;
-              const logo = isObj ? partner.logo : PARTNER_LOGOS[idx] || null;
+          <div className="partners-logos-wrapper">
+            <div className="partners-logos-strip partners-organizers-row">
+              {t.partners.items.slice(0, 3).map((partner, idx) => {
+                const isObj = typeof partner === "object" && partner !== null;
+                const name = isObj ? partner.name : partner;
+                const logo = isObj ? partner.logo : PARTNER_LOGOS[idx] || null;
 
-              return (
-                <div key={idx} className="partner-strip-item" title={name}>
-                  {logo ? (
-                    <img src={logo} alt={name} className="partner-strip-logo" />
-                  ) : (
-                    <span className="partner-strip-name">{name}</span>
-                  )}
-                </div>
-              );
-            })}
+                return (
+                  <div key={idx} className="partner-strip-item partner-organizer-item" title={name}>
+                    {logo ? (
+                      <img src={logo} alt={name} className="partner-strip-logo" />
+                    ) : (
+                      <span className="partner-strip-name">{name}</span>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+
+            <div className="partners-marquee">
+              <div className="partners-marquee-track">
+                {[0, 1].map((dupIdx) => (
+                  <div
+                    key={dupIdx}
+                    className="partners-marquee-group"
+                    aria-hidden={dupIdx === 1}
+                  >
+                    {t.partners.items.slice(3).map((partner, idx) => {
+                      const realIdx = idx + 3;
+                      const isObj = typeof partner === "object" && partner !== null;
+                      const name = isObj ? partner.name : partner;
+                      const logo = isObj ? partner.logo : PARTNER_LOGOS[realIdx] || null;
+
+                      return (
+                        <div
+                          key={`${dupIdx}-${realIdx}`}
+                          className="partner-strip-item partner-marquee-item"
+                          title={name}
+                        >
+                          {logo ? (
+                            <img src={logo} alt={dupIdx === 0 ? name : ""} className="partner-strip-logo" />
+                          ) : (
+                            <span className="partner-strip-name">{name}</span>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>

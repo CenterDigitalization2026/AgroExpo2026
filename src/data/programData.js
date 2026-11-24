@@ -14,75 +14,74 @@ export const programData = {
         label: "Рӯзи 1 (3 декабр)",
         badge: "Рӯзи аввал • Ифтитоҳи расмӣ, Ҷаласаи пленарӣ ва Муҳокимаҳои панелӣ",
         overview:
-          "Рӯзи аввал ба ифтитоҳи расмии намоишгоҳ, ҷаласаи пленарӣ оид ба стратегияи рақамикунонии соҳаи кишоварзӣ ва муҳокимаҳои муҳими панелӣ оид ба додаҳо, пардохтпазирии AgTech ва хизматрасониҳои рақамӣ бахшида шудааст.",
+          "Рӯзи аввал ба ифтитоҳи расмии намоишгоҳ, ҷаласаи пленарӣ оид ба стратегияи рақамикунонии соҳаи кишоварзӣ ва муҳокимаҳои панелӣ оид ба додаҳо, пардохтпазирии AgTech ва хизматрасониҳои рақамӣ бахшида шудааст.",
         schedule: [
           {
-            time: "08:30 – 09:00",
+            time: "08:00 – 08:30",
             category: "Бақайдгирӣ",
             type: "welcome",
             title: "Бақайдгирии иштирокчиён ва қаҳванӯшӣ",
             description: "Қаҳванӯшӣ (кофе-брейк) барои ташриф ва муоширати ғайрирасмӣ.",
           },
           {
-            time: "09:00 – 10:00",
+            time: "08:30 – 09:30",
             category: "Ифтитоҳ",
             type: "ceremony",
             title: "Ифтитоҳи расмии Намоишгоҳ",
-            description:
-              "09:00-09:15 — Даъвати меҳмонон ба саҳни асосии ифтитоҳ, сухани хайрамақдам ва муаррифии Намоишгоҳ ва моҳияти калидии гӯшаҳои намоишӣ (экспозитсияҳо).\n09:15-10:00 — Маросими рамзии ифтитоҳ ва боздид аз Намоишгоҳ бо иштироки меҳмонони фахрӣ ва намояндагони воситаҳои ахбори омма.",
+            description: "Маросими ифтитоҳи расмии намоишгоҳ ва шиносоӣ бо гӯшаҳои инноватсионӣ.",
           },
           {
-            time: "10:00 – 11:00",
+            time: "09:30 – 11:00",
             category: "Ҷаласаи пленарӣ",
             type: "plenary",
             title: "Ифтитоҳи Конференсия. Ҷаласаи пленарӣ",
             description:
-              "Мавзӯъ: «Стратегияи рақамикунонии маҷмааи агросаноатии Тоҷикистон: дастовардҳои калидӣ ва самтҳои рушд».\n10:00-10:05 — Ифтитоҳи расмии Конференсия: Сухани муқаддимавии модератор.\n10:05-10:15 — Сухани ифтитоҳӣ: Намояндаи Ҳукумати Ҷумҳурии Тоҷикистон.\n10:15-10:30 — Навори видеоӣ: «Дастовардҳои калидӣ дар рақамикунонии соҳаи кишоварзии Тоҷикистон» ва дидгоҳи ҷонибҳои асосии манфиатдор ва шарикони рушд.\n10:30-11:00 — Ҷамъбасти ҷаласаи пленарӣ ва муаррифии бахшҳои мавзӯӣ.",
+              "Мавзӯъ: «Стратегияи рақамикунонии маҷмааи агросаноатии Тоҷикистон: дастовардҳои калидӣ ва самтҳои рушд».\n09:30–09:35 — Ифтитоҳи расмии Конференсия: Сухани муқаддимавии модератор.\n09:35–09:45 — Сухани ифтитоҳӣ: Намояндаи Ҳукумати Ҷумҳурии Тоҷикистон.\n09:45–09:55 — Навори видеоӣ: «Дастовардҳои калидӣ дар рақамикунонии соҳаи кишоварзии Тоҷикистон».\n09:55–10:30 — Нигоҳи шарикони рушд ва ҷонибҳои калидии манфиатдор (KOICA, Бонки Ҷаҳонӣ, Бонки Осиёии Рушд, ФАО, Ассотсиатсияи хоҷагиҳои деҳқонӣ).\n10:30–11:00 — Ҷамъбасти ҷаласаи пленарӣ ва муаррифии бахшҳои мавзӯӣ.",
           },
           {
             time: "11:00 – 12:30",
-            category: "Ҷаласаи панелӣ",
+            category: "Ҷаласаи панелӣ (толори калон)",
             type: "panel",
             title: "Ҷаласаи панелӣ: Маълумот ҳамчун асоси идоракунии соҳаи кишоварзӣ",
             description:
-              "• Намояндагони вазорату идораҳои ҶТ: Дидгоҳи стратегӣ ва тадбирҳои амалӣ оид ба рушди ҳамкории байниидоравӣ дар самти идоракунии додаҳои аграрӣ, таъмини сифат, эътимоднокӣ, шаффофият ва дастрасии онҳо барои деҳқонон, агробизнес ва сармоягузорон.\n• Намояндагони лоиҳаи Бонки Ҷаҳонӣ: Табдилдиҳии рақамии низоми таҳлили бозори аграрӣ тавассути ҷорӣ намудани Системаи иттилоотии идоракунии кишоварзӣ AMIS — муттаҳидсозии маълумоти оморӣ, геофазоӣ ва бозорӣ баҳри рушди таҳлилот ва пешгӯии дақиқ дар маҷмааи агросаноатӣ.\n• Намояндагони лоиҳаи Бонки Осиёии Рушд: Рақамикунонии соҳаи чорводорӣ — ташаккули низоми миллии мушаххассозӣ (идентификатсия) ва пайгирии ҳайвоноти кишоварзӣ ҳамчун омили рушди устувор ва таҳкими ҳамоҳангсозии ниҳодӣ.\n• Саволи муҳокимавӣ: Барои ҳамгироии қарорҳои рақамии давлатӣ ва хусусӣ ба экосистемаи ягонаи рақамии кишоварзӣ кадом механизмҳо зарур мебошанд?",
+              "Модератор: Н. Анварӣ — муовини вазири кишоварзии Ҷумҳурии Тоҷикистон\nМаърӯзачиён: Намояндагони вазорату идораҳои ҶТ, муассисаҳои илмӣ.\n• 11:00–11:40 — Табдилдиҳии рақамии омори аграрӣ, баҳисобгирии захираҳои об ва автоматикунонии обёрӣ, баҳисобгирии заминҳо ва арзёбии ҳолати киштзор (Агентии омори назди Президенти ҶТ, Кумитаи давлатии идораи замин ва геодезии ҶТ, Агентии беҳдошти замин ва обёрии назди Ҳукумати ҶТ, Академияи илмҳои кишоварзии Тоҷикистон).\n• 11:40–11:55 — Табдилдиҳии рақамии низоми таҳлили бозори аграрӣ тавассути ҷорӣ намудани платформаи AMIS (Намояндагони Лоиҳаи Бонки Ҷаҳонӣ).\n• 11:55–12:10 — Табдилдиҳии рақамии бахши чорводорӣ — ташаккули низоми миллии идентификатсия ва пайгирии ҳайвоноти кишоварзӣ (Намояндагони Лоиҳаи Бонки Осиёии Рушд).\n• 12:10–12:30 — Саволу ҷавоб, тавзеҳоти иштирокдорон.",
           },
           {
             time: "12:30 – 13:30",
             category: "Танаффус",
             type: "lunch",
             title: "Хӯроки нисфирӯзӣ",
-            description: "Танаффус барои хӯроки нисфирӯзӣ ва муоширати озоди иштирокчиён.",
+            description: "Танаффус барои хӯроки нисфирӯзӣ.",
           },
           {
             time: "13:30 – 15:00",
-            category: "Ҷаласаи панелӣ",
+            category: "Ҷаласаи панелӣ (толори калон)",
             type: "panel",
             title: "Ҷаласаи панелӣ: Пардохтпазирии иқтисодӣ ва дастрасии технологияҳои муосир ва қарорҳои рақамӣ барои хоҷагиҳои деҳқонӣ",
             description:
-              "• Иштирокдорони муҳокимаи панелӣ: Донишгоҳи аграрии Тоҷикистон, WFP, GIZ, WHH, Каритас, FAO ва дигарон.\nМавзӯъ: Пардохтпазирии иқтисодии қарорҳои AgTech барои хоҷагиҳои деҳқонии хурду миёна дар шароити маҳдудияти захираҳо ва тағйирёбии иқлим (моделҳои кооператсионӣ, хариди муштарак, мутобиқсозии технологияҳо ба шароити Тоҷикистон).\n• Иштирокдорони бахши молиявӣ: Намояндагони Бонки миллии Тоҷикистон ва бонкҳои тиҷоратӣ.\nМавзӯъ: Дастрасии фишангҳои инноватсионии молиявӣ (лизинги имтиёзнок, қарзҳои «сабз», маблағгузории иқлимӣ, агросуғурта ва коҳиши хавфҳои сармоягузорӣ).",
+              "• 13:30–14:10 — Пардохтпазирии иқтисодии технологияҳои муосир (қарорҳои AgTech) барои хоҷагиҳои деҳқонии хурду миёна дар шароити норасоии захираҳо ва тағйирёбии иқлим.\nМодератор: М. Мӯъминов — Раиси Раёсати Кооперативи «Сароб».\nИштирокдорон: WFP, GIZ, Агроаксияи Олмон (WHH), КАРИТАС, ФАО, инчунин ДАТ (дигарон вобаста ба воридшавии дархостҳо муайян карда мешаванд).\n• 14:10–15:00 — Дастрасии фишангҳои инноватсионии молиявӣ (лизинги имтиёзнок, қарзҳои «сабз», маблағгузории иқлимӣ, агросуғурта).\nМодератор: Намояндаи БМТ (муайян карда мешавад).\nИштирокдорон: бонкҳои тиҷоратӣ (дигарон вобаста ба воридшавии дархостҳо муайян карда мешаванд).",
           },
           {
             time: "15:00 – 15:15",
             category: "Қаҳванӯшӣ",
             type: "welcome",
             title: "Қаҳванӯшӣ (кофе-брейк)",
-            description: "Танаффуси кӯтоҳ барои қаҳванӯшӣ ва нетворкинг.",
+            description: "Танаффус барои қаҳванӯшӣ ва муоширати озод.",
           },
           {
             time: "15:15 – 16:45",
-            category: "Ҷаласаи панелӣ",
+            category: "Ҷаласаи панелӣ (толори калон)",
             type: "panel",
             title: "Ҷаласаи панелӣ: Табдилдиҳии хизматрасониҳои рақамӣ барои деҳқонон",
             description:
-              "• Иштирокдорон: Донишгоҳи аграрии Тоҷикистон ба номи Ш. Шоҳтемур, Кооперативи «Сароб», ТҶ «Нексигол Мушовир», ҶДММ «ZARZO», ТҶ «Муносибатҳои иқтисодии тиҷорати миёнмарзӣ» ва дигарон.\n• Мавзӯъҳо:\n1. Рушди хизматрасониҳои рақамӣ ва агроконсалтинг (тавсияҳо оид ба ҳифзи растаниҳо, ҳисоби нуриҳо, нархҳои бозор ва машварати мустақим тавассути телефонҳои мобилӣ).\n2. Устуворӣ ва ҳамгироии платформаҳои рақамӣ пас аз анҷоми лоиҳаҳои байналмилалӣ.\n3. Саводнокии рақамӣ ва дастрасии хизматрасониҳо барои деҳқонон (махсусан занон ва ҷавонони деҳот).",
+              "15:15–16:45 — Рушди хизматрасониҳои рақамӣ ва агроконсалтинг барои деҳқонон. Устуворӣ ва ҳамгироии платформаҳои рақамӣ. Саводнокии рақамӣ ва дастрасии хизматрасониҳо барои деҳқонон.\nМодератор: намояндаи Донишгоҳи аграрии Тоҷикистон ба номи Ш. Шоҳтемур (муайян карда мешавад).\nИштирокдорони муҳокимаи панелӣ: Кооперативи «Сароб», ТҶ «Нексигол-мушовир», ҶДММ «ЗАРЗО», ҶДММ «Мармарӣ», Стартапи «Akkan Suu», REGAGRO Corporation, ТҶ «Муносибатҳои иқтисодии тиҷорати миёнмарзӣ»-и в. Суғд (дигарон вобаста ба воридшавии дархостҳо муайян карда мешаванд).",
           },
           {
             time: "11:00 – 16:45",
-            category: "Сессияи махсус",
+            category: "Толори алоҳида",
             type: "workshop",
             title: "Занҷираҳои рақамии таъминоти маҳсулоти кишоварзӣ: Ҷорӣ намудани сертификати электронии фитосанитарӣ",
-            description: "(Рӯзномаи алоҳидаи мавзӯӣ дар доираи рӯзи 1).",
+            description: "(РӮЗНОМАИ АЛОҲИДА).",
           },
           {
             time: "16:45 – 17:30",
@@ -90,7 +89,7 @@ export const programData = {
             type: "resolution",
             title: "Ҷаласаи ҷамъбастии хотимавии конфронс",
             description:
-              "• Ҷамъбасти натиҷаҳо: Хулосаҳои асосӣ, муаррифии қатъномаи ниҳоӣ (резолютсия) ва қарорҳои таҳияшуда.\n• Нигоҳ ба оянда: Хулосаҳои калидӣ ва паёмҳои асосии намоишгоҳ — соҳаи кишоварзии Тоҷикистон пас аз 5 сол чӣ гуна хоҳад буд.",
+              "Хулосаҳои асосии конференсия ва сухани ҷамъбастӣ — Вазорати кишоварзии Ҷумҳурии Тоҷикистон якҷоя бо WFP ва бахши хусусӣ.",
           },
         ],
       },
@@ -100,30 +99,30 @@ export const programData = {
         label: "Рӯзи 2 (4 декабр)",
         badge: "Рӯзи дуюм • Синфҳои маҳорат (Мастер-классҳо) ва Ҷамъбасти расмӣ",
         overview:
-          "Рӯзи дуюми чорабинӣ ба намоиши амалии қарорҳо, синфҳои маҳорат (мастер-классҳо), муаррифии платформаҳои омӯзиши электронӣ ва ҷамъбасти расмии Намоишгоҳ бахшида мешавад.",
+          "Рӯзи дуюми чорабинӣ ба синфҳои маҳорат (мастер-классҳо), муаррифии платформаҳо ва қарорҳои рақамии ширкатҳо, инчунин ҷамъбасти расмии намоишгоҳ бахшида мешавад.",
         schedule: [
           {
             time: "08:30 – 09:00",
             category: "Қаҳванӯшӣ",
             type: "welcome",
             title: "Қаҳванӯшӣ ва муоширати озоди корӣ",
-            description: "Субҳона, қаҳванӯшӣ ва муоширати кории субҳирӯзӣ барои иштирокчиён.",
+            description: "Қаҳванӯшӣ ва муоширати озоди корӣ барои иштирокчиён.",
           },
           {
-            time: "09:00 – 12:00",
-            category: "Мастер-классҳо",
+            time: "09:00 – 12:45",
+            category: "Мастер-классҳо (толори калон)",
             type: "workshop",
             title: "Синфҳои маҳорат (мастер-классҳо) ва идомаи намоишгоҳ",
             description:
-              "• Платформаи таълимии электронӣ (E-learning): Муаррифии Кооперативи «Сароб» (WFP).\n• Консепсияи «Киоски рақамии кишоварзӣ»: Муаррифии Каритас Швейтсария дар Тоҷикистон.\n• Шабакаи хизматрасониҳои интерактивӣ ва фардӣ ба деҳқонон: Аз ҷониби Кооперативи «Сароб» ва ҶДММ «Найсон Технология».\n(Рӯйхат вобаста ба воридшавии дархостҳо мукаммал карда мешавад).",
+              "Модератор: И. Асадуллозода — Директори КВД «Маркази рақамикунонӣ, инноватсия ва такмили ихтисоси кадрҳои соҳаи кишоварзӣ»-и Вазорати кишоварзии ҶТ.\n• Имкониятҳои Системаи иттилоотии идоракунии кишоварзӣ «AMIS» оид ба ҳамгироии маълумоти кишоварзӣ\n• Платформаи таълими электронӣ (E-learning): Муаррифии Кооперативи «Sarob»\n• Низоми харитасозии хок (DSMS): Институти хокшиносӣ ва агрохимияи АИКТ\n• Шабакаи хизматрасониҳои интерактивӣ ва инфиродӣ барои деҳқонон аз ҷониби Кооперативи «Sarob» ва ҶДММ «Найсон Технология»\n• Консепсияи «КИОСК»: Муаррифии КАРИТАС\n• Муаррифӣ — Стартапи «Akkan Suu»: қарорҳои рақамӣ барои обёрии дақиқ\n• AISAAT Limited — арзёбии хавфҳои иқлимӣ, маълумоти кишоварзӣ ва қарорҳои инноватсионии рақамӣ\n• Муаррифии ширкати «InSpace»-и Ҷумҳурии Корея\n• Муаррифии ТҶ «Муносибатҳои иқтисодии тиҷорати миёнмарзӣ»\n• Муаррифии ТҶ «Нексигол-мушовир»\n• Муаррифии ҶДММ «ЗАРЗО»\n• ҶДММ «Мармарӣ»\n• Муаррифии REGAGRO Corporation\n(Рӯйхат вобаста ба воридшавии дархостҳо муайян карда мешавад).",
           },
           {
-            time: "12:00 – 12:30",
+            time: "12:45 – 13:00",
             category: "Ҷамъбаст",
             type: "resolution",
             title: "Ҷамъбасти расмии намоишгоҳ",
             description:
-              "Сухани хотимавӣ ва ҷамъбасти намоишгоҳ аз ҷониби Намояндаи Вазорати кишоварзии Ҷумҳурии Тоҷикистон ва Намояндаи Барномаи озуқавории ҷаҳонии СММ (WFP).",
+              "Намояндаи Вазорати кишоварзии Ҷумҳурии Тоҷикистон ва Намояндаи Барномаи озуқавории ҷаҳонии СММ (WFP).",
           },
         ],
       },
@@ -147,80 +146,79 @@ export const programData = {
           "Первый день посвящен официальному открытию выставки, пленарному заседанию по стратегии цифровизации АПК и ключевым панельным сессиям по управлению аграрными данными, экономической окупаемости AgTech и цифровым сервисам для фермеров.",
         schedule: [
           {
-            time: "08:30 – 09:00",
+            time: "08:00 – 08:30",
             category: "Регистрация",
             type: "welcome",
-            title: "Регистрация участников и утренний кофе",
-            description: "Приветственный кофе, регистрация участников и неформальное общение.",
+            title: "Регистрация участников и кофе-брейк",
+            description: "Приветственный кофе-брейк для прибытия и неформального общения.",
           },
           {
-            time: "09:00 – 10:00",
+            time: "08:30 – 09:30",
             category: "Церемония",
             type: "ceremony",
             title: "Официальное открытие выставки",
-            description:
-              "09:00 - 09:15 — Приглашение гостей к главной локации открытия, приветственное слово и презентация концепции выставки, ключевых смыслов экспозиций.\n09:15 - 10:00 — Символическое открытие и обход экспозиции с участием почетных гостей и прессы.",
+            description: "Торжественное открытие выставки и ознакомление с инновационными стендами.",
           },
           {
-            time: "10:00 – 11:00",
+            time: "09:30 – 11:00",
             category: "Пленарная сессия",
             type: "plenary",
-            title: "Открытие конференции. Пленарная сессия",
+            title: "Открытие Конференции. Пленарная сессия",
             description:
-              "Тема: «Стратегия цифровизации сельского хозяйства Таджикистана: ключевые достижения и векторы развития».\n10:00-10:05 — Официальное открытие сессии: Приветственное слово модератора.\n10:05-10:15 — Вступительное слово: Представитель Правительства Республики Таджикистан.\n10:15-10:30 — Видеопрезентация «Ключевые достижения в цифровой трансформации сельского хозяйства Таджикистана» и взгляд ключевых стейкхолдеров и партнеров по развитию.\n10:30-11:00 — Подведение итогов пленарной сессии и презентация тематических сессий.",
+              "Тема: «Стратегия цифровизации агропромышленного комплекса Таджикистана: ключевые достижения и векторы развития».\n09:30–09:35 — Официальное открытие Конференции: Вступительное слово модератора.\n09:35–09:45 — Приветственное слово: Представитель Правительства Республики Таджикистан.\n09:45–09:55 — Видеоролик: «Ключевые достижения в цифровизации сельского хозяйства Таджикистана».\n09:55–10:30 — Взгляд партнеров по развитию и ключевых стейкхолдеров (KOICA, Всемирный банк, Азиатский банк развития, ФАО, Ассоциация дехканских хозяйств).\n10:30–11:00 — Подведение итогов пленарной сессии и презентация тематических секций.",
           },
           {
             time: "11:00 – 12:30",
-            category: "Панельная сессия",
+            category: "Панельная сессия (Большой зал)",
             type: "panel",
             title: "Панельная сессия: Данные как основа управления в сельском хозяйстве",
             description:
-              "• Представители министерств и ведомств Республики Таджикистан:\nТема: Стратегическое видение и практические шаги по развитию межведомственного взаимодействия в управлении аграрными данными, обеспечение их качества, достоверности, открытости и доступности для фермеров, агробизнеса и инвесторов.\n• Представители проекта Всемирного банка:\nТема: Цифровая трансформация системы анализа аграрного рынка посредством внедрения платформы AMIS — консолидация статистических, геопространственных и рыночных данных для развития аналитики и точного прогнозирования в АПК.\n• Представители проекта Азиатского банка развития:\nТема: Цифровая трансформация животноводческого сектора — формирование национальной системы идентификации и прослеживаемости сельскохозяйственных животных как фактор устойчивого развития и укрепления институциональной координации.\n• Дискуссионный вопрос: Какие механизмы необходимы для интеграции государственных и частных цифровых решений в единую цифровую экосистему сельского хозяйства?",
+              "Модератор: Н. Анвари — заместитель министра сельского хозяйства Республики Таджикистан\nВыступающие: Представители министерств и ведомств РТ, научных учреждений.\n• 11:00–11:40 — Цифровая трансформация аграрной статистики, учета водных ресурсов и автоматизации орошения, учета земель и оценки состояния посевов (Агентство по статистике при Президенте РТ, Госкомитет по земельному управлению и геодезии РТ, Агентство мелиорации и ирригации при Правительстве РТ, ТАСХН).\n• 11:40–11:55 — Цифровая трансформация системы анализа аграрного рынка посредством внедрения платформы AMIS (Представители проекта Всемирного банка).\n• 11:55–12:10 — Цифровая трансформация животноводческого сектора — формирование национальной системы идентификации и прослеживаемости сельскохозяйственных животных (Представители проекта Азиатского банка развития).\n• 12:10–12:30 — Вопросы и ответы, комментарии участников.",
           },
           {
             time: "12:30 – 13:30",
             category: "Обед",
             type: "lunch",
             title: "Обед",
-            description: "Перерыв на обед и неформальный нетворкинг участников.",
+            description: "Перерыв на обед.",
           },
           {
             time: "13:30 – 15:00",
-            category: "Панельная сессия",
+            category: "Панельная сессия (Большой зал)",
             type: "panel",
             title: "Панельная сессия: Экономическая окупаемость и доступность современных технологий и цифровых решений для дехканских хозяйств",
             description:
-              "• Участники панельной дискуссии: Таджикский аграрный университет имени Ш. Шохтемура, Всемирная продовольственная программа (WFP), Германское общество по международному сотрудничеству (GIZ), «Германская агроакция» (WHH), «Каритас», FAO и другие.\nТема: Экономическая окупаемость современных AgTech-решений для малых и средних хозяйств в условиях дефицита ресурсов и изменения климата (кооперационные модели совместного использования метеостанций, дронов, систем ГИС и точного земледелия).\n• Участники финансового блока: Представители Национального банка Таджикистана и коммерческих банков.\nТема: Доступность инновационных финансовых инструментов (льготный лизинг, «зеленые» кредиты, климатическое финансирование, агрострахование и снижение инвестиционных рисков).",
+              "• 13:30–14:10 — Экономическая окупаемость современных технологий (AgTech-решений) для малых и средних дехканских хозяйств в условиях дефицита ресурсов и изменения климата.\nМодератор: М. Муминов — Председатель Правления Кооператива «Сароб».\nУчастники панельной дискуссии: WFP, GIZ, Немецкая агроакция (WHH), КАРИТАС, ФАО, а также ТАУ (другие определяются по мере поступления заявок).\n• 14:10–15:00 — Доступность инновационных финансовых инструментов (льготный лизинг, «зеленые» кредиты, климатическое финансирование, агрострахование).\nМодератор: Представитель НБТ (определяется).\nУчастники панельной дискуссии: коммерческие банки (другие определяются по мере поступления заявок).",
           },
           {
             time: "15:00 – 15:15",
             category: "Кофе-брейк",
             type: "welcome",
             title: "Кофе-брейк",
-            description: "Краткий перерыв на кофе и неформальное общение.",
+            description: "Короткий перерыв на кофе и неформальное общение.",
           },
           {
             time: "15:15 – 16:45",
-            category: "Панельная сессия",
+            category: "Панельная сессия (Большой зал)",
             type: "panel",
             title: "Панельная сессия: Трансформация цифровых сервисов для фермеров",
             description:
-              "• Участники: Таджикский аграрный университет, Кооператив «Сароб», ОО «Нексигол-Мушовир», ООО «ЗАРЗО», ОО «Трансграничные торгово-экономические отношения» и др.\n• Темы:\n1. Развитие цифровых сервисов и агроконсалтинга для фермеров (рекомендации по защите растений, расчёт удобрений, рыночные цены, прямой доступ к услугам через мобильные телефоны).\n2. Устойчивость и интеграция цифровых платформ после завершения международных проектов.\n3. Цифровая грамотность и доступность услуг для фермеров (особенно женщин и молодежи в сельской местности).",
+              "15:15–16:45 — Развитие цифровых сервисов и агроконсалтинга для фермеров. Устойчивость и интеграция цифровых платформ. Цифровая грамотность и доступность услуг для фермеров.\nМодератор: представитель Таджикского аграрного университета имени Ш. Шохтемура (определяется).\nУчастники панельной дискуссии: Кооператив «Сароб», ОО «Нексигол-мушовир», ООО «ЗАРЗО», ООО «Мармари», Стартап «Akkan Suu», REGAGRO Corporation, ОО «Трансграничные торгово-экономические отношения» Согдийской области (другие определяются по мере поступления заявок).",
           },
           {
             time: "11:00 – 16:45",
-            category: "Специальная сессия",
+            category: "Отдельный зал",
             type: "workshop",
             title: "Цифровые цепочки поставок сельскохозяйственной продукции: внедрение электронного фитосанитарного сертификата",
-            description: "(Отдельная повестка дня в рамках дня 1).",
+            description: "(ОТДЕЛЬНАЯ ПОВЕСТКА).",
           },
           {
             time: "16:45 – 17:30",
             category: "Итоги",
             type: "resolution",
-            title: "Итоговая сессия закрытия конференции",
+            title: "Заключительная итоговая сессия конференции",
             description:
-              "• Подведение итогов: Основные выводы, презентация итоговой резолюции и выработанных решений.\n• Видение будущего: Инсайты выставки — каким мы видим сельское хозяйство Таджикистана через 5 лет.",
+              "Основные выводы конференции и заключительное слово — Министерство сельского хозяйства Республики Таджикистан совместно с WFP и частным сектором.",
           },
         ],
       },
@@ -230,30 +228,30 @@ export const programData = {
         label: "День 2 (4 декабря)",
         badge: "День 2 • Мастер-классы и Официальное закрытие выставки",
         overview:
-          "Второй день посвящен интерактивным мастер-классам, демонстрации платформы электронного обучения, презентации цифровых киосков и сервисов, а также официальному подведению итогов выставки.",
+          "Второй день посвящен мастер-классам, презентациям цифровых платформ и решений участников, а также официальному закрытию выставки.",
         schedule: [
           {
             time: "08:30 – 09:00",
             category: "Кофе-брейк",
             type: "welcome",
-            title: "Кофе-брейк и неформальное общение",
-            description: "Утренний сбор участников, кофе-брейк и неформальное деловое общение.",
+            title: "Кофе-брейк и свободное деловое общение",
+            description: "Утренний кофе-брейк и свободное деловое общение участников.",
           },
           {
-            time: "09:00 – 12:00",
-            category: "Мастер-классы",
+            time: "09:00 – 12:45",
+            category: "Мастер-классы (Большой зал)",
             type: "workshop",
             title: "Мастер-классы и продолжение выставки",
             description:
-              "• E-learning Платформа: Презентация Кооператива «Sarob» (WFP).\n• Концепция «КИОСК»: Презентация КАРИТАС Швейцария в Таджикистане.\n• Сеть интерактивных и персонализированных услуг фермерам: Со стороны Кооператива «Sarob» и ООО «Найсон Технология».\n(Список дополняется по мере поступления заявок).",
+              "Модератор: И. Асадуллозода — Директор ГУП «Центр цифровизации, инновации и повышения квалификации кадров сельского хозяйства» МСХ РТ.\n• Возможности Информационной системы управления сельским хозяйством «AMIS» по интеграции аграрных данных\n• Платформа электронного обучения (E-learning): Презентация Кооператива «Sarob»\n• Система картирования почв (DSMS): Институт почвоведения и агрохимии ТАСХН\n• Сеть интерактивных и персонализированных услуг для фермеров от Кооператива «Sarob» и ООО «Найсон Технология»\n• Концепция «КИОСК»: Презентация КАРИТАС\n• Презентация — Стартап «Akkan Suu»: цифровые решения для точного орошения\n• AISAAT Limited — оценка климатических рисков, аграрные данные и инновационные цифровые решения\n• Презентация компании «InSpace» (Республика Корея)\n• Презентация ОО «Трансграничные торгово-экономические отношения»\n• Презентация ОО «Нексигол-мушовир»\n• Презентация ООО «ЗАРЗО»\n• ООО «Мармари»\n• Презентация REGAGRO Corporation\n(Список определяется по мере поступления заявок).",
           },
           {
-            time: "12:00 – 12:30",
+            time: "12:45 – 13:00",
             category: "Закрытие",
             type: "resolution",
-            title: "Закрытие выставки",
+            title: "Официальное закрытие выставки",
             description:
-              "Официальное завершение и подведение итогов выставки с участием Представителя Министерства сельского хозяйства Республики Таджикистан и Представителя WFP.",
+              "Представитель Министерства сельского хозяйства Республики Таджикистан и Представитель Всемирной продовольственной программы ООН (WFP).",
           },
         ],
       },
@@ -261,11 +259,11 @@ export const programData = {
   },
   en: {
     title: "Conference & Expo Program",
-    subtitle: "Detailed agenda of Digital AgriExpo Tajikistan-2026 for December 3–4, 2026",
+    subtitle: "Detailed schedule of Digital AgriExpo Tajikistan-2026 for December 3–4, 2026",
     exhibition: {
       title: "Exhibition Zone",
       description:
-        "The digital technology expo will be open across both days, featuring AgTech demo zones, private sector innovations, and smart farming solutions.",
+        "The digital technology exhibition runs across both days, showcasing innovative AgTech solutions, booths, and digital agricultural services.",
     },
     days: [
       {
@@ -274,75 +272,74 @@ export const programData = {
         label: "Day 1 (Dec 3)",
         badge: "Day 1 • Official Opening, Plenary Session & Panel Discussions",
         overview:
-          "Day 1 is dedicated to the official opening ceremony, the high-level plenary session on Tajikistan's agricultural digitalization strategy, and thematic panel discussions on data management, AgTech viability, and digital services.",
+          "Day 1 features the official exhibition opening, a plenary session on Tajikistan's agricultural digitalization strategy, and panel discussions on data governance, AgTech viability, and digital services for farmers.",
         schedule: [
           {
-            time: "08:30 – 09:00",
+            time: "08:00 – 08:30",
             category: "Registration",
             type: "welcome",
-            title: "Participant Registration & Welcome Coffee",
-            description: "Registration, badge collection, and morning networking coffee.",
+            title: "Participant Registration & Coffee Break",
+            description: "Welcome coffee break for arrival and informal networking.",
           },
           {
-            time: "09:00 – 10:00",
+            time: "08:30 – 09:30",
             category: "Opening",
             type: "ceremony",
-            title: "Official Opening Ceremony of the Exhibition",
-            description:
-              "09:00 - 09:15 — Welcome remarks and presentation of the exhibition concept and key demo zones.\n09:15 - 10:00 — Symbolic ribbon cutting and VIP exhibition tour with distinguished guests and media.",
+            title: "Official Exhibition Opening",
+            description: "Official opening ceremony of the exhibition and tour of innovation booths.",
           },
           {
-            time: "10:00 – 11:00",
+            time: "09:30 – 11:00",
             category: "Plenary",
             type: "plenary",
             title: "Conference Opening & Plenary Session",
             description:
-              "Theme: «Digitalization Strategy of Agriculture in Tajikistan: Key Achievements and Growth Vectors».\n10:00-10:05 — Opening remarks by the moderator.\n10:05-10:15 — Keynote address by the Government of the Republic of Tajikistan representative.\n10:15-10:30 — Video presentation on digital transformation milestones in agriculture and stakeholder visions.\n10:30-11:00 — Plenary wrap-up and introduction of thematic panels.",
+              "Topic: «Digitalization Strategy of Tajikistan's Agro-Industrial Complex: Key Achievements and Growth Vectors».\n09:30–09:35 — Official Conference Opening: Moderator's introductory remarks.\n09:35–09:45 — Opening Address: Representative of the Government of the Republic of Tajikistan.\n09:45–09:55 — Video Presentation: «Key Achievements in Digitalizing Agriculture in Tajikistan».\n09:55–10:30 — Perspectives of Development Partners and Key Stakeholders (KOICA, World Bank, Asian Development Bank, FAO, Association of Dehkan Farms).\n10:30–11:00 — Plenary Wrap-up and Introduction of Thematic Sessions.",
           },
           {
             time: "11:00 – 12:30",
-            category: "Panel",
+            category: "Panel Session (Grand Hall)",
             type: "panel",
             title: "Panel Session: Data as the Foundation for Agricultural Management",
             description:
-              "• Ministries & State Agencies of RT: Strategic vision and inter-agency collaboration in agricultural data governance, quality, and open access for farmers and agribusiness.\n• World Bank Project: Digital transformation of market analysis via AMIS platform — consolidating statistical, geospatial, and market data for predictive analytics.\n• Asian Development Bank Project: Livestock sector digitalization — establishing a national livestock identification and traceability system.\n• Key question: What mechanisms are needed to integrate public and private digital solutions into a single agrifood digital ecosystem?",
+              "Moderator: N. Anvari — Deputy Minister of Agriculture of the Republic of Tajikistan\nSpeakers: Representatives of Ministries and Agencies of RT, research institutions.\n• 11:00–11:40 — Digital transformation of agricultural statistics, water accounting and irrigation automation, land registry and crop monitoring (Agency on Statistics under the President of RT, State Committee on Land Management and Geodesy, Agency for Land Reclamation and Irrigation, Tajik Academy of Agricultural Sciences).\n• 11:40–11:55 — Digital transformation of agricultural market analysis through the AMIS platform (World Bank Project Representatives).\n• 11:55–12:10 — Digital transformation of the livestock sector — establishing a national livestock identification and traceability system (Asian Development Bank Project Representatives).\n• 12:10–12:30 — Q&A and participant remarks.",
           },
           {
             time: "12:30 – 13:30",
             category: "Lunch",
             type: "lunch",
             title: "Lunch Break",
-            description: "Lunch and informal networking at the Hyatt Regency Dushanbe.",
+            description: "Lunch break.",
           },
           {
             time: "13:30 – 15:00",
-            category: "Panel",
+            category: "Panel Session (Grand Hall)",
             type: "panel",
-            title: "Panel Session: Economic Viability and Affordability of Modern Technologies for Smallholders",
+            title: "Panel Session: Economic Viability and Affordability of Modern Technologies and Digital Solutions for Farmers",
             description:
-              "• Panelists: Tajik Agrarian University, WFP, GIZ, WHH, Caritas, FAO, and others.\nTopic: Economic viability of AgTech solutions for small and medium farms under resource constraints and climate change (cooperative shared-use models for weather stations, drones, and precision agriculture).\n• Financial Sector: National Bank of Tajikistan and commercial banks.\nTopic: Innovative financial tools (concessional leasing, green loans, climate finance, and agricultural insurance).",
+              "• 13:30–14:10 — Economic viability of modern technologies (AgTech solutions) for small and medium farms amid resource scarcity and climate change.\nModerator: M. Muminov — Chairman of the Board, Sarob Cooperative.\nPanelists: WFP, GIZ, Welthungerhilfe (WHH), CARITAS, FAO, and TAU (others to be confirmed as applications arrive).\n• 14:10–15:00 — Access to innovative financial instruments (concessional leasing, green loans, climate finance, agricultural insurance).\nModerator: Representative of the National Bank of Tajikistan (TBC).\nPanelists: commercial banks (others to be confirmed as applications arrive).",
           },
           {
             time: "15:00 – 15:15",
             category: "Coffee Break",
             type: "welcome",
             title: "Coffee Break",
-            description: "Short refreshment break and informal networking.",
+            description: "Short coffee break and informal networking.",
           },
           {
             time: "15:15 – 16:45",
-            category: "Panel",
+            category: "Panel Session (Grand Hall)",
             type: "panel",
             title: "Panel Session: Transformation of Digital Services for Farmers",
             description:
-              "• Panelists: Tajik Agrarian University, Sarob Cooperative, Nexigol Mushovir, ZARZO, Cross-Border Economic Relations NGO, and others.\n• Themes:\n1. Digital services and agro-consulting (plant protection, fertilizer calculation, market prices, mobile-first advisory).\n2. Sustainability and integration of digital platforms beyond donor-funded projects.\n3. Digital literacy and access for smallholders, with special focus on rural women and youth.",
+              "15:15–16:45 — Development of digital services and agro-consulting for farmers. Sustainability and integration of digital platforms. Digital literacy and service accessibility.\nModerator: Representative of Tajik Agrarian University named after Sh. Shotemur (TBC).\nPanelists: Sarob Cooperative, NGO Nexigol-Mushovir, ZARZO LLC, Marmari LLC, Akkan Suu Startup, REGAGRO Corporation, Cross-Border Trade Economic Relations NGO of Sughd Region (others to be confirmed as applications arrive).",
           },
           {
             time: "11:00 – 16:45",
-            category: "Special Session",
+            category: "Separate Hall",
             type: "workshop",
-            title: "Digital Agrifood Supply Chains: Implementation of Electronic Phytosanitary Certificates (e-Phyto)",
-            description: "(Separate thematic parallel agenda during Day 1).",
+            title: "Digital Agricultural Supply Chains: Implementation of Electronic Phytosanitary Certificates (e-Phyto)",
+            description: "(SEPARATE AGENDA).",
           },
           {
             time: "16:45 – 17:30",
@@ -350,7 +347,7 @@ export const programData = {
             type: "resolution",
             title: "Conference Concluding Session",
             description:
-              "• Summary of results: Key takeaways and presentation of the Final Resolution.\n• Future Outlook: Expo insights — how we envision Tajikistan's agriculture in 5 years.",
+              "Key conference takeaways and closing remarks — Ministry of Agriculture of the Republic of Tajikistan together with WFP and the private sector.",
           },
         ],
       },
@@ -358,32 +355,32 @@ export const programData = {
         id: 2,
         date: "December 4, 2026",
         label: "Day 2 (Dec 4)",
-        badge: "Day 2 • Masterclasses & Official Expo Closing",
+        badge: "Day 2 • Masterclasses & Official Exhibition Closing",
         overview:
-          "Day 2 focuses on hands-on masterclasses, e-learning platforms presentation, digital agricultural kiosks, and the official closing ceremony.",
+          "Day 2 focuses on masterclasses, presentations of digital platforms and AgTech solutions, and the official closing of the exhibition.",
         schedule: [
           {
             time: "08:30 – 09:00",
             category: "Coffee Break",
             type: "welcome",
-            title: "Morning Coffee & Networking",
-            description: "Morning check-in and informal business discussions.",
+            title: "Coffee Break & Open Business Networking",
+            description: "Morning coffee break and open business networking.",
           },
           {
-            time: "09:00 – 12:00",
-            category: "Masterclasses",
+            time: "09:00 – 12:45",
+            category: "Masterclasses (Grand Hall)",
             type: "workshop",
-            title: "Masterclasses & Ongoing Expo Exhibition",
+            title: "Masterclasses & Ongoing Exhibition",
             description:
-              "• E-learning Platform: Presentation by Sarob Cooperative (WFP).\n• Digital Agri Kiosk Concept: Presentation by Caritas Switzerland in Tajikistan.\n• Interactive & Personalized Farmer Services: By Sarob Cooperative and Nayson Technology LLC.\n(List updated as applications arrive).",
+              "Moderator: I. Asadullozoda — Director of SUE «Center for Digitalization, Innovation and Capacity Building of Agricultural Employees», Ministry of Agriculture of RT.\n• Capabilities of the Agricultural Management Information System «AMIS» for agricultural data integration\n• E-learning Platform: Presentation by Sarob Cooperative\n• Digital Soil Mapping System (DSMS): Institute of Soil Science and Agrochemistry, TAAS\n• Network of interactive and personalized services for farmers by Sarob Cooperative and Nayson Technology LLC\n• «KIOSK» Concept: Presentation by CARITAS\n• Presentation — Akkan Suu Startup: digital solutions for precision irrigation\n• AISAAT Limited — climate risk assessment, agricultural data, and innovative digital solutions\n• Presentation by InSpace (Republic of Korea)\n• Presentation by Cross-Border Trade Economic Relations NGO\n• Presentation by NGO Nexigol-Mushovir\n• Presentation by ZARZO LLC\n• Marmari LLC\n• Presentation by REGAGRO Corporation\n(List updated as applications are received).",
           },
           {
-            time: "12:00 – 12:30",
+            time: "12:45 – 13:00",
             category: "Closing",
             type: "resolution",
-            title: "Official Expo Closing",
+            title: "Official Exhibition Closing",
             description:
-              "Closing remarks by the Ministry of Agriculture of the Republic of Tajikistan and the UN World Food Programme (WFP).",
+              "Representative of the Ministry of Agriculture of the Republic of Tajikistan and Representative of the UN World Food Programme (WFP).",
           },
         ],
       },
