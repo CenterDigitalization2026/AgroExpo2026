@@ -81,7 +81,21 @@ export const programData = {
             category: "Толори алоҳида",
             type: "workshop",
             title: "Занҷираҳои рақамии таъминоти маҳсулоти кишоварзӣ: Ҷорӣ намудани сертификати электронии фитосанитарӣ",
-            description: "(РӮЗНОМАИ АЛОҲИДА).",
+            description:
+              "• 11:00–11:10 | СУХАНИ ИФТИТОҲӢ — Муҳимияти ҷорӣ намудани низоми электронии додани гувоҳномаи фитосанитарӣ (ePhyto): Кумитаи бехатарии озуқавории назди Ҳукумати ҶТ.\n" +
+              "• 11:10–11:25 | Қарори IPPC оид ба низоми ePhyto — навсозиҳои барнома: Ҷанлука Нуццо, FAO/IPPC.\n" +
+              "• 11:25–11:40 | ТАҶРИБАИ ОЗАРБОЙҶОН — Рақамикунонии расмиёти фитосанитарӣ ва таҷрибаи амалии мубодилаи маълумоти ePhyto дар доираи долонҳои минтақавии нақлиётӣ: Элмар Аллоҳвердиев, Сарнозири фитосанитарии давлатии Озарбойҷон.\n" +
+              "• 11:40–11:55 | ТАҶРИБАИ ҚАЗОҚИСТОН — Таҷриба дар татбиқ ва ҳамгироии системаҳои миллии иттилоотии фитосанитарӣ бо ePhyto Global Hub ва ҳамкорӣ бо кишварҳои ИИАО: Шнар Малдибоева, Вазорати кишоварзии Ҷумҳурии Қазоқистон.\n" +
+              "• 11:55–12:10 | ТАҶРИБАИ ҶУМҲУРИИ ҚИРҒИЗИСТОН — Рақамикунонии расмиёти фитосанитарӣ дар Ҷумҳурии Қирғизистон: Адил Нурбаев, Вазорати захираҳои об, кишоварзӣ ва саноати коркарди ҶҚ.\n" +
+              "• 12:10–12:25 | ТАҶРИБАИ ӮЗБЕКИСТОН — Ташкили мубодилаи фаромарзии сертификати электронии фитосанитарӣ: Иброҳим Шокосимов, Кумитаи бехатарии озуқавории Ҷумҳурии Ӯзбекистон.\n" +
+              "• 12:25–12:30 | САВОЛУ ҶАВОБ.\n" +
+              "• 12:30–13:30 | ТАНАФФУС БАРОИ НАҲОР.\n" +
+              "• 13:30–13:45 | СТРАТЕГИЯИ ТУРКМАНИСТОН — Татбиқи ePhyto: Ҳолати кунунӣ ва дурнамои рушд (Намояндаи Хадамоти давлатии карантини растаниҳои Вазорати кишоварзии Туркманистон).\n" +
+              "• 13:45–14:00 | СТРАТЕГИЯИ ТОҶИКИСТОН — Қадамҳои стратегӣ, ҳамоҳангсозии байниидоравӣ ва марҳилаҳои калидии татбиқи ePhyto дар ҶТ (Кумитаи амнияти озуқавории назди Ҳукумати ҶТ).\n" +
+              "• 14:00–14:45 | НАЗАРИ ШАРИКОНИ РУШД — Пешбурди ePhyto барои суръат бахшидан ба тиҷорат дар Осиёи Марказӣ: Роҳнамо — Артур Шамилов (ФАО); иштирокдорон: IOFS, GIZ, Бонки Рушди Осиё (БОР).\n" +
+              "• 14:45–15:00 | САВОЛУ ҶАВОБ.\n" +
+              "• 15:00–15:15 | ТАНАФФУС БАРОИ ҚАҲВАНӮШӢ.\n" +
+              "• 15:15–16:00 | МУҲОКИМА ВА ҶАМЪБАСТИ ҶАЛАСА — Ҷамъбасти хулосаҳои асосӣ, муайян намудани самтҳои афзалиятноки ҳамкориҳои минбаъда ва мувофиқа намудани тавсияҳо оид ба рушди занҷираҳои рақамии таъминот дар минтақа.",
           },
           {
             time: "16:45 – 17:30",
@@ -210,7 +224,22 @@ export const programData = {
             category: "Отдельный зал",
             type: "workshop",
             title: "Цифровые цепочки поставок сельскохозяйственной продукции: внедрение электронного фитосанитарного сертификата",
-            description: "(ОТДЕЛЬНАЯ ПОВЕСТКА).",
+            description:
+              "• 11:00–11:10 | ВСТУПИТЕЛЬНОЕ СЛОВО — Актуальность внедрения электронного фитосанитарного сертификата (ePhyto): Комитет продовольственной безопасности при Правительстве РТ.\n" +
+              "• 11:10–11:25 | Система ePhyto IPPC — обновления программы: Джанлука Нуццо, ФАО/МККЗР.\n" +
+              "• 11:25–11:40 | ПРАКТИКА АЗЕРБАЙДЖАНА — Цифровизация фитосанитарных процедур и практический опыт обмена ePhyto в рамках региональных транспортных коридоров: Эльмар Аллахвердиев, Агентство продовольственной безопасности Азербайджана.\n" +
+              "• 11:40–11:55 | ПРАКТИКА КАЗАХСТАНА — Опыт внедрения и интеграции национальных фитосанитарных информационных систем с Глобальным хабом ePhyto и взаимодействие со странами ЕАЭС: Шнар Малдыбаева, МСХ Республики Казахстан.\n" +
+              "• 11:55–12:10 | ПРАКТИКА РЕСПУБЛИКИ КЫРГЫЗСТАН — Цифровизация фитосанитарных процедур: текущий опыт, задачи и перспективы перехода к ePhyto: Адыл Нурбаев, Минводсельпром КР.\n" +
+              "• 12:10–12:25 | ПРАКТИКА УЗБЕКИСТАНА — Организация трансграничного обмена электронными фитосанитарными сертификатами: Иброхим Шокосимов, Комитет по безопасности пищевой продукции РУз.\n" +
+              "• 12:15–12:30 | ВОПРОСЫ И ОТВЕТЫ.\n" +
+              "• 12:30–13:30 | ОБЕД.\n" +
+              "• 13:30–13:45 | СТРАТЕГИЯ ТУРКМЕНИСТАНА — Внедрение ePhyto: текущий статус и перспективы развития (представитель Госслужбы карантина растений МСХ Туркменистана).\n" +
+              "• 13:45–14:00 | СТРАТЕГИЯ ТАДЖИКИСТАНА — Стратегические шаги, межведомственная координация и основные этапы внедрения ePhyto в РТ (Комитет продовольственной безопасности при Правительстве РТ).\n" +
+              "• 14:00–14:45 | ВИДЕНИЕ ПАРТНЕРОВ ПО РАЗВИТИЮ — Развитие ePhyto для ускорения торговли в Центральной Азии: Фасилитатор — Артур Шамиев (FAO); Спикеры: Исламская организация по продовольственной безопасности (IOFS), Германское общество по международному сотрудничеству (GIZ), Азиатский банк развития (ADB).\n" +
+              "• 14:45–15:00 | ВОПРОСЫ И ОТВЕТЫ.\n" +
+              "• 15:00–15:15 | КОФЕ-БРЕЙК.\n" +
+              "• 15:15–15:45 | ОТКРЫТАЯ ДИСКУССИЯ.\n" +
+              "• 15:45–16:00 | ПОДВЕДЕНИЕ ИТОГОВ И ЗАКРЫТИЕ СЕССИИ — Обобщение ключевых выводов, определение приоритетных направлений дальнейшего сотрудничества и согласование рекомендаций по развитию цифровых агропродовольственных цепочек поставок в регионе.",
           },
           {
             time: "16:45 – 17:30",
@@ -336,10 +365,24 @@ export const programData = {
           },
           {
             time: "11:00 – 16:45",
-            category: "Separate Hall",
+            category: "Side Hall",
             type: "workshop",
-            title: "Digital Agricultural Supply Chains: Implementation of Electronic Phytosanitary Certificates (e-Phyto)",
-            description: "(SEPARATE AGENDA).",
+            title: "Digital Agricultural Supply Chains: Introducing Electronic Phytosanitary Certification (ePhyto)",
+            description:
+              "• 11:00–11:10 | OPENING REMARKS — The relevance of implementing an electronic phytosanitary certificate (ePhyto): Representative of the Food Security Committee under the Government of the Republic of Tajikistan.\n" +
+              "• 11:10–11:25 | IPPC ePhyto Solution — Programme Updates: Gianluca Nuzzo, FAO/IPPC.\n" +
+              "• 11:25–11:40 | AZERBAIJAN'S EXPERIENCE — Digitalization of phytosanitary procedures and practical experience of ePhyto exchange within regional transport corridors: Elmar Allahverdiyev, Food Safety Agency of the Republic of Azerbaijan.\n" +
+              "• 11:40–11:55 | KAZAKHSTAN'S EXPERIENCE — Integration of national phytosanitary information systems with the ePhyto Global HUB and cross-border exchange among EAEU countries: Shnar Maldybaeva, Ministry of Agriculture of the Republic of Kazakhstan.\n" +
+              "• 11:55–12:10 | EXPERIENCE OF THE KYRGYZ REPUBLIC — Digitalization of Phytosanitary Procedures: Current status, key challenges, and prospects for transition to ePhyto: Adyl Nurbaev, Ministry of Water Resources, Agriculture and Processing Industry of the Kyrgyz Republic.\n" +
+              "• 12:10–12:25 | UZBEKISTAN'S EXPERIENCE — Cross-border exchange of electronic phytosanitary certificates: Ibrohim Shokosimov, Food Safety Committee of the Republic of Uzbekistan.\n" +
+              "• 12:25–12:30 | Q&A.\n" +
+              "• 12:30–13:30 | LUNCH.\n" +
+              "• 13:30–13:45 | TURKMENISTAN'S STRATEGY — ePhyto Implementation: Current Status and Future Prospects (Representative of State Plant Quarantine Service of Turkmenistan).\n" +
+              "• 13:45–14:00 | TAJIKISTAN'S STRATEGY — Strategic steps, interdepartmental coordination and key stages of ePhyto implementation in Tajikistan (Committee on Food Security under the Government of RT).\n" +
+              "• 14:00–14:45 | DEVELOPMENT PARTNERS' PERSPECTIVES — Advancing ePhyto to accelerate trade in Central Asia: Facilitator — Artur Shamilov (FAO REU); Speakers: Islamic Organization for Food Security (IOFS), German Society for International Cooperation (GIZ), Asian Development Bank (ADB).\n" +
+              "• 14:45–15:00 | Q&A.\n" +
+              "• 15:00–15:15 | COFFEE BREAK.\n" +
+              "• 15:15–16:00 | DISCUSSION AND CONCLUSION — Summarize key findings, identify priority areas for further cooperation, and agree on recommendations for digital agri-food supply chains in the region.",
           },
           {
             time: "16:45 – 17:30",
